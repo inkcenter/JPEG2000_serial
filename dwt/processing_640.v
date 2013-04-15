@@ -1,33 +1,32 @@
 //==================================================================================================
 //  Filename      : processing_640.v
-//  Created On    : 2013-04-06 14:40:13
-//  Last Modified : 2013-04-06 14:40:14
+//  Created On    : 2013-04-04 22:24:32
+//  Last Modified : 2013-04-15 16:20:36
 //  Revision      : 
-//  Author        : Tian Changsong
 //
 //  Description   : 
 //
 //
 //==================================================================================================
-module processing(	//output
-					//ena_all_1,
-					addra_all_1,
-					dina_o1,
-					dina_o2,
-					addra_o1_w,
-					addra_o2_w,
-					wea_o1_w,
-					wea_o2_w,
-					ena_o1_w,
-					ena_o2_w,
-					start,
-					//input
-					douta_all_1,
-					start_cpu,
-					clk_dwt,
-                    clk_sg,
-					rst,
-					rst_syn		);
+module processing(/*autoport*/
+//output
+			addra_all_1, 
+			dina_o1,
+			dina_o2,
+			addra_o1_w,
+			addra_o2_w,
+			wea_o1_w,
+			wea_o2_w,
+			ena_o1_w,
+			ena_o2_w,
+			start,
+//input
+			douta_all_1,
+			start_cpu,
+			clk_dwt,
+			clk_sg,
+			rst,
+			rst_syn);
 							
 
 //output ena_all_1;
@@ -116,7 +115,6 @@ assign pre_vld = (fsm==work);
 assign pre_vld_and = pre_vld_delay_2 & pre_vld_delay;
 assign over_start = (addra_o2_w==12287);
 assign start_pre = start_pre_reg1||start_pre_reg2||start_pre_reg3||start_pre_reg4;
-
 /*********************************************************/
 always @(posedge clk_dwt or negedge rst) 
 begin
@@ -546,16 +544,16 @@ begin
 		begin	
 			case(count_3)
 				0:	begin
-						dina_low_1  <= douta_all_1[23:16];		//Y0	
-						dina_high_1 <= douta_all_1[7:0];		//Y1
+						dina_low_1  <= douta_all_1[31:24]-128;		//Y0	
+						dina_high_1 <= douta_all_1[15:8]-128;		//Y1
 					end
 				1:	begin
-						dina_low_1  <= douta_all_1[31:24];		//U0
-						dina_high_1 <= douta_all_1[31:24];		//U1	
+						dina_low_1  <= douta_all_1[23:16]-128;		//U0
+						dina_high_1 <= douta_all_1[23:16]-128;		//U1	
 					end
 				2:	begin
-						dina_low_1  <= douta_all_1[15:8];		//V0
-						dina_high_1 <= douta_all_1[15:8];		//V1
+						dina_low_1  <= douta_all_1[7:0]-128;		//V0
+						dina_high_1 <= douta_all_1[7:0]-128;		//V1
 					end
 			default:begin
 						dina_high_1 <= 8'b0;

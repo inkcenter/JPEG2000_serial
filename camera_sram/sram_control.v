@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : sram_control.v
 //  Created On    : 2013-04-04 19:32:32
-//  Last Modified : 2013-04-05 18:10:17
+//  Last Modified : 2013-04-15 16:34:55
 //  Revision      : 
 //  Author        : Tian Changsong
 //
@@ -82,6 +82,7 @@ module sram_control(/*autoport*/
 	reg pclk_reg1;
 	reg pclk_reg2;
 	reg jpeg_working;
+	reg [31:0]data_test;
 
 	/* wire */
 	wire jpeg_start;
@@ -102,7 +103,6 @@ module sram_control(/*autoport*/
 	assign row_full=row_counter==640;
 	assign output_test_sram=&data_reg&&(&cam_data_reg);
 	assign data_sram=write_en_n?32'bz:data_to_write;
-	assign data_to_jpeg = jpeg_working?data_sram:0;
 
 	//assign write_en_n=!(state==WRITTING);
 	assign chip_en=0;
@@ -199,6 +199,18 @@ module sram_control(/*autoport*/
 		else if(pclk_reg1&&!pclk_reg2&&cam_href&&frame_valid)
 			cam_data_counter<=cam_data_counter+1;
 	end
+	always @(posedge clk_100 or negedge rst)
+	begin
+		if (!rst) 
+		begin
+			data_test<=0;
+		end
+		// else if(pclk_reg1&&!pclk_reg2&&cam_href&&frame_valid) 
+		else if(pclk_reg1&&!pclk_reg2&&cam_href&&frame_valid&&cam_data_counter==3) //for test
+		begin
+			data_test<=data_test+1;
+		end
+	end
 	always@(posedge clk_100 or negedge rst)
 	begin
 		if(!rst)
@@ -209,6 +221,11 @@ module sram_control(/*autoport*/
 				1:cam_data_buffer[23:16]<=cam_data;
 				2:cam_data_buffer[15:8]<=cam_data;
 				3:cam_data_buffer[7:0]<=cam_data;
+
+				// 0:cam_data_buffer[31:24]<=data_test;//for test
+				// 1:cam_data_buffer[23:16]<=data_test;//for test
+				// 2:cam_data_buffer[15:8]<=data_test;//for test
+				// 3:cam_data_buffer<=data_test;//for test
 			endcase
 	end
 	

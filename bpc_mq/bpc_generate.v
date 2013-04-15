@@ -1269,11 +1269,11 @@ always@(posedge clk_rc or negedge rst) begin
 		//stripe_over_delay1 <= 1'b0;		
 		stripe_over_flag <= 1'b0;
 	end
-	else if(pos_clk_bpc==1'b1)begin	
-		if(stall_vld == 1'b0)begin
+	//else if(pos_clk_bpc==1'b1)begin	
+	else if(stall_vld == 1'b0)begin
 			//stripe_over_delay1 <= stripe_over_delay;
 			stripe_over_flag <= stripe_over_delay;
-		end
+		//end
 	end
 end
 
