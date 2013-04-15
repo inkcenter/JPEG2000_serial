@@ -1,0 +1,2066 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"conf",
+				"CONFIGURE_REGISTERS"
+			],
+			[
+				"pclk",
+				"pclk_reg2"
+			],
+			[
+				"button",
+				"fpga_push_button"
+			],
+			[
+				"ass",
+				"assign"
+			],
+			[
+				"al",
+				"al	al"
+			],
+			[
+				"jpg",
+				"jpeg_working"
+			],
+			[
+				"jpeg",
+				"jpeg_working"
+			],
+			[
+				"jpegw",
+				"JPEG_WORKING"
+			],
+			[
+				"jpewo",
+				"JPEG_WORKING"
+			],
+			[
+				"dwtre",
+				"DWT_READ_BEGIN"
+			],
+			[
+				"che",
+				"check_file_ext"
+			],
+			[
+				"com",
+				"compnany"
+			],
+			[
+				"modu",
+				"module_scopes	(local, instance)"
+			],
+			[
+				"inmal",
+				"input_name_max_length	(local, instance)"
+			],
+			[
+				"max",
+				"max_length"
+			],
+			[
+				"bit",
+				"bitwidth_list_to_insert	(local, instance)"
+			],
+			[
+				"autoi",
+				"autoinst"
+			],
+			[
+				"autopo",
+				"autoport"
+			],
+			[
+				"get",
+				"get_match(pattern, string, group_number)	(global, function)"
+			],
+			[
+				"file",
+				"file_name	(local, instance)"
+			],
+			[
+				"de",
+				"def	Function"
+			],
+			[
+				"pri",
+				"print	(keyword, instance)"
+			],
+			[
+				"cl",
+				"class	(keyword, instance)"
+			],
+			[
+				"fro",
+				"from	(keyword, instance)"
+			],
+			[
+				"exce",
+				"Exception"
+			],
+			[
+				"exc",
+				"Exception"
+			],
+			[
+				"mo",
+				"module_name"
+			],
+			[
+				"mat",
+				"match"
+			],
+			[
+				"g",
+				"group"
+			],
+			[
+				"ino",
+				"inout_list"
+			],
+			[
+				"re",
+				"reverse"
+			],
+			[
+				"range",
+				"range_list"
+			],
+			[
+				"ins",
+				"insert_pattern"
+			],
+			[
+				"match",
+				"match_list"
+			],
+			[
+				"line",
+				"line_string"
+			],
+			[
+				"en",
+				"endif"
+			],
+			[
+				"be",
+				"begin	begin"
+			],
+			[
+				"for",
+				"forg	forg"
+			],
+			[
+				"haha",
+				"haha"
+			],
+			[
+				"beg",
+				"begin"
+			],
+			[
+				"begin",
+				"begin	begin"
+			],
+			[
+				"end",
+				"end"
+			],
+			[
+				"sd",
+				"sdfasdf"
+			],
+			[
+				"pa",
+				"parameter"
+			],
+			[
+				"exam",
+				"extraAmount"
+			],
+			[
+				"hell",
+				"Hello"
+			],
+			[
+				"passascan",
+				"PASS_ALL_SCANED"
+			],
+			[
+				"filehea",
+				"GENERATE_FILE_HEADER"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/E/project/ise/jpeg2000_v5_read_sram/source/system_top.v",
+			"settings":
+			{
+				"buffer_size": 7270,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/project/ise/jpeg2000_v5_read_sram/source/read_sram.v",
+			"settings":
+			{
+				"buffer_size": 4922,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/project/ise/jpeg2000_v5_read_sram/top.ucf",
+			"settings":
+			{
+				"buffer_size": 8823,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/project/ise/jpeg2000_v5_read_sram/source/tier2/codestream_generate.v",
+			"settings":
+			{
+				"buffer_size": 54598,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/project/ise/jpeg2000_v5_read_sram/cpu/SDK/SDK_Export/hw/test_ram_new/src/my_ram_48tile.c",
+			"settings":
+			{
+				"buffer_size": 4658,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/project/ise/jpeg2000_v5_read_sram/source/camera_sram/camera_control.v",
+			"settings":
+			{
+				"buffer_size": 16446,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/project/ise/jpeg2000_v5_read_sram/source/camera_sram/sram_control.v",
+			"settings":
+			{
+				"buffer_size": 6336,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/E/Users/tian/workspace/python_script/yuv2bmp.py",
+			"settings":
+			{
+				"buffer_size": 2864,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/Users/tian/workspace/python_script/merge_25_tiles2.py",
+			"settings":
+			{
+				"buffer_size": 5270,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/Users/tian/workspace/python_script/split_to_tiles.py",
+			"settings":
+			{
+				"buffer_size": 768,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/tian/Desktop/right.txt",
+			"settings":
+			{
+				"buffer_size": 4619,
+				"line_ending": "Windows",
+				"name": "right:"
+			}
+		},
+		{
+			"file": "/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/FileDiffs/FileDiffs.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 979,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/FileDiffs/README.md",
+			"settings":
+			{
+				"buffer_size": 1930,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/tian/Desktop/wrong.txt",
+			"settings":
+			{
+				"buffer_size": 4629,
+				"line_ending": "Windows",
+				"name": "wrong:"
+			}
+		},
+		{
+			"file": "/E/Users/tian/workspace/python_script/test_binary.py",
+			"settings":
+			{
+				"buffer_size": 526,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/Users/tian/workspace/python_script/remove_line_end.py",
+			"settings":
+			{
+				"buffer_size": 505,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"diff",
+				"Sublimerge: View Diff"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"REPE",
+				"Repeat macro"
+			],
+			[
+				"ICM",
+				"Increment Numbers"
+			],
+			[
+				"NEXN",
+				"Select Next Number"
+			],
+			[
+				"NEX",
+				"Select Next Number"
+			],
+			[
+				"INCNUM",
+				"Increment Numbers"
+			],
+			[
+				"NUMBER",
+				"Increment Numbers"
+			],
+			[
+				"reger",
+				"Rope: Regenerate Project Cache"
+			],
+			[
+				"rege",
+				"Rope: Regenerate Global Module Cache"
+			],
+			[
+				"ju",
+				"Rope: Jump To Global"
+			],
+			[
+				"jum",
+				"Rope: Jump To Global"
+			],
+			[
+				"gene",
+				"Rope: Regenerate Global Module Cache"
+			],
+			[
+				"new",
+				"Rope: New Project"
+			],
+			[
+				"rope",
+				"Rope: New Project"
+			],
+			[
+				"regene",
+				"Rope: Regenerate Global Module Cache"
+			],
+			[
+				"genera",
+				"Rope: Regenerate Project Cache"
+			],
+			[
+				"generate",
+				"Rope: Regenerate Global Module Cache"
+			],
+			[
+				"assi",
+				"Rope: Import Assist"
+			],
+			[
+				"sho",
+				"Rope: Show Documentation"
+			],
+			[
+				"findall",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"fina",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"finda",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"find",
+				"FindKeyConflicts: Command Search"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"finda ",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"setting",
+				"Preferences: Settings - Default"
+			],
+			[
+				"align",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"settin",
+				"Preferences: Settings - Default"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"setti",
+				"Preferences: Settings - User"
+			],
+			[
+				"mo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"re",
+				"Set Syntax: Regular Expression"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 345.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/TDDOWNLOAD/BeyondCompare/Beyond Compare 3/使用更新说明.txt",
+		"/F/TDDOWNLOAD/Scooter_Software_Beyond_Compare_Pro/Readme.txt",
+		"/C/Users/tian/Desktop/密钥.txt",
+		"/F/TDDOWNLOAD/Scooter_Software_Beyond_Compare_Pro/使用说明.txt",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/FileDiffs.sublime-settings",
+		"/E/project/ise/jpeg2000_v5_read_sram/source/bpc_mq/arrange_cell.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/FileDiffs/FileDiffs.sublime-settings",
+		"/E/Users/tian/workspace/python_script/camera_tile1.txt",
+		"/E/Users/tian/workspace/python_script/yuv.py",
+		"/E/Users/tian/workspace/python_script/yuv_tile1.txt",
+		"/H/shexiangtou_output.txt",
+		"/E/Users/tian/workspace/python_script/camera_rows.txt",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/Quickfind/README.md",
+		"/E/Users/tian/workspace/python_script/camera_lines.txt",
+		"/E/Users/tian/workspace/python_script/camera_original.txt",
+		"/E/Users/tian/workspace/python_script/camera3.txt",
+		"/E/Users/tian/workspace/python_script/new3.txt",
+		"/C/Users/tian/Desktop/camera配置",
+		"/E/Users/tian/workspace/python_script/new_without_end3.txt",
+		"/E/Users/tian/workspace/python_script/test.txt",
+		"/E/Users/tian/workspace/python_script/uyvy_hex.txt",
+		"/E/Users/tian/workspace/python_script/merge_25_tiles.py",
+		"/E/Users/tian/workspace/python_script/yuv2bmp2.py",
+		"/E/Users/tian/Documents/Tencent Files/775825807/FileRecv/uyvy.txt",
+		"/E/Users/tian/workspace/python_script/uyvy.txt",
+		"/E/Users/tian/workspace/python_script/elephants/Elephant13.TXT",
+		"/E/Users/tian/workspace/python_script/elephant.txt",
+		"/E/Users/tian/workspace/python_script/camera.txt",
+		"/E/Users/tian/workspace/python_script/test.py",
+		"/E/Users/tian/workspace/python_script/new_without_end.txt",
+		"/E/Users/tian/Documents/Tencent Files/775825807/FileRecv/camera.txt",
+		"/C/Users/tian/Desktop/camera_original (2).txt",
+		"/C/Users/tian/Desktop/新建文本文档 (2).txt",
+		"/E/Users/tian/workspace/python_script/1.txt",
+		"/E/Users/tian/workspace/python_script/RGB.txt",
+		"/C/Users/tian/Desktop/yuv_rgb.cpp",
+		"/C/Users/tian/Desktop/lena_128.bmp",
+		"/C/Users/tian/Desktop/VisualAssistX_10.7.1925_Soft711/破解说明.txt",
+		"/C/Users/tian/Desktop/output.txt",
+		"/C/Users/tian/Desktop/new_without_end.txt",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/snippets/verilog/always.tmSnippet",
+		"/C/Users/tian/Desktop/camera配置2",
+		"/E/Users/tian/workspace/python_script/camera6.txt",
+		"/E/project/ise/camera/source/.tags_sorted_by_file",
+		"/E/project/ise/camera/source/.tags",
+		"/E/Users/tian/workspace/python_script/camera5.txt",
+		"/E/Users/tian/workspace/python_script/camera4.txt",
+		"/E/Users/tian/workspace/python_script/camera2.txt",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/tian/Desktop/camera.txt",
+		"/E/project/ise/jpeg2000_v5_read_sram/source/camera_sram/sram_control.v",
+		"/C/Users/tian/Desktop/新建文本文档.txt",
+		"/E/project/ise/jpeg2000_v5_read_sram/cpu/SDK/SDK_Export/hw/cpu.xml",
+		"/C/Users/tian/Desktop/camera_data.txt",
+		"/E/project/ise/jpeg2000_v5_read_sram/source/tier2/codestream_generate.v",
+		"/E/project/ise/jpeg2000_v5_read_sram/source/Tier_1_top.v",
+		"/E/project/ise/jpeg2000_v5/source/system_top.v",
+		"/E/project/ise/jpeg2000_v5_read_sram/source/camera_sram/camera_control.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/completion_files/verilog.sublime-completions",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/my_configuration/verilog/Indentation Rules.tmPreferences",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/snippets/verilog_snippet/always.tmSnippet",
+		"/E/project/ise/jpeg2000_v5/source/dwt/processing_640.v",
+		"/E/project/ise/camera/source/sram.v",
+		"/E/project/ise/camera/source/top.v",
+		"/E/project/ise/jpeg2000_v5/top.ucf",
+		"/E/project/ise/camera/top.ucf",
+		"/E/project/ise/jpeg2000_v5/source/camera_sram/camera_control.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/Theme - Phoenix/README.md",
+		"/E/project/ise/jpeg2000_v5/source/camera_sram/sram_control.v",
+		"/E/project/ise/jpeg2000_v5/source/dwt/entropy_calc.v",
+		"/E/project/ise/jpeg2000_v5/source/Tier_1_top.v",
+		"/E/project/ise/jpeg2000_v5/source/jpeg2000_top.v",
+		"/E/project/ise/jpeg2000_v5/source/read_sram.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/Theme - Soda/README.md",
+		"/E/project/ise/jpeg2000_v5/source/tier2/codestream_generate.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/E/Users/tian/Documents/Tencent Files/775825807/FileRecv/source(1)/dwt/processing_640.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/VerilogAutomatic/README.md",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/VerilogAutomatic/VerilogAutomatic.py",
+		"/E/project/ise/jpeg2000_v5/source/camera_sram/sram.v",
+		"/E/project/ise/jpeg2000_v5/source/camera_sram/camera.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/VerilogAutomatic.sublime-settings",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/ControlScroll/controlscroll.py",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/ControlScroll/controlscroll.sublime-settings",
+		"/C/Users/tian/Desktop/df/.tags_sorted_by_file",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/ControlScroll/Default.sublime-commands",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/ControlScroll/README.md",
+		"/E/Users/tian/Documents/Tencent Files/775825807/FileRecv/source(1)/dwt/processing.v",
+		"/C/Users/tian/Desktop/df/tier2/tier2_control.v",
+		"/C/Users/tian/.gitconfig",
+		"/C/Users/tian/Desktop/df/tier2/tier2_top.v",
+		"/C/Users/tian/Desktop/sublime-bower-master/sublime-bower-master/README.md",
+		"/C/Users/tian/Desktop/clone/repositories.json",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/SublimeRope/package-metadata.json",
+		"/C/Users/tian/Desktop/clone/tests/test.py",
+		"/C/Users/tian/Desktop/新建文件夹/README.md",
+		"/C/Users/tian/Desktop/T_shell-version1.0/T_shell-version1.0/README.md",
+		"/C/Users/tian/Desktop/test4/git_test/third.txt",
+		"/C/Users/tian/Desktop/test2/second.txt",
+		"/C/Users/tian/Desktop/git_test/third.txt",
+		"/C/Users/tian/Desktop/git_test/second.txt",
+		"/C/Users/tian/Desktop/T_shell-master/T_shell-master/README.md",
+		"/C/Users/tian/repo01/commit-1e706e8",
+		"/C/Users/tian/repo2/remote-repository/.git/config",
+		"/C/Users/tian/repo01/test01",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/VerilogAutomatic/VerilogAutomatic.sublime-settings",
+		"/C/Users/tian/Desktop/df/tier2/tier2_ram.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/Verilog/packages.json",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/Verilog/README.md",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/FindKeyConflicts/package-metadata.json",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/FindKeyConflicts/README.md",
+		"/C/Users/tian/Desktop/df/tier2/ram_12k.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/VerilogAutomatic/Default (Linux).sublime-keymap",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/VerilogAutomatic/Default (OSX).sublime-keymap",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/VerilogAutomatic/Default (Windows).sublime-keymap",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/VerilogAutomatic/Main.sublime-menu",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/FindKeyConflicts/find_key_conflicts.py",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/FindKeyConflicts/LICENSE.txt",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/SublimeRope/README.markdown",
+		"/C/Users/tian/Desktop/df/tier2/fifo_t1_t2.v",
+		"/C/Users/tian/Desktop/tier2_control.v",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/BracketHighlighter/Main.sublime-menu",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/Verilog Automatic/verilog_automatic.sublime-settings",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/SublimeRope/sublime_rope.py",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/verilog_automatic.sublime-settings",
+		"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\tian\\Desktop\\tier2"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ff92",
+			"ff91",
+			"ff92",
+			"FF91",
+			"ff91",
+			"28",
+			"36",
+			"00",
+			"rgb",
+			":\n",
+			"start_reg",
+			"data_test",
+			"CONFIGURE_REGISTERS",
+			"valid",
+			"clk_sccb",
+			"sccb_clk",
+			"clk_scc",
+			"DEVICE_ADDRESS",
+			"device_address",
+			"DEVICE_ADDRESS",
+			"sda_reg",
+			"com7",
+			"time_counter",
+			"sccb_end_reg1",
+			"sccb_end",
+			"READ_ID",
+			"read_phase2",
+			"device_address",
+			"sccb_counter",
+			"sccb_valid",
+			"SCCB_IDLE",
+			"sccb_valid",
+			"VSTART",
+			"COM7",
+			"data_test",
+			"cam_data_counter",
+			"data_test",
+			"pclk_reg2",
+			"data_test",
+			"frame_valid",
+			"cam_data_buffer",
+			"data_to_write",
+			"data_sram",
+			"9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F 9C 8F 74 8F",
+			"9C 8F 74 8F",
+			"start_cpu_reg1",
+			"start_cpu_reg",
+			"\\n",
+			"WRITTING_2",
+			"address",
+			"cam_data",
+			"data_to_write",
+			"data_sram",
+			"READING",
+			"data_counter",
+			"data_sram",
+			"data_from_sram",
+			"write_en_n",
+			"data_sram",
+			"data_ready_write",
+			"frame_valid",
+			"configure_over",
+			"\\n",
+			"data_to_cpu",
+			"rst",
+			"JPEG_START",
+			"jpeg_start",
+			"JPEG_START",
+			"jpeg_start",
+			"clk_100",
+			"clk",
+			"Clk",
+			"clk",
+			"CLK",
+			"clk",
+			"CLK",
+			"clk",
+			"CLK",
+			"clk",
+			"CLK",
+			"clk",
+			"CLK",
+			"clk",
+			"one_tile_full",
+			"address_to_cpu",
+			"start_cpu",
+			"write_en",
+			"output_address",
+			"address_to_cpu",
+			"output_address",
+			"address_to_sram",
+			"start_cpu",
+			"start_cpu_reg",
+			"start_cpu",
+			"start_cpu_reg",
+			"start_cpu",
+			"start_cpu_reg",
+			"start_cpu",
+			"start_cpu_reg",
+			"jpeg_start",
+			"fpga_push_button",
+			"start_jpeg",
+			"jpeg_start",
+			"JPEG_START",
+			"jpeg_start",
+			"start_jpeg",
+			"fpga_push_button",
+			"jpeg_start",
+			"test_tier",
+			"address_from_dwt",
+			"data_to_jpeg",
+			"start_cpu",
+			"test_signals",
+			"SUB_ADDRESS",
+			"sub_address",
+			"cam_vsyn",
+			"data_from_sram",
+			"jpeg_working",
+			"address_to_sram",
+			"address_to_sram_control",
+			"address_to_sram",
+			"JPEG_WORKING",
+			"address_to_sram",
+			"data_to_jpeg",
+			"start_jpeg",
+			"start_jpeg_reg",
+			"data_counter",
+			"one_tile_full"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"ff92\\n",
+			"\\nff91",
+			"ff92\\n",
+			"\\nff91",
+			"ff91\\n",
+			"start_cpu_reg1",
+			"",
+			"jpeg_start",
+			"address_to_sram_read",
+			"address_to_sram_write",
+			"address_to_sram_control",
+			"jpeg_working",
+			"JPEG_START",
+			"start_button",
+			"replace_pattern",
+			"3242"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 10,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/E/project/ise/jpeg2000_v5_read_sram/source/system_top.v",
+					"settings":
+					{
+						"buffer_size": 7270,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1298,
+								1298
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/User/my_configuration/verilog/Verilog.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 225.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/project/ise/jpeg2000_v5_read_sram/source/read_sram.v",
+					"settings":
+					{
+						"buffer_size": 4922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								690,
+								690
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/User/my_configuration/verilog/Verilog.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/E/project/ise/jpeg2000_v5_read_sram/top.ucf",
+					"settings":
+					{
+						"buffer_size": 8823,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/E/project/ise/jpeg2000_v5_read_sram/source/tier2/codestream_generate.v",
+					"settings":
+					{
+						"buffer_size": 54598,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6628,
+								6628
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/User/my_configuration/verilog/Verilog.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3557.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/E/project/ise/jpeg2000_v5_read_sram/cpu/SDK/SDK_Export/hw/test_ram_new/src/my_ram_48tile.c",
+					"settings":
+					{
+						"buffer_size": 4658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/E/project/ise/jpeg2000_v5_read_sram/source/camera_sram/camera_control.v",
+					"settings":
+					{
+						"buffer_size": 16446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9841,
+								9841
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/User/my_configuration/verilog/Verilog.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 5935.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/E/project/ise/jpeg2000_v5_read_sram/source/camera_sram/sram_control.v",
+					"settings":
+					{
+						"buffer_size": 6336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4290,
+								4290
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/User/my_configuration/verilog/Verilog.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2794.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/E/Users/tian/workspace/python_script/yuv2bmp.py",
+					"settings":
+					{
+						"buffer_size": 2864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1148,
+								1148
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 691.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/E/Users/tian/workspace/python_script/merge_25_tiles2.py",
+					"settings":
+					{
+						"buffer_size": 5270,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4484,
+								4484
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1916.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/E/Users/tian/workspace/python_script/split_to_tiles.py",
+					"settings":
+					{
+						"buffer_size": 768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								716,
+								716
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/Users/tian/Desktop/right.txt",
+					"settings":
+					{
+						"buffer_size": 4619,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1946,
+								1946
+							]
+						],
+						"settings":
+						{
+							"auto_name": "right:",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/FileDiffs/FileDiffs.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								829,
+								829
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/AAAPackageDev/Support/Sublime Settings.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/FileDiffs/README.md",
+					"settings":
+					{
+						"buffer_size": 1930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1645,
+								1645
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/C/Users/tian/Desktop/wrong.txt",
+					"settings":
+					{
+						"buffer_size": 4629,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								437,
+								437
+							]
+						],
+						"settings":
+						{
+							"auto_name": "wrong:",
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/E/Users/tian/workspace/python_script/test_binary.py",
+					"settings":
+					{
+						"buffer_size": 526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								526,
+								526
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "/E/Users/tian/workspace/python_script/remove_line_end.py",
+					"settings":
+					{
+						"buffer_size": 505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.94633273703,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.aaa_package_dev":
+	{
+		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 94.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"sram",
+				"source/camera_sram/sram_control.v"
+			],
+			[
+				"pro",
+				"source/dwt/processing_640.v"
+			],
+			[
+				"codege",
+				"source/tier2/codestream_generate.v"
+			],
+			[
+				"proce",
+				"source/dwt/processing_640.v"
+			],
+			[
+				"ti",
+				"source/Tier_1_top.v"
+			],
+			[
+				"sys",
+				"source/system_top.v"
+			],
+			[
+				"qui",
+				"/C/Users/tian/AppData/Roaming/Sublime Text 2/Packages/Quickfind/quick_find.py"
+			],
+			[
+				"tes",
+				"/E/Users/tian/Documents/Tencent Files/775825807/FileRecv/source/tier2/codestream_generate.v"
+			],
+			[
+				"fi",
+				"/C/Users/tian/Desktop/tier2/fifo_t1_t2.v"
+			],
+			[
+				"co",
+				"/C/Users/tian/Desktop/codestream_generate.v"
+			],
+			[
+				"ge",
+				"/C/Users/tian/Desktop/codestream_generate.v"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 162.0,
+	"status_bar_visible": true
+}
