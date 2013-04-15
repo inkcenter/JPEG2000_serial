@@ -1817,7 +1817,6 @@ reg halt_reg4;
 reg halt_reg5;		  
 reg halt_reg6;
 reg halt_reg7;
-reg halt_reg8;
 reg clear0;
 		   
 reg [7:0] bpc_out0;
@@ -2264,7 +2263,6 @@ always@(posedge clk_dwt or negedge rst) begin
 			halt_reg5 <= 1'b0;	
 			halt_reg6 <= 1'b0;
 			halt_reg7 <= 1'b0;
-			halt_reg8 <= 1'b0;
 		end
 		else if(rst_syn)begin
 			halt_reg1 <= 1'b0;
@@ -2274,7 +2272,6 @@ always@(posedge clk_dwt or negedge rst) begin
 			halt_reg3 <= 1'b0;
 			halt_reg6 <= 1'b0;
 			halt_reg7 <= 1'b0;
-			halt_reg8 <= 1'b0;
 		end
 		else if(pos_clk_bpc==1'b1)begin
 		  begin
@@ -2285,7 +2282,6 @@ always@(posedge clk_dwt or negedge rst) begin
 			halt_reg5 <= halt_reg4;
 			halt_reg6 <= halt_reg5;
 			halt_reg7 <= halt_reg6;
-			halt_reg8 <= halt_reg7;
 		  end
 	end
 end

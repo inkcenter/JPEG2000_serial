@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : Tier_1_top.v
 //  Created On    : 2013-04-04 21:43:33
-//  Last Modified : 2013-04-06 14:43:19
+//  Last Modified : 2013-04-15 18:31:57
 //  Revision      : 
 //  Author        : Tian Changsong
 //
@@ -23,8 +23,6 @@ module Tier_1_top(/*autoport*/
 			pass_error_sp,
 			pass_error_mp,
 			pass_error_cp,
-			ena_all_1,
-			wea_all_1,
 			addra_all_1,
 			test_tier1,
 //input
@@ -60,13 +58,9 @@ output [30:0]pass_error_mp;
 output [30:0]pass_error_cp;
 
 
-output ena_all_1;
-output [3:0]wea_all_1;
 output[17:0] addra_all_1;
 output test_tier1;
 
-wire [3:0]wea_all_1;
-wire ena_all_1;
 wire [17:0] addra_all_1;
 wire [3:0]count_bp;
 wire start_aga; 
@@ -76,10 +70,6 @@ wire [16:0] dina_o1;
 wire [16:0] dina_o2;
 wire [13:0] addra_o1;
 wire [13:0] addra_o2;
-wire ena_o1;
-wire ena_o2;
-wire wea_o1;
-wire wea_o2; 
 wire start;
 wire test_tier1;
 wire clk_sg;
@@ -155,10 +145,6 @@ wire ena_o2_r;
 wire ena_o2_w;
 //assign addra_o1 = (start_test == 1)? addra_o1_r:addra_o1_w;
 //assign addra_o2 = (start_test == 1)? addra_o2_r:addra_o2_w;
-//assign wea_o1 = (start_test == 1)? wea_o1_r:wea_o1_w;
-//assign wea_o2 = (start_test == 1)? wea_o2_r:wea_o2_w;
-//assign ena_o1 = (start_test == 1)? ena_o1_r:ena_o1_w;
-//assign ena_o2 = (start_test == 1)? ena_o2_r:ena_o2_w;
 
 wire bpc_start;
 wire bpc_start_reg;
@@ -1064,7 +1050,6 @@ write_fifo u_write_fifo(	//output
 				            .arrange_out8  (arrange_out8),
 				            .arrange_out9  (arrange_out9),
 				            .vld_num  (vld_num),
-				            .flush  (flush),
 				            .clk_wr  (clk_sg),
 							.clk_dwt	(clk_dwt),
 				            .rst  (rst),

@@ -28,7 +28,6 @@ module write_fifo(//output
 				  arrange_out8,
 				  arrange_out9,
 				  vld_num,
-				  flush,
 				  clk_wr,
 				  clk_dwt,
 				  rst,
@@ -63,7 +62,6 @@ module write_fifo(//output
 	//input stall_vld;
 	input [9:0] wrfull;
 	input [3:0] vld_num;
-	input  flush;
 	input  clk_wr;
 	input  clk_dwt;
 	input  rst;
@@ -83,22 +81,7 @@ always@(posedge clk_dwt or negedge rst)
 wire pos_clk_sg=((clk_sg_reg==1'b0)&&(clk_sg==1'b1))?1'b1:1'b0;
 	
 	
-	
-	reg flush1,flush2;
-	always@(posedge clk_dwt or negedge rst) begin
-	    if(!rst) begin
-	        flush1 <= 1'b0;
-	        flush2 <= 1'b0;
-	    end
-		else if(rst_syn)begin
-			flush1 <= 1'b0;
-			flush2 <= 1'b0;
-		end
-	    else if(pos_clk_sg==1'b1)begin
-	        flush1 <= flush;
-	        flush2 <= flush1;
-	    end
-	end
+
 	
 reg [1:0]count_clk_dwt;
 	
@@ -189,7 +172,6 @@ assign stall_vld=stall_vld_n||stall_vld_reg1||stall_vld_reg2||stall_vld_reg3;
 		else if(rst_syn)begin
 			start_point <= 0;
 		end
-		//else if(flush2==1'b1) begin
 		//    start_point <= 4'b0;
 		//end
 		else if(pos_clk_sg==1'b1)begin
@@ -507,26 +489,7 @@ always@(posedge clk_dwt or negedge rst)
 			end
 		end
 	end	
-	wire[4:0] cx0;
-	wire[4:0] cx1;
-	wire[4:0] cx2;
-	wire[4:0] cx3;
-	wire[4:0] cx4;
-	wire[4:0] cx5;
-	wire[4:0] cx6;
-	wire[4:0] cx7;
-	wire[4:0] cx8;
-	wire[4:0] cx9;
-    assign cx0 = fifo_in0[5:1];
-	assign cx1 = fifo_in1[5:1];
-	assign cx2 = fifo_in2[5:1];
-	assign cx3 = fifo_in3[5:1];
-	assign cx4 = fifo_in4[5:1];
-	assign cx5 = fifo_in5[5:1];
-	assign cx6 = fifo_in6[5:1];
-	assign cx7 = fifo_in7[5:1];
-	assign cx8 = fifo_in8[5:1];
-	assign cx9 = fifo_in9[5:1];
+	
 	
 
 	

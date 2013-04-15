@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : processing_640.v
 //  Created On    : 2013-04-04 22:24:32
-//  Last Modified : 2013-04-15 16:20:36
+//  Last Modified : 2013-04-15 18:08:45
 //  Revision      : 
 //
 //  Description   : 
@@ -85,7 +85,6 @@ reg pre_vld_delay_1;
 reg pre_vld_delay_2;
 reg pre_vld_delay_3;
 reg start_reg1;
-reg	start_reg2;
 reg [1:0]start_count;
 reg start_cpu_syn;
 reg	start_cpu_reg1;
@@ -102,7 +101,6 @@ reg over_start_delay_2;
 reg start_reg;
 reg odd_even_judge_r;
 reg odd_even_judge;
-reg odd_even_judge_delay;
 reg[7:0] dina_high_1;
 reg[7:0] dina_low_1;
 reg [16:0]dina_o1;
@@ -282,12 +280,10 @@ begin
  	if(!rst) 
  		begin
 			start_reg1 <= 1'b0;
-			start_reg2 <= 1'b0;
  		end
  	else 
  		begin
 			start_reg1 <= start_reg;
-			start_reg2 <= start_reg1;
  		end
 end
 
@@ -349,17 +345,14 @@ begin
 	if(!rst) 
 	begin
 		odd_even_judge <=1'b0;
-		odd_even_judge_delay <=1'b0;
 	end	
 	else if(rst_syn)
 	begin
 		odd_even_judge <=1'b0;
-		odd_even_judge_delay <=1'b0;
 	end	
 	else
 	begin
 		odd_even_judge <= odd_even_judge_r;
-		odd_even_judge_delay <= odd_even_judge;
 	end	
 end 
 
@@ -568,8 +561,6 @@ begin
 		end
 end
 
-// assign dina_o1 = ((addra_o1_w < 12288)&&(odd_even_judge_delay==1'b0))? {1'bz,dina_high_1[7:0],dina_low_1[7:0]}:17'bz;
-// assign dina_o2 = ((addra_o2_w < 12288)&&(odd_even_judge_delay==1'b1))? {1'bz,dina_high_1[7:0],dina_low_1[7:0]}:17'bz;
 always@(posedge clk_dwt or negedge rst) 
 begin
 	if(!rst)
@@ -632,7 +623,6 @@ end
 
 assign wea_o1_w = 1;
 assign wea_o2_w = 1;
-//assign ena_o1_w = (odd_even_judge_delay==1'b0)?  1'b1:1'b0;
 assign ena_o2_w = (odd_even_judge==1'b1)?  1'b1:1'b0;
 
 always @(*) 

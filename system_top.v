@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : system_top.v
 //  Created On    : 2013-04-04 20:07:14
-//  Last Modified : 2013-04-06 19:00:24
+//  Last Modified : 2013-04-15 18:02:33
 //  Revision      : 
 //  Author        : Tian Changsong
 //
@@ -115,10 +115,8 @@ module top(/*autoport*/
 	wire [17:0] addra_all_1;
 	wire [2:0]  compression_ratio;
 	wire [31:0] douta_all_1;
-	wire        ena_all_1;
 	wire [31:0] output_address;
 	wire [31:0] output_to_fpga_32;
-	wire [3:0]  wea_all_1;
 	wire [3:0]  write_en;
 	wire test_signals;
 
@@ -252,8 +250,6 @@ end
     .compression_ratio          (compression_ratio[2:0]         ),
     .write_en                   (write_en[3:0]                  ),
     .output_address             (output_address[31:0]           ),
-    .ena_all_1                  (ena_all_1                      ),
-    .wea_all_1                  (wea_all_1[3:0]                 ),
     .addra_all_1                (addra_all_1[17:0]              ),
     .output_to_fpga_32          (output_to_fpga_32[31:0]        ),
 	 .test_tier1(test_tier1)

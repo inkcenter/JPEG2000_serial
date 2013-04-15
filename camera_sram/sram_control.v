@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : sram_control.v
 //  Created On    : 2013-04-04 19:32:32
-//  Last Modified : 2013-04-15 16:34:55
+//  Last Modified : 2013-04-15 17:00:00
 //  Revision      : 
 //  Author        : Tian Changsong
 //
@@ -103,6 +103,7 @@ module sram_control(/*autoport*/
 	assign row_full=row_counter==640;
 	assign output_test_sram=&data_reg&&(&cam_data_reg);
 	assign data_sram=write_en_n?32'bz:data_to_write;
+	assign data_to_jpeg = jpeg_working?data_sram:0;
 
 	//assign write_en_n=!(state==WRITTING);
 	assign chip_en=0;

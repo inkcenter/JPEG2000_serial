@@ -111,9 +111,6 @@ module fifo_t1_t2(/*autoarg*/
 	reg [19:0]target_byte_number;
 	reg lram_write_en;
 	reg [ADDR_WIDTH-1:0]lram_address_wr;
-	reg over_reg1;
-	reg over_reg2;
-	reg over_reg3;
 	reg [29:0]exponent_input;
 	reg [4:0]exponent;
 	reg [4:0]state;                         
@@ -1339,13 +1336,7 @@ module fifo_t1_t2(/*autoarg*/
 		else lram_write_en<=0;
 	end
 	
-	always@(posedge wr_clk)
-	begin
-	    over_reg1<=one_codeblock_over;
-		over_reg2<=over_reg1;
-		over_reg3<=over_reg2;
-	end
-	
+
 	always@(*)
 	begin
 		if(fifo_group)

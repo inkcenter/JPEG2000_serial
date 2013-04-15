@@ -70,34 +70,7 @@ module read_fifo(//output
 			start_aga<=1'b0;
 		end
 	end   
-reg rdempty_reg1;
-reg rdempty_reg2;
-reg rdempty_reg3;
-reg rdempty_reg4;
-always@(posedge clk_rd or negedge rst) 
-	begin
-		if(!rst)
-			begin
-				rdempty_reg1<=1'b0;
-				rdempty_reg2<=1'b0;
-				rdempty_reg3<=1'b0;
-				rdempty_reg4<=1'b0;
-			end
-		else if(rst_syn)	
-			begin
-				rdempty_reg1<=1'b0;
-				rdempty_reg2<=1'b0;
-				rdempty_reg3<=1'b0;
-				rdempty_reg4<=1'b0;
-			end
-		else 
-			begin
-				rdempty_reg1<=rdempty;
-			    rdempty_reg2<=rdempty_reg1;
-			    rdempty_reg3<=rdempty_reg2;
-			    rdempty_reg4<=rdempty_reg3;
-			end	
-	end
+
 	always@(posedge clk_rd or negedge rst) begin
 	    if(!rst) begin
 		    rd_vld_reg <= 10'b0;
@@ -177,29 +150,6 @@ always@(posedge clk_rd or negedge rst)
 		endcase
 	end
 	
-	wire[4:0]cx0_r;
-	wire[4:0]cx1_r;
-	wire[4:0]cx2_r;
-	wire[4:0]cx3_r;
-	wire[4:0]cx4_r;
-	wire[4:0]cx5_r;
-	wire[4:0]cx6_r;
-	wire[4:0]cx7_r;
-	wire[4:0]cx8_r;
-	wire[4:0]cx9_r;
-    assign cx0_r = fifo_out0[5:1];
-	assign cx1_r = fifo_out1[5:1];
-	assign cx2_r = fifo_out2[5:1];
-	assign cx3_r = fifo_out3[5:1];
-	assign cx4_r = fifo_out4[5:1];
-	assign cx5_r = fifo_out5[5:1];
-	assign cx6_r = fifo_out6[5:1];
-	assign cx7_r = fifo_out7[5:1];
-	assign cx8_r = fifo_out8[5:1];
-	assign cx9_r = fifo_out9[5:1];
-	
-	wire[4:0] cx_r;
-	assign cx_r = fifo_out[5:1];
 	
 
 endmodule 

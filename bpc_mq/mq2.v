@@ -3608,19 +3608,7 @@ always @(posedge clk or negedge rst)
   else if(!flush_over)
     flush_delay4<=flush_delay3;
 
-reg flush_en_delay4_0;
-always @(posedge clk or negedge rst)
-  if(!rst)
-    flush_en_delay4_0<=0;
-	else if(rst_syn)begin
-	  flush_en_delay4_0<=0;	
-	end
-   else if(start_aga) begin
-    flush_en_delay4_0<=0;
-  end
-  else if(!flush_over)
-    flush_en_delay4_0<=flush_en_delay3_0;	
-	
+
 	
 reg flush_en_delay4_1;
 always @(posedge clk or negedge rst)
@@ -3662,16 +3650,7 @@ always @(posedge clk or negedge rst)
     flush_en_delay4_3<=flush_en_delay3_3;
 	
 	
-reg flush_en_delay4_4;
-always @(posedge clk or negedge rst)
-  if(!rst)
-    flush_en_delay4_4<=0;
-  else if(rst_syn)
-	  flush_en_delay4_4<=0;
-  else if(start_aga) 
-    flush_en_delay4_4<=0;
-  else if(!flush_over)
-    flush_en_delay4_4<=flush_en_delay3_4;
+
 
 	
 reg flush_en_delay4_5;
@@ -3945,8 +3924,7 @@ always @(posedge clk or negedge rst)
   else
      MQ_out<=data_to_fifo;
 
-wire[7:0] MQ_out_a=MQ_out[15:8];
-wire[7:0] MQ_out_b=MQ_out[7:0];
+
     
 wire[1:0]  Bout_flag_reg_sp;
 wire[1:0]  Bout_flag_reg_mrp;

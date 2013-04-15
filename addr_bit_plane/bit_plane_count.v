@@ -248,14 +248,7 @@ reg [3:0]plane_count_reg3_ram3;
 reg [3:0]plane_count_reg1_ram4;
 reg [3:0]plane_count_reg2_ram4;
 reg [3:0]plane_count_reg3_ram4;
-wire [3:0]plane_count_reg_ram1;
-wire [3:0]plane_count_reg_ram2;
-wire [3:0]plane_count_reg_ram3;
-wire [3:0]plane_count_reg_ram4;
-wire [3:0]plane_count_reg_mid_ram1;
-wire [3:0]plane_count_reg_mid_ram2;
-wire [3:0]plane_count_reg_mid_ram3;
-wire [3:0]plane_count_reg_mid_ram4;
+
 wire return_sta;
 wire unvalid_cnt_over_before;
 reg unvalid_cnt_over_before_1;
@@ -568,8 +561,6 @@ always@(posedge clk_mmu or negedge rst)begin
 	end
 end
 
-assign plane_count_reg_mid_ram2=(unvalid_cnt_over==0)?4'b0:(plane_count_reg1_ram2>=plane_count_reg2_ram2)?plane_count_reg1_ram2:plane_count_reg2_ram2;
-assign plane_count_reg_ram2=(unvalid_cnt_over==0)?4'b0:(plane_count_reg3_ram2>=plane_count_reg_mid_ram2)?plane_count_reg3_ram2:plane_count_reg_mid_ram2;
 
 always@(posedge clk_mmu or negedge rst)begin
 	if(!rst)begin
@@ -810,8 +801,6 @@ always@(posedge clk_mmu or negedge rst)begin
 	end
 end
 
-assign plane_count_reg_mid_ram3=(unvalid_cnt_over==0)?4'b0:(plane_count_reg1_ram3>=plane_count_reg2_ram3)?plane_count_reg1_ram3:plane_count_reg2_ram3;
-assign plane_count_reg_ram3=(unvalid_cnt_over==0)?4'b0:(plane_count_reg3_ram3>=plane_count_reg_mid_ram3)?plane_count_reg3_ram3:plane_count_reg_mid_ram3;
 
 
 always@(posedge clk_mmu or negedge rst)begin
@@ -1053,8 +1042,6 @@ always@(posedge clk_mmu or negedge rst)begin
 	end
 end
 
-assign plane_count_reg_mid_ram4=(unvalid_cnt_over==0)?4'b0:(plane_count_reg1_ram4>=plane_count_reg2_ram4)?plane_count_reg1_ram4:plane_count_reg2_ram4;
-assign plane_count_reg_ram4=(unvalid_cnt_over==0)?4'b0:(plane_count_reg3_ram4>=plane_count_reg_mid_ram4)?plane_count_reg3_ram4:plane_count_reg_mid_ram4;
 
 always@(posedge clk_mmu or negedge rst)begin
 	if(!rst)begin
@@ -1148,37 +1135,6 @@ always@(posedge clk_mmu or negedge rst)begin
 	end
 end
 
-// always@(posedge clk_mmu or negedge rst)begin
-	// if(!rst)begin
-		// block_count_0_hh<=0;
-		// block_count_1_hh<=0;
-		// block_count_2_hh<=0;
-		// block_count_3_hh<=0;
-		// block_count_4_hh<=0;
-	// end
-	// else if(rst_syn)begin
-		// block_count_0_hh<=0;
-		// block_count_1_hh<=0;
-		// block_count_2_hh<=0;
-		// block_count_3_hh<=0;
-		// block_count_4_hh<=0;
-	// end
-	// else if((unvalid_cnt_over==1'b1)&&(cnount_level==3'd1))begin
-		// block_count_0_hh<=plane_count_reg_ram4;
-	// end
-	// else if((unvalid_cnt_over==1'b1)&&(cnount_level==3'd2))begin
-		// block_count_1_hh<=plane_count_reg_ram4;
-	// end	
-	// else if((unvalid_cnt_over==1'b1)&&(cnount_level==3'd3))begin
-		// block_count_2_hh<=plane_count_reg_ram4;
-	// end
-	// else if((unvalid_cnt_over==1'b1)&&(cnount_level==3'd4))begin
-		// block_count_3_hh<=plane_count_reg_ram4;
-	// end
-	// else if((unvalid_cnt_over==1'b1)&&(cnount_level==3'd5))begin
-		// block_count_4_hh<=plane_count_reg_ram4;
-	// end
-// end 
 
 ////*********************** ram1 bit_plane_count **********************************////
 
@@ -1296,8 +1252,6 @@ always@(posedge clk_mmu or negedge rst)begin
 	end
 end
 
-assign plane_count_reg_mid_ram1=(unvalid_cnt_over==0)?4'b0:(plane_count_reg1_ram1>=plane_count_reg2_ram1)?plane_count_reg1_ram1:plane_count_reg2_ram1;
-assign plane_count_reg_ram1=(unvalid_cnt_over==0)?4'b0:(plane_count_reg3_ram1>=plane_count_reg_mid_ram1)?plane_count_reg3_ram1:plane_count_reg_mid_ram1;
 
 always@(posedge clk_mmu or negedge rst)begin
 	if(!rst)begin
@@ -1323,17 +1277,7 @@ always@(posedge clk_mmu or negedge rst)begin
 	end
 end
 
-// always@(posedge clk_mmu or negedge rst)begin
-	// if(!rst)begin
-		// block_count_4_ll<=0;
-	// end
-	// else if(rst_syn)begin
-		// block_count_4_ll<=0;
-	// end
-	// else if((unvalid_cnt_over==1'b1)&&(cnount_level==3'd5))begin
-		// block_count_4_ll<=plane_count_reg_ram1;
-	// end
-// end 
+
 
 endmodule 
 

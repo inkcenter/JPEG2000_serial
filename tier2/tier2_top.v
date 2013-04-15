@@ -31,7 +31,6 @@ parameter WORD_WIDTH=18,
 	input [30:0]pass_error_mp;
 	input [30:0]pass_error_cp;
 
-	//output [31:0]codestream_output_32;
 	output [31:0]output_address;
 	output [3:0]write_en;
 	output rst_syn;
@@ -42,7 +41,6 @@ parameter WORD_WIDTH=18,
 	wire [ADDR_WIDTH-1:0]lram_address_rd;
 	wire [7:0]codeblock_counter;
 	//wire [15:0]codestream_output;
-	wire [31:0]codestream_output_32;
 	wire [31:0]output_address;
 	wire [3:0]write_en;
 	wire rst_syn;

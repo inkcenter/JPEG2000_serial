@@ -1,0 +1,710 @@
+diff --git a/bpc_mq/bpc_generate.v b/bpc_mq/bpc_generate.v
+index 3f8c0d4..8831a2b 100644
+--- a/bpc_mq/bpc_generate.v
++++ b/bpc_mq/bpc_generate.v
+@@ -1269,11 +1269,11 @@ always@(posedge clk_rc or negedge rst) begin
+ 		//stripe_over_delay1 <= 1'b0;		
+ 		stripe_over_flag <= 1'b0;
+ 	end
+-	else if(pos_clk_bpc==1'b1)begin	
+-		if(stall_vld == 1'b0)begin
++	//else if(pos_clk_bpc==1'b1)begin	
++	else if(stall_vld == 1'b0)begin
+ 			//stripe_over_delay1 <= stripe_over_delay;
+ 			stripe_over_flag <= stripe_over_delay;
+-		end
++		//end
+ 	end
+ end
+ 
+diff --git a/camera_sram/camera_control.v b/camera_sram/camera_control.v
+index cbd7c24..0651169 100644
+--- a/camera_sram/camera_control.v
++++ b/camera_sram/camera_control.v
+@@ -1,7 +1,7 @@
+ //==================================================================================================
+ //  Filename      : camera_control.v
+ //  Created On    : 2013-04-04 19:32:51
+-//  Last Modified : 2013-04-06 16:28:00
++//  Last Modified : 2013-04-11 19:24:05
+ //  Revision      : 
+ //  Author        : Tian Changsong
+ //
+@@ -38,18 +38,19 @@ output configure_over;
+ 
+ parameter IDLE            =0,
+ CONFIGURE_REGISTERS_BEGIN =1,
+-READ_ID                   =13,
+-COM7                      =2,
+-VSTART                    =7,
+-VSTOP                     =8,
+-VREF                      =11,
+-HSTART                    =9,
+-HSTOP                     =10,
+-HREF                      =12,
++READ_ID                   =2,
+ CONFIGURE_REGISTERS_OVER  =3,
+ READ_DATA_BEGIN           =4,
+ READ_DATA                 =5,
+-READ_DATA_OVER            =6;
++READ_DATA_OVER            =6,
++CONFIGURE_REGISTERS=7;
++// COM7                   =2,
++// VSTART                 =7,
++// VSTOP                  =8,
++// VREF                   =11,
++// HSTART                 =9,
++// HSTOP                  =10,
++// HREF                      =12,
+ 
+ parameter SCCB_IDLE =0,
+ SCCB_START          =1,
+@@ -63,6 +64,7 @@ SCCB_END            =5;
+ 
+ 
+ /* reg */
++reg [7:0]register_counter;
+ reg configure_over;
+ reg read_over;
+ reg read_phase2;
+@@ -72,8 +74,8 @@ reg sda_reg;
+ reg sccb_valid;
+ reg [6:0]time_counter;
+ reg [12:0]col_counter;
+-reg [4:0]state;
+-reg [4:0]nextstate;
++reg [7:0]state;
++reg [7:0]nextstate;
+ reg [2:0]state_sccb;
+ reg [2:0]nextstate_sccb;
+ reg [4:0]sccb_counter;
+@@ -97,6 +99,17 @@ assign clk_sccb=time_counter[6];
+ assign sda_input_en=sccb_counter==16||sccb_counter==17||(state_sccb==READING);
+ //assign sda_response=(sccb_counter==16||sccb_counter==17)?sda:1'b0;
+ /* reg internal */
++always @(posedge clk_25 or negedge rst)
++begin
++	if (!rst) 
++	begin
++		register_counter<=0;
++	end
++	else  if(!sccb_end&&sccb_end_reg1)
++	begin
++		register_counter<=register_counter+1;
++	end
++end
+ always@(posedge clk_sccb or negedge rst)
+ begin
+ 	if(!rst)
+@@ -141,7 +154,7 @@ begin
+ 					READING:state_identifier<=4;
+ 				endcase
+ 			end 
+-			COM7:
++			CONFIGURE_REGISTERS:
+ 			begin
+ 				case(state_sccb)
+ 					DEVICE_ADDRESS:state_identifier<=5;
+@@ -189,7 +202,7 @@ end
+ always@(*)
+ begin
+     case(state)
+-		READ_ID,COM7, VSTART, VSTOP, VREF, HSTART, HSTOP, HREF:sccb_valid=1;
++		CONFIGURE_REGISTERS,READ_ID:sccb_valid=1;
+ 		default:sccb_valid=0;
+ 	endcase
+ end
+@@ -229,15 +242,144 @@ begin
+ 	else
+ 	begin
+ 		case(state)
+-			//READ_ID:sub_address<=8'h0b;
+-			READ_ID:sub_address <=8'h3a;
+-			COM7:sub_address    <=8'h12;
+-			VSTART:sub_address  <=8'h19;
+-			VSTOP:sub_address   <=8'h1a;
+-			VREF:sub_address    <=8'h03;
+-			HSTART:sub_address  <=8'h17;
+-			HSTOP:sub_address   <=8'h18;
+-			HREF:sub_address    <=8'h32;
++			// READ_ID:sub_address<=8'h0b;
++			READ_ID:sub_address <=8'h18;
++			CONFIGURE_REGISTERS:
++			begin
++				case(register_counter)
++					0  :sub_address<=8'h12;
++					1  :sub_address<=8'h11;
++					2  :sub_address<=8'h6a;
++					3  :sub_address<=8'h3b;
++					4  :sub_address<=8'h13;
++					5  :sub_address<=8'h01;
++					6  :sub_address<=8'h02;
++					7  :sub_address<=8'h00;
++					8  :sub_address<=8'h10;
++					9  :sub_address<=8'h13;
++					10 :sub_address<=8'h39;
++					11 :sub_address<=8'h38;
++					12 :sub_address<=8'h37;
++					13 :sub_address<=8'h35;
++					14 :sub_address<=8'h0e;
++					15 :sub_address<=8'h1e;
++					16 :sub_address<=8'hA8;
++					17 :sub_address<=8'h14;
++					18 :sub_address<=8'h04;
++					19 :sub_address<=8'h0c;
++					20 :sub_address<=8'h0d;
++					21 :sub_address<=8'h18;
++					22 :sub_address<=8'h17;
++					23 :sub_address<=8'h32;
++					24 :sub_address<=8'h03;
++					25 :sub_address<=8'h1a;
++					26 :sub_address<=8'h19;
++					27 :sub_address<=8'h3f;
++					28 :sub_address<=8'h14;
++					29 :sub_address<=8'h15;
++					30 :sub_address<=8'h41;
++					31 :sub_address<=8'h42;
++					32 :sub_address<=8'h1b;
++					33 :sub_address<=8'h16;
++					34 :sub_address<=8'h33;
++					35 :sub_address<=8'h34;
++					36 :sub_address<=8'h96;
++					37 :sub_address<=8'h3a;
++					38 :sub_address<=8'h8e;
++					39 :sub_address<=8'h3c;
++					40 :sub_address<=8'h8B;
++					41 :sub_address<=8'h94;
++					42 :sub_address<=8'h95;
++					43 :sub_address<=8'h40;
++					44 :sub_address<=8'h29;
++					45 :sub_address<=8'h0f;
++					46 :sub_address<=8'h3d;
++					47 :sub_address<=8'h69;
++					48 :sub_address<=8'h5C;
++					49 :sub_address<=8'h5D;
++					50 :sub_address<=8'h5E;
++					51 :sub_address<=8'h59;
++					52 :sub_address<=8'h5A;
++					53 :sub_address<=8'h5B;
++					54 :sub_address<=8'h43;
++					55 :sub_address<=8'h44;
++					56 :sub_address<=8'h45;
++					57 :sub_address<=8'h46;
++					58 :sub_address<=8'h47;
++					59 :sub_address<=8'h48;
++					60 :sub_address<=8'h5F;
++					61 :sub_address<=8'h60;
++					62 :sub_address<=8'h61;
++					63 :sub_address<=8'ha5;
++					64 :sub_address<=8'ha4;
++					65 :sub_address<=8'h8d;
++					66 :sub_address<=8'h13;
++					67 :sub_address<=8'h4f;
++					68 :sub_address<=8'h50;
++					69 :sub_address<=8'h51;
++					70 :sub_address<=8'h52;
++					71 :sub_address<=8'h53;
++					72 :sub_address<=8'h54;
++					73 :sub_address<=8'h55;
++					74 :sub_address<=8'h56;
++					75 :sub_address<=8'h57;
++					76 :sub_address<=8'h58;
++					77 :sub_address<=8'h8C;
++					78 :sub_address<=8'h3E;
++					79 :sub_address<=8'ha9;
++					80 :sub_address<=8'haa;
++					81 :sub_address<=8'hab;
++					82 :sub_address<=8'h8f;
++					83 :sub_address<=8'h90;
++					84 :sub_address<=8'h91;
++					85 :sub_address<=8'h9f;
++					86 :sub_address<=8'ha0;
++					87 :sub_address<=8'h3A;
++					88 :sub_address<=8'h24;
++					89 :sub_address<=8'h25;
++					90 :sub_address<=8'h26;
++					91 :sub_address<=8'h2a;
++					92 :sub_address<=8'h2b;
++					93 :sub_address<=8'h6c;
++					94 :sub_address<=8'h6d;
++					95 :sub_address<=8'h6e;
++					96 :sub_address<=8'h6f;
++					97 :sub_address<=8'h70;
++					98 :sub_address<=8'h71;
++					99 :sub_address<=8'h72;
++					100:sub_address<=8'h73;
++					101:sub_address<=8'h74;
++					102:sub_address<=8'h75;
++					103:sub_address<=8'h76;
++					104:sub_address<=8'h77;
++					105:sub_address<=8'h78;
++					106:sub_address<=8'h79;
++					107:sub_address<=8'h7a;
++					108:sub_address<=8'h7b;
++					109:sub_address<=8'h7c;
++					110:sub_address<=8'h7d;
++					111:sub_address<=8'h7e;
++					112:sub_address<=8'h7f;
++					113:sub_address<=8'h80;
++					114:sub_address<=8'h81;
++					115:sub_address<=8'h82;
++					116:sub_address<=8'h83;
++					117:sub_address<=8'h84;
++					118:sub_address<=8'h85;
++					119:sub_address<=8'h86;
++					120:sub_address<=8'h87;
++					121:sub_address<=8'h88;
++					122:sub_address<=8'h89;
++					123:sub_address<=8'h8a;
++				endcase
++			end
++			// COM7:sub_address    <=8'h12;
++			// VSTART:sub_address  <=8'h19;
++			// VSTOP:sub_address   <=8'h1a;
++			// VREF:sub_address    <=8'h03;
++			// HSTART:sub_address  <=8'h17;
++			// HSTOP:sub_address   <=8'h18;
++			// HREF:sub_address    <=8'h32;
+ 		endcase
+ 	end 
+ end
+@@ -247,15 +389,143 @@ begin
+ 		register<=0;
+ 	else
+ 	begin
+-		case(state)
+-			//COM7:register<=8'h40;//yuv
+-			COM7:register   <=8'h00;//yuv
+-			VSTART:register <=8'h09;//row start
+-			VSTOP:register  <=8'h59;//row stop
+-			VREF:register   <=8'h00;//[5:3]:row stop low bits,[2:0]:row start low bits 
+-			HSTART:register <=8'h09;//col start
+-			HSTOP:register  <=8'h59;//col stop
+-			HREF:register   <=8'h00;//[5:3]col stop low bits,[2:0]col start low bits
++		case(register_counter)
++			0  :register<=8'h80;//COM7
++			1  :register<=8'h80;//ori:81
++			2  :register<=8'h3e;
++			3  :register<=8'h09;
++			4  :register<=8'he0;
++			5  :register<=8'h80;
++			6  :register<=8'h80;
++			7  :register<=8'h00;
++			8  :register<=8'h00;
++			9  :register<=8'he5;
++			10 :register<=8'h50;//ori:43
++			11 :register<=8'h93;//ori:12
++			12 :register<=8'h81;//ori:91
++			13 :register<=8'h91;
++			14 :register<=8'h20;//COM5
++			15 :register<=8'h04;
++			16 :register<=8'h80;
++			17 :register<=8'h40;
++			18 :register<=8'h00;
++			19 :register<=8'h00;//ori:04
++			20 :register<=8'h00;//ori:80
++			21 :register<=8'h76;//HSTOP,59
++			// 21 :register<=8'h59;//HSTOP,59
++			22 :register<=8'h26;//HSTART,09
++			// 22 :register<=8'h09;//HSTART,09
++			23 :register<=8'h00;//HREF,00
++			24 :register<=8'h00;
++			// 25 :register<=8'h59;//VSTOP,59
++			// 26 :register<=8'h09;//VSTRT,09
++			25 :register<=8'h76;//VSTOP,59
++			26 :register<=8'h26;//VSTRT,09
++			27 :register<=8'ha6;
++			28 :register<=8'h2e;
++			29 :register<=8'h10;
++			30 :register<=8'h02;
++			31 :register<=8'h08;
++			32 :register<=8'h00;
++			33 :register<=8'h06;
++			34 :register<=8'he2;
++			35 :register<=8'hbf;
++			36 :register<=8'h04;
++			37 :register<=8'h00;//uyvy
++			// 37 :register<=8'h00;
++			38 :register<=8'h00;
++			39 :register<=8'h77;
++			40 :register<=8'h06;
++			41 :register<=8'h88;
++			42 :register<=8'h88;
++			43 :register<=8'hc1;
++			44 :register<=8'h3f;
++			45 :register<=8'h42;
++			46 :register<=8'h92;
++			47 :register<=8'h40;
++			48 :register<=8'hb9;
++			49 :register<=8'h96;
++			50 :register<=8'h10;
++			51 :register<=8'hc0;
++			52 :register<=8'haf;
++			53 :register<=8'h55;
++			54 :register<=8'hf0;
++			55 :register<=8'h10;
++			56 :register<=8'h68;
++			57 :register<=8'h96;
++			58 :register<=8'h60;
++			59 :register<=8'h80;
++			60 :register<=8'he0;
++			61 :register<=8'h8c;
++			62 :register<=8'h20;
++			63 :register<=8'hd9;
++			64 :register<=8'h74;
++			65 :register<=8'h02;
++			66 :register<=8'he7;
++			67 :register<=8'h3a;
++			68 :register<=8'h3d;
++			69 :register<=8'h03;
++			70 :register<=8'h12;
++			71 :register<=8'h26;
++			72 :register<=8'h38;
++			73 :register<=8'h40;
++			74 :register<=8'h40;
++			75 :register<=8'h40;
++			76 :register<=8'h0d;
++			77 :register<=8'h23;
++			78 :register<=8'h02;
++			79 :register<=8'hb8;
++			80 :register<=8'h92;
++			81 :register<=8'h0a;
++			82 :register<=8'hdf;
++			83 :register<=8'h00;
++			84 :register<=8'h00;
++			85 :register<=8'h00;
++			86 :register<=8'h00;
++			87 :register<=8'h01;
++			88 :register<=8'h70;
++			89 :register<=8'h64;
++			90 :register<=8'hc3;
++			91 :register<=8'h00;
++			92 :register<=8'h00;
++			93 :register<=8'h40;
++			94 :register<=8'h30;
++			95 :register<=8'h4b;
++			96 :register<=8'h60;
++			97 :register<=8'h70;
++			98 :register<=8'h70;
++			99 :register<=8'h70;
++			100:register<=8'h70;
++			101:register<=8'h60;
++			102:register<=8'h60;
++			103:register<=8'h50;
++			104:register<=8'h48;
++			105:register<=8'h3a;
++			106:register<=8'h2e;
++			107:register<=8'h28;
++			108:register<=8'h22;
++			109:register<=8'h04;
++			110:register<=8'h07;
++			111:register<=8'h10;
++			112:register<=8'h28;
++			113:register<=8'h36;
++			114:register<=8'h44;
++			115:register<=8'h52;
++			116:register<=8'h60;
++			117:register<=8'h6c;
++			118:register<=8'h78;
++			119:register<=8'h8c;
++			120:register<=8'h9e;
++			121:register<=8'hbb;
++			122:register<=8'hd2;
++			123:register<=8'he6;
++			// COM7:register   <=8'h00;//yuv
++			// VSTART:register <=8'h09;//row start
++			// VSTOP:register  <=8'h59;//row stop
++			// VREF:register   <=8'h00;//[5:3]:row stop low bits,[2:0]:row start low bits 
++			// HSTART:register <=8'h09;//col start
++			// HSTOP:register  <=8'h59;//col stop
++			// HREF:register   <=8'h00;//[5:3]col stop low bits,[2:0]col start low bits
+ 		endcase
+ 	end 
+ end
+@@ -372,56 +642,25 @@ begin
+ 		end 
+ 		CONFIGURE_REGISTERS_BEGIN:
+ 		begin
+-			nextstate=COM7;
++			nextstate=CONFIGURE_REGISTERS;
+ 		end 
++		CONFIGURE_REGISTERS:
++		begin
++			if (register_counter==123&&!sccb_end&&sccb_end_reg1) 
++			begin
++				nextstate=READ_ID;
++			end
++			else 
++			begin
++				nextstate=CONFIGURE_REGISTERS;
++			end
++		end
+ 		READ_ID:
+ 		begin
+ 			if(!sccb_end&&sccb_end_reg1&&read_over)
+ 				nextstate=CONFIGURE_REGISTERS_OVER;
+ 			else nextstate=READ_ID;
+ 		end 
+-		COM7:
+-		begin 
+-			if(!sccb_end&&sccb_end_reg1)
+-				nextstate=VSTART;
+-			else nextstate=COM7;
+-		end 
+-		VSTART:
+-		begin
+-			if(!sccb_end&&sccb_end_reg1)
+-				nextstate=VSTOP;
+-			else nextstate=VSTART;
+-		end 
+-		VSTOP:
+-		begin
+-			if(!sccb_end&&sccb_end_reg1)
+-				nextstate=VREF;
+-			else nextstate=VSTOP;
+-		end 
+-		VREF:
+-		begin
+-			if(!sccb_end&&sccb_end_reg1)
+-				nextstate=HSTART;
+-			else nextstate=VREF;
+-		end 
+-		HSTART:
+-		begin
+-			if(!sccb_end&&sccb_end_reg1)
+-				nextstate=HSTOP;
+-			else nextstate=HSTART;
+-		end 
+-		HSTOP:
+-		begin
+-			if(!sccb_end&&sccb_end_reg1)
+-				nextstate=HREF;
+-			else nextstate=HSTOP;
+-		end 
+-		HREF:
+-		begin
+-			if(!sccb_end&&sccb_end_reg1)
+-				nextstate=READ_ID;
+-			else nextstate=HREF;
+-		end 
+ 		CONFIGURE_REGISTERS_OVER:
+ 		begin
+ 			nextstate=IDLE;
+diff --git a/camera_sram/sram_control.v b/camera_sram/sram_control.v
+index 3aab3cb..bba6c1a 100644
+--- a/camera_sram/sram_control.v
++++ b/camera_sram/sram_control.v
+@@ -1,7 +1,7 @@
+ //==================================================================================================
+ //  Filename      : sram_control.v
+ //  Created On    : 2013-04-04 19:32:32
+-//  Last Modified : 2013-04-05 18:10:17
++//  Last Modified : 2013-04-09 21:50:48
+ //  Revision      : 
+ //  Author        : Tian Changsong
+ //
+@@ -14,7 +14,7 @@ module sram_control(/*autoport*/
+ //inout
+ 			data_sram,
+ //output
+-			address_to_sram,
++			address_to_sram_write,
+ 			adv,
+ 			write_en_n,
+ 			chip_en,
+@@ -22,7 +22,7 @@ module sram_control(/*autoport*/
+ 			byte_en,
+ 			output_test_sram,
+ 			jpeg_start,
+-			data_to_jpeg,
++			jpeg_working,
+ //input
+ 			clk_100,
+ 			rst,
+@@ -30,8 +30,7 @@ module sram_control(/*autoport*/
+ 			cam_pclk,
+ 			cam_href,
+ 			cam_vsyn,
+-			configure_over,
+-			address_from_dwt);
++			configure_over);
+ 	input clk_100;
+ 	input rst;
+ 	input [7:0]cam_data;
+@@ -40,9 +39,8 @@ module sram_control(/*autoport*/
+ 	input cam_href;
+ 	input cam_vsyn;
+ 	input configure_over;
+-	input [17:0]address_from_dwt;
+ 
+-	output [17:0]address_to_sram;
++	output [17:0]address_to_sram_write;
+ 	output adv;
+ 	output write_en_n;
+ 	output chip_en;
+@@ -50,7 +48,7 @@ module sram_control(/*autoport*/
+ 	output [3:0]byte_en;
+ 	output output_test_sram;
+ 	output jpeg_start;
+-	output [31:0]data_to_jpeg;
++	output jpeg_working;
+ 
+ 
+ 	parameter IDLE=0,
+@@ -82,6 +80,7 @@ module sram_control(/*autoport*/
+ 	reg pclk_reg1;
+ 	reg pclk_reg2;
+ 	reg jpeg_working;
++	reg [31:0]data_test;
+ 
+ 	/* wire */
+ 	wire jpeg_start;
+@@ -93,16 +92,14 @@ module sram_control(/*autoport*/
+ 	wire [31:0]data_sram;
+ 	wire [3:0]byte_en;
+ 	wire row_full;
+-	wire address_to_sram;
+-	wire [31:0]data_to_jpeg;
++	wire [17:0]address_to_sram_write;
+ 	/* wire assign */
+ 	assign jpeg_start = state==JPEG_START;
+-	assign address_to_sram = jpeg_working?address_from_dwt:address;
++	assign address_to_sram_write = address;
+ 	assign encoding_free=(state==IDLE||state==WRITTING_1||state==WRITTING_2||state==WRITE_WAITING);
+ 	assign row_full=row_counter==640;
+ 	assign output_test_sram=&data_reg&&(&cam_data_reg);
+ 	assign data_sram=write_en_n?32'bz:data_to_write;
+-	assign data_to_jpeg = jpeg_working?data_sram:0;
+ 
+ 	//assign write_en_n=!(state==WRITTING);
+ 	assign chip_en=0;
+@@ -199,6 +196,18 @@ module sram_control(/*autoport*/
+ 		else if(pclk_reg1&&!pclk_reg2&&cam_href&&frame_valid)
+ 			cam_data_counter<=cam_data_counter+1;
+ 	end
++	always @(posedge clk_100 or negedge rst)
++	begin
++		if (!rst) 
++		begin
++			data_test<=0;
++		end
++		// else if(pclk_reg1&&!pclk_reg2&&cam_href&&frame_valid) 
++		else if(pclk_reg1&&!pclk_reg2&&cam_href&&frame_valid&&cam_data_counter==3) //for test
++		begin
++			data_test<=data_test+1;
++		end
++	end
+ 	always@(posedge clk_100 or negedge rst)
+ 	begin
+ 		if(!rst)
+@@ -209,6 +218,11 @@ module sram_control(/*autoport*/
+ 				1:cam_data_buffer[23:16]<=cam_data;
+ 				2:cam_data_buffer[15:8]<=cam_data;
+ 				3:cam_data_buffer[7:0]<=cam_data;
++
++				// 0:cam_data_buffer[31:24]<=data_test;//for test
++				// 1:cam_data_buffer[23:16]<=data_test;//for test
++				// 2:cam_data_buffer[15:8]<=data_test;//for test
++				// 3:cam_data_buffer<=data_test;//for test
+ 			endcase
+ 	end
+ 	
+diff --git a/dwt/processing_640.v b/dwt/processing_640.v
+index dbefee4..d9b1732 100644
+--- a/dwt/processing_640.v
++++ b/dwt/processing_640.v
+@@ -1,33 +1,32 @@
+ //==================================================================================================
+ //  Filename      : processing_640.v
+-//  Created On    : 2013-04-06 14:40:13
+-//  Last Modified : 2013-04-06 14:40:14
++//  Created On    : 2013-04-04 22:24:32
++//  Last Modified : 2013-04-12 19:20:46
+ //  Revision      : 
+-//  Author        : Tian Changsong
+ //
+ //  Description   : 
+ //
+ //
+ //==================================================================================================
+-module processing(	//output
+-					//ena_all_1,
+-					addra_all_1,
+-					dina_o1,
+-					dina_o2,
+-					addra_o1_w,
+-					addra_o2_w,
+-					wea_o1_w,
+-					wea_o2_w,
+-					ena_o1_w,
+-					ena_o2_w,
+-					start,
+-					//input
+-					douta_all_1,
+-					start_cpu,
+-					clk_dwt,
+-                    clk_sg,
+-					rst,
+-					rst_syn		);
++module processing(/*autoport*/
++//output
++			addra_all_1, 
++			dina_o1,
++			dina_o2,
++			addra_o1_w,
++			addra_o2_w,
++			wea_o1_w,
++			wea_o2_w,
++			ena_o1_w,
++			ena_o2_w,
++			start,
++//input
++			douta_all_1,
++			start_cpu,
++			clk_dwt,
++			clk_sg,
++			rst,
++			rst_syn);
+ 							
+ 
+ //output ena_all_1;
+@@ -116,7 +115,6 @@ assign pre_vld = (fsm==work);
+ assign pre_vld_and = pre_vld_delay_2 & pre_vld_delay;
+ assign over_start = (addra_o2_w==12287);
+ assign start_pre = start_pre_reg1||start_pre_reg2||start_pre_reg3||start_pre_reg4;
+-
+ /*********************************************************/
+ always @(posedge clk_dwt or negedge rst) 
+ begin
+@@ -327,7 +325,7 @@ begin
+ 	else if(count == 191)
+ 	    count <= 9'b0;
+ 	else if(pre_vld_delay_2==1'b1)
+-		count <= count + 1;
++		count = count + 1;
+ end
+ 	
+ always @(posedge clk_dwt or negedge rst) 
+@@ -546,16 +544,16 @@ begin
+ 		begin	
+ 			case(count_3)
+ 				0:	begin
+-						dina_low_1  <= douta_all_1[23:16];		//Y0	
+-						dina_high_1 <= douta_all_1[7:0];		//Y1
++						dina_low_1  <= douta_all_1[31:24]-128;		//Y0	
++						dina_high_1 <= douta_all_1[15:8]-128;		//Y1
+ 					end
+ 				1:	begin
+-						dina_low_1  <= douta_all_1[31:24];		//U0
+-						dina_high_1 <= douta_all_1[31:24];		//U1	
++						dina_low_1  <= douta_all_1[23:16]-128;		//U0
++						dina_high_1 <= douta_all_1[23:16]-128;		//U1	
+ 					end
+ 				2:	begin
+-						dina_low_1  <= douta_all_1[15:8];		//V0
+-						dina_high_1 <= douta_all_1[15:8];		//V1
++						dina_low_1  <= douta_all_1[7:0]-128;		//V0
++						dina_high_1 <= douta_all_1[7:0]-128;		//V1
+ 					end
+ 			default:begin
+ 						dina_high_1 <= 8'b0;

@@ -146,6 +146,7 @@ douta_3	Tier_1_top.v	/^wire [16:0]douta_3;$/;"	n
 douta_4	Tier_1_top.v	/^wire [16:0]douta_4;$/;"	n
 douta_64	Tier_1_top.v	/^wire[16:0] douta_64;$/;"	n
 douta_all_1	Tier_1_top.v	/^input [31:0]douta_all_1;											$/;"	p
+douta_all_1_reg	Tier_1_top.v	/^reg [31:0]douta_all_1_reg;\/\/data from sram,for test$/;"	r
 douta_o1	Tier_1_top.v	/^wire [16:0] douta_o1;$/;"	n
 douta_o2	Tier_1_top.v	/^wire [16:0] douta_o2;$/;"	n
 doutb_1	Tier_1_top.v	/^wire[16:0] doutb_1;$/;"	n
@@ -167,12 +168,8 @@ ena_3_m	Tier_1_top.v	/^wire ena_3_m;$/;"	n
 ena_4_b	Tier_1_top.v	/^wire ena_4_b;$/;"	n
 ena_4_m	Tier_1_top.v	/^wire ena_4_m;$/;"	n
 ena_64	Tier_1_top.v	/^wire ena_64;$/;"	n
-ena_all_1	Tier_1_top.v	/^output ena_all_1;$/;"	p
-ena_all_1	Tier_1_top.v	/^wire ena_all_1;$/;"	n
-ena_o1	Tier_1_top.v	/^wire ena_o1;$/;"	n
 ena_o1_r	Tier_1_top.v	/^wire ena_o1_r;$/;"	n
 ena_o1_w	Tier_1_top.v	/^wire ena_o1_w;$/;"	n
-ena_o2	Tier_1_top.v	/^wire ena_o2;$/;"	n
 ena_o2_r	Tier_1_top.v	/^wire ena_o2_r;$/;"	n
 ena_o2_w	Tier_1_top.v	/^wire ena_o2_w;$/;"	n
 enb_1	Tier_1_top.v	/^wire enb_1;$/;"	n
@@ -279,12 +276,8 @@ wea_2_m	Tier_1_top.v	/^wire wea_2_m;$/;"	n
 wea_3_m	Tier_1_top.v	/^wire wea_3_m;$/;"	n
 wea_4_m	Tier_1_top.v	/^wire wea_4_m;$/;"	n
 wea_64	Tier_1_top.v	/^wire wea_64;$/;"	n
-wea_all_1	Tier_1_top.v	/^output [3:0]wea_all_1;$/;"	p
-wea_all_1	Tier_1_top.v	/^wire [3:0]wea_all_1;$/;"	n
-wea_o1	Tier_1_top.v	/^wire wea_o1;$/;"	n
 wea_o1_r	Tier_1_top.v	/^wire wea_o1_r;$/;"	n
 wea_o1_w	Tier_1_top.v	/^wire wea_o1_w;$/;"	n
-wea_o2	Tier_1_top.v	/^wire wea_o2; $/;"	n
 wea_o2_r	Tier_1_top.v	/^wire wea_o2_r;$/;"	n
 wea_o2_w	Tier_1_top.v	/^wire wea_o2_w;$/;"	n
 web_1	Tier_1_top.v	/^wire web_1;											$/;"	n
@@ -713,7 +706,6 @@ halt_reg4	bpc_mq\bpc.v	/^reg halt_reg4;$/;"	r
 halt_reg5	bpc_mq\bpc.v	/^reg halt_reg5;		  $/;"	r
 halt_reg6	bpc_mq\bpc.v	/^reg halt_reg6;$/;"	r
 halt_reg7	bpc_mq\bpc.v	/^reg halt_reg7;$/;"	r
-halt_reg8	bpc_mq\bpc.v	/^reg halt_reg8;$/;"	r
 incnt	bpc_mq\bpc.v	/^reg [5:0] incnt;$/;"	r
 last_cp	bpc_mq\bpc.v	/^	reg [64:0] last_cp;$/;"	r
 last_sign	bpc_mq\bpc.v	/^reg [63:0] last_sign;$/;"	r
@@ -957,8 +949,6 @@ MSB_2	bpc_mq\bpc_generate.v	/^reg [3:0]MSB_2;$/;"	r
 MSB_3	bpc_mq\bpc_generate.v	/^reg [3:0]MSB_3;$/;"	r
 MSB_4	bpc_mq\bpc_generate.v	/^reg [3:0]MSB_4;$/;"	r
 band	bpc_mq\bpc_generate.v	/^input [1:0] band;$/;"	p
-band_delay1	bpc_mq\bpc_generate.v	/^reg[1:0]band_delay1;$/;"	r
-band_flag	bpc_mq\bpc_generate.v	/^reg[1:0]band_flag;$/;"	r
 bit1_nmsedec	bpc_mq\bpc_generate.v	/^output[16:0] bit1_nmsedec;	$/;"	p
 bit1_nmsedec	bpc_mq\bpc_generate.v	/^reg[16:0]bit1_nmsedec;$/;"	r
 bit1_nmsedec_n	bpc_mq\bpc_generate.v	/^reg[16:0]bit1_nmsedec_n;$/;"	r
@@ -1160,11 +1150,8 @@ addra_4_n	bpc_mq\bpc_read_control.v	/^reg [13:0] addra_4_n;$/;"	r
 band	bpc_mq\bpc_read_control.v	/^output [1:0] band;$/;"	p
 band	bpc_mq\bpc_read_control.v	/^reg[1:0] band;$/;"	r
 band_n	bpc_mq\bpc_read_control.v	/^reg[1:0] band_n;$/;"	r
-band_reg	bpc_mq\bpc_read_control.v	/^reg [1:0]band_reg;$/;"	r
-band_reg_reg	bpc_mq\bpc_read_control.v	/^reg [1:0]band_reg_reg;$/;"	r
 band_unequ_band	bpc_mq\bpc_read_control.v	/^reg band_unequ_band;$/;"	r
 band_unequ_band_n	bpc_mq\bpc_read_control.v	/^wire band_unequ_band_n=(band!=band_n)?1'b1:1'b0;$/;"	n
-band_unequ_band_reg	bpc_mq\bpc_read_control.v	/^reg band_unequ_band_reg;$/;"	r
 block_all_bp_over	bpc_mq\bpc_read_control.v	/^output block_all_bp_over;$/;"	p
 block_all_bp_over	bpc_mq\bpc_read_control.v	/^wire block_all_bp_over;$/;"	n
 block_over	bpc_mq\bpc_read_control.v	/^reg block_over;$/;"	r
@@ -1612,8 +1599,6 @@ MASK_S	bpc_mq\mq2.v	/^reg[27:0] MASK_S;$/;"	r
 MPS1	bpc_mq\mq2.v	/^wire MPS1;$/;"	n
 MQ_out	bpc_mq\mq2.v	/^output [15:0]MQ_out; \/\/from fifo$/;"	p
 MQ_out	bpc_mq\mq2.v	/^reg [15:0] MQ_out; $/;"	r
-MQ_out_a	bpc_mq\mq2.v	/^wire[7:0] MQ_out_a=MQ_out[15:8];$/;"	n
-MQ_out_b	bpc_mq\mq2.v	/^wire[7:0] MQ_out_b=MQ_out[7:0];$/;"	n
 NLPS1	bpc_mq\mq2.v	/^reg [6:0]NLPS1;$/;"	r
 NMPS1	bpc_mq\mq2.v	/^reg [6:0]NMPS1;$/;"	r
 PCXD	bpc_mq\mq2.v	/^input[7:0] PCXD;$/;"	p
@@ -1723,13 +1708,11 @@ flush_en_delay3_9	bpc_mq\mq2.v	/^reg flush_en_delay3_9,flush_en_delay3_10,flush_
 flush_en_delay3_cp	bpc_mq\mq2.v	/^reg flush_en_delay3_sp,flush_en_delay3_mrp,flush_en_delay3_cp;$/;"	r
 flush_en_delay3_mrp	bpc_mq\mq2.v	/^reg flush_en_delay3_sp,flush_en_delay3_mrp,flush_en_delay3_cp;$/;"	r
 flush_en_delay3_sp	bpc_mq\mq2.v	/^reg flush_en_delay3_sp,flush_en_delay3_mrp,flush_en_delay3_cp;$/;"	r
-flush_en_delay4_0	bpc_mq\mq2.v	/^reg flush_en_delay4_0;$/;"	r
 flush_en_delay4_1	bpc_mq\mq2.v	/^reg flush_en_delay4_1;$/;"	r
 flush_en_delay4_10	bpc_mq\mq2.v	/^reg flush_en_delay4_10;$/;"	r
 flush_en_delay4_11	bpc_mq\mq2.v	/^reg flush_en_delay4_11;$/;"	r
 flush_en_delay4_2	bpc_mq\mq2.v	/^reg flush_en_delay4_2;$/;"	r
 flush_en_delay4_3	bpc_mq\mq2.v	/^reg flush_en_delay4_3;$/;"	r
-flush_en_delay4_4	bpc_mq\mq2.v	/^reg flush_en_delay4_4;$/;"	r
 flush_en_delay4_5	bpc_mq\mq2.v	/^reg flush_en_delay4_5;$/;"	r
 flush_en_delay4_6	bpc_mq\mq2.v	/^reg flush_en_delay4_6;$/;"	r
 flush_en_delay4_7	bpc_mq\mq2.v	/^reg flush_en_delay4_7;$/;"	r
@@ -1884,17 +1867,6 @@ word_last_sp	bpc_mq\mq_out_state_generate.v	/^output word_last_sp;$/;"	p
 word_last_sp	bpc_mq\mq_out_state_generate.v	/^reg word_last_sp;$/;"	r
 word_last_valid	bpc_mq\mq_out_state_generate.v	/^input [1:0]word_last_valid;$/;"	p
 clk_rd	bpc_mq\read_fifo.v	/^	input       clk_rd;$/;"	p
-cx0_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx0_r;$/;"	n
-cx1_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx1_r;$/;"	n
-cx2_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx2_r;$/;"	n
-cx3_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx3_r;$/;"	n
-cx4_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx4_r;$/;"	n
-cx5_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx5_r;$/;"	n
-cx6_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx6_r;$/;"	n
-cx7_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx7_r;$/;"	n
-cx8_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx8_r;$/;"	n
-cx9_r	bpc_mq\read_fifo.v	/^	wire[4:0]cx9_r;$/;"	n
-cx_r	bpc_mq\read_fifo.v	/^	wire[4:0] cx_r;$/;"	n
 fifo_out	bpc_mq\read_fifo.v	/^	reg [7:0] fifo_out;$/;"	r
 fifo_out	bpc_mq\read_fifo.v	/^    output [7:0] fifo_out;$/;"	p
 fifo_out0	bpc_mq\read_fifo.v	/^	input [7:0] fifo_out0;$/;"	p
@@ -1914,10 +1886,6 @@ rd_vld_delay1	bpc_mq\read_fifo.v	/^	reg [9:0]rd_vld_delay1;$/;"	r
 rd_vld_n	bpc_mq\read_fifo.v	/^	reg [9:0] rd_vld_n;$/;"	r
 rd_vld_reg	bpc_mq\read_fifo.v	/^    reg [9:0] rd_vld_reg;$/;"	r
 rdempty	bpc_mq\read_fifo.v	/^	input [9:0] rdempty;$/;"	p
-rdempty_reg1	bpc_mq\read_fifo.v	/^reg rdempty_reg1;$/;"	r
-rdempty_reg2	bpc_mq\read_fifo.v	/^reg rdempty_reg2;$/;"	r
-rdempty_reg3	bpc_mq\read_fifo.v	/^reg rdempty_reg3;$/;"	r
-rdempty_reg4	bpc_mq\read_fifo.v	/^reg rdempty_reg4;$/;"	r
 read_fifo	bpc_mq\read_fifo.v	/^module read_fifo(\/\/output$/;"	m
 rst	bpc_mq\read_fifo.v	/^	input       rst;$/;"	p
 rst_syn	bpc_mq\read_fifo.v	/^	input       rst_syn;$/;"	p
@@ -1940,16 +1908,6 @@ clk_sg	bpc_mq\write_fifo.v	/^wire clk_sg=clk_wr;$/;"	n
 clk_sg_reg	bpc_mq\write_fifo.v	/^reg clk_sg_reg;$/;"	r
 clk_wr	bpc_mq\write_fifo.v	/^	input  clk_wr;$/;"	p
 count_clk_dwt	bpc_mq\write_fifo.v	/^reg [1:0]count_clk_dwt;$/;"	r
-cx0	bpc_mq\write_fifo.v	/^	wire[4:0] cx0;$/;"	n
-cx1	bpc_mq\write_fifo.v	/^	wire[4:0] cx1;$/;"	n
-cx2	bpc_mq\write_fifo.v	/^	wire[4:0] cx2;$/;"	n
-cx3	bpc_mq\write_fifo.v	/^	wire[4:0] cx3;$/;"	n
-cx4	bpc_mq\write_fifo.v	/^	wire[4:0] cx4;$/;"	n
-cx5	bpc_mq\write_fifo.v	/^	wire[4:0] cx5;$/;"	n
-cx6	bpc_mq\write_fifo.v	/^	wire[4:0] cx6;$/;"	n
-cx7	bpc_mq\write_fifo.v	/^	wire[4:0] cx7;$/;"	n
-cx8	bpc_mq\write_fifo.v	/^	wire[4:0] cx8;$/;"	n
-cx9	bpc_mq\write_fifo.v	/^	wire[4:0] cx9;$/;"	n
 fifo_in0	bpc_mq\write_fifo.v	/^	output [7:0] fifo_in0;$/;"	p
 fifo_in0	bpc_mq\write_fifo.v	/^    reg [7:0] fifo_in0;$/;"	r
 fifo_in1	bpc_mq\write_fifo.v	/^	output [7:0] fifo_in1;$/;"	p
@@ -1971,8 +1929,6 @@ fifo_in8	bpc_mq\write_fifo.v	/^	reg [7:0] fifo_in8;$/;"	r
 fifo_in9	bpc_mq\write_fifo.v	/^	output [7:0] fifo_in9;$/;"	p
 fifo_in9	bpc_mq\write_fifo.v	/^	reg [7:0] fifo_in9;$/;"	r
 flush	bpc_mq\write_fifo.v	/^	input  flush;$/;"	p
-flush1	bpc_mq\write_fifo.v	/^	reg flush1,flush2;$/;"	r
-flush2	bpc_mq\write_fifo.v	/^	reg flush1,flush2;$/;"	r
 pos_clk_sg	bpc_mq\write_fifo.v	/^wire pos_clk_sg=((clk_sg_reg==1'b0)&&(clk_sg==1'b1))?1'b1:1'b0;$/;"	n
 rst	bpc_mq\write_fifo.v	/^	input  rst;$/;"	p
 rst_syn	bpc_mq\write_fifo.v	/^	input  rst_syn;$/;"	p
@@ -1997,27 +1953,21 @@ wr_vldn_reg2	bpc_mq\write_fifo.v	/^reg [9:0]wr_vldn_reg2;$/;"	r
 wr_vldn_reg3	bpc_mq\write_fifo.v	/^reg [9:0]wr_vldn_reg3;$/;"	r
 wrfull	bpc_mq\write_fifo.v	/^	input [9:0] wrfull;$/;"	p
 write_fifo	bpc_mq\write_fifo.v	/^module write_fifo(\/\/output$/;"	m
-COM7	camera_sram\camera_control.v	/^COM7                      =2,$/;"	c
+CONFIGURE_REGISTERS	camera_sram\camera_control.v	/^CONFIGURE_REGISTERS=7;$/;"	c
 CONFIGURE_REGISTERS_BEGIN	camera_sram\camera_control.v	/^CONFIGURE_REGISTERS_BEGIN =1,$/;"	c
 CONFIGURE_REGISTERS_OVER	camera_sram\camera_control.v	/^CONFIGURE_REGISTERS_OVER  =3,$/;"	c
 DEVICE_ADDRESS	camera_sram\camera_control.v	/^DEVICE_ADDRESS      =2,$/;"	c
-HREF	camera_sram\camera_control.v	/^HREF                      =12,$/;"	c
-HSTART	camera_sram\camera_control.v	/^HSTART                    =9,$/;"	c
-HSTOP	camera_sram\camera_control.v	/^HSTOP                     =10,$/;"	c
 IDLE	camera_sram\camera_control.v	/^parameter IDLE            =0,$/;"	c
 READING	camera_sram\camera_control.v	/^READING             =6,$/;"	c
 READ_DATA	camera_sram\camera_control.v	/^READ_DATA                 =5,$/;"	c
 READ_DATA_BEGIN	camera_sram\camera_control.v	/^READ_DATA_BEGIN           =4,$/;"	c
-READ_DATA_OVER	camera_sram\camera_control.v	/^READ_DATA_OVER            =6;$/;"	c
-READ_ID	camera_sram\camera_control.v	/^READ_ID                   =13,$/;"	c
+READ_DATA_OVER	camera_sram\camera_control.v	/^READ_DATA_OVER            =6,$/;"	c
+READ_ID	camera_sram\camera_control.v	/^READ_ID                   =2,$/;"	c
 READ_OVER	camera_sram\camera_control.v	/^READ_OVER           =7,$/;"	c
 SCCB_END	camera_sram\camera_control.v	/^SCCB_END            =5;$/;"	c
 SCCB_IDLE	camera_sram\camera_control.v	/^parameter SCCB_IDLE =0,$/;"	c
 SCCB_START	camera_sram\camera_control.v	/^SCCB_START          =1,$/;"	c
 SUB_ADDRESS	camera_sram\camera_control.v	/^SUB_ADDRESS         =3,$/;"	c
-VREF	camera_sram\camera_control.v	/^VREF                      =11,$/;"	c
-VSTART	camera_sram\camera_control.v	/^VSTART                    =7,$/;"	c
-VSTOP	camera_sram\camera_control.v	/^VSTOP                     =8,$/;"	c
 WRITE_DATA	camera_sram\camera_control.v	/^WRITE_DATA          =4,$/;"	c
 cam_href	camera_sram\camera_control.v	/^input cam_href;$/;"	p
 cam_pclk	camera_sram\camera_control.v	/^input cam_pclk;$/;"	p
@@ -2029,13 +1979,14 @@ col_counter	camera_sram\camera_control.v	/^reg [12:0]col_counter;$/;"	r
 configure_over	camera_sram\camera_control.v	/^output configure_over;$/;"	p
 configure_over	camera_sram\camera_control.v	/^reg configure_over;$/;"	r
 device_address	camera_sram\camera_control.v	/^reg [7:0]device_address;$/;"	r
-nextstate	camera_sram\camera_control.v	/^reg [4:0]nextstate;$/;"	r
+nextstate	camera_sram\camera_control.v	/^reg [7:0]nextstate;$/;"	r
 nextstate_sccb	camera_sram\camera_control.v	/^reg [2:0]nextstate_sccb;$/;"	r
 output_test_camera	camera_sram\camera_control.v	/^output output_test_camera;$/;"	p
 output_test_camera	camera_sram\camera_control.v	/^wire output_test_camera;$/;"	n
 read_over	camera_sram\camera_control.v	/^reg read_over;$/;"	r
 read_phase2	camera_sram\camera_control.v	/^reg read_phase2;$/;"	r
 register	camera_sram\camera_control.v	/^reg [7:0]register;$/;"	r
+register_counter	camera_sram\camera_control.v	/^reg [7:0]register_counter;$/;"	r
 rst	camera_sram\camera_control.v	/^input rst;$/;"	p
 sccb_counter	camera_sram\camera_control.v	/^reg [4:0]sccb_counter;$/;"	r
 sccb_end	camera_sram\camera_control.v	/^wire sccb_end;$/;"	n
@@ -2050,7 +2001,7 @@ sda_reg	camera_sram\camera_control.v	/^reg sda_reg;$/;"	r
 sda_response	camera_sram\camera_control.v	/^reg sda_response;$/;"	r
 start_button	camera_sram\camera_control.v	/^input start_button;$/;"	p
 start_reg	camera_sram\camera_control.v	/^reg start_reg;$/;"	r
-state	camera_sram\camera_control.v	/^reg [4:0]state;$/;"	r
+state	camera_sram\camera_control.v	/^reg [7:0]state;$/;"	r
 state_identifier	camera_sram\camera_control.v	/^reg [2:0]state_identifier;$/;"	r
 state_sccb	camera_sram\camera_control.v	/^reg [2:0]state_sccb;$/;"	r
 sub_address	camera_sram\camera_control.v	/^reg [7:0]sub_address;$/;"	r
@@ -2088,12 +2039,15 @@ data_ready_write	camera_sram\sram_control.v	/^	reg data_ready_write;$/;"	r
 data_reg	camera_sram\sram_control.v	/^	reg [31:0]data_reg;$/;"	r
 data_sram	camera_sram\sram_control.v	/^	inout [31:0]data_sram;$/;"	p
 data_sram	camera_sram\sram_control.v	/^	wire [31:0]data_sram;$/;"	n
+data_test	camera_sram\sram_control.v	/^	reg [31:0]data_test;$/;"	r
+data_to_jpeg	camera_sram\sram_control.v	/^	output [31:0]data_to_jpeg;$/;"	p
+data_to_jpeg	camera_sram\sram_control.v	/^	wire [31:0]data_to_jpeg;$/;"	n
 data_to_write	camera_sram\sram_control.v	/^	reg [31:0]data_to_write;$/;"	r
 encoding_free	camera_sram\sram_control.v	/^	wire encoding_free;$/;"	n
 frame_valid	camera_sram\sram_control.v	/^	reg frame_valid;$/;"	r
 jpeg_start	camera_sram\sram_control.v	/^	output jpeg_start;$/;"	p
 jpeg_start	camera_sram\sram_control.v	/^	wire jpeg_start;$/;"	n
-jpeg_working	camera_sram\sram_control.v	/^	wire jpeg_working;$/;"	n
+jpeg_working	camera_sram\sram_control.v	/^	reg jpeg_working;$/;"	r
 nextstate	camera_sram\sram_control.v	/^	reg [3:0]nextstate;$/;"	r
 output_en	camera_sram\sram_control.v	/^	output output_en;$/;"	p
 output_en	camera_sram\sram_control.v	/^	wire output_en;$/;"	n
@@ -2706,7 +2660,6 @@ fsm_address_n	dwt\processing_640.v	/^reg [1:0]fsm_address_n;$/;"	r
 fsm_n	dwt\processing_640.v	/^reg fsm_n;$/;"	r
 idle	dwt\processing_640.v	/^parameter 	idle = 0 ,$/;"	c
 odd_even_judge	dwt\processing_640.v	/^reg odd_even_judge;$/;"	r
-odd_even_judge_delay	dwt\processing_640.v	/^reg odd_even_judge_delay;$/;"	r
 odd_even_judge_r	dwt\processing_640.v	/^reg odd_even_judge_r;$/;"	r
 over	dwt\processing_640.v	/^wire over;$/;"	n
 over_start	dwt\processing_640.v	/^wire over_start;$/;"	n
@@ -2720,7 +2673,7 @@ pre_vld_delay	dwt\processing_640.v	/^reg pre_vld_delay;$/;"	r
 pre_vld_delay_1	dwt\processing_640.v	/^reg pre_vld_delay_1;$/;"	r
 pre_vld_delay_2	dwt\processing_640.v	/^reg pre_vld_delay_2;$/;"	r
 pre_vld_delay_3	dwt\processing_640.v	/^reg pre_vld_delay_3;$/;"	r
-processing	dwt\processing_640.v	/^module processing(	\/\/output$/;"	m
+processing	dwt\processing_640.v	/^module processing(\/*autoport*\/$/;"	m
 rst	dwt\processing_640.v	/^input rst;$/;"	p
 rst_syn	dwt\processing_640.v	/^input rst_syn;$/;"	p
 start	dwt\processing_640.v	/^output start;$/;"	p
@@ -2740,7 +2693,6 @@ start_pre_reg3	dwt\processing_640.v	/^reg	start_pre_reg3;$/;"	r
 start_pre_reg4	dwt\processing_640.v	/^reg	start_pre_reg4;$/;"	r
 start_reg	dwt\processing_640.v	/^reg start_reg;$/;"	r
 start_reg1	dwt\processing_640.v	/^reg start_reg1;$/;"	r
-start_reg2	dwt\processing_640.v	/^reg	start_reg2;$/;"	r
 wait_add_tile	dwt\processing_640.v	/^			wait_add_tile=2'b00;$/;"	c
 wea_o1_w	dwt\processing_640.v	/^output wea_o1_w;$/;"	p
 wea_o1_w	dwt\processing_640.v	/^wire wea_o1_w;$/;"	n
@@ -4852,14 +4804,12 @@ wrch_full	ip_core\FIFO_GENERATOR_V7_2.v	/^  wire                          wrch_f
 wrch_prog_empty	ip_core\FIFO_GENERATOR_V7_2.v	/^  wire                          wrch_prog_empty   ;$/;"	n
 wrch_prog_full	ip_core\FIFO_GENERATOR_V7_2.v	/^  wire                          wrch_prog_full    ;$/;"	n
 write_fifo	ip_core\FIFO_GENERATOR_V7_2.v	/^  task write_fifo;$/;"	t
-addra_all_1	jpeg2000_top.v	/^output [31:0] addra_all_1;$/;"	p
+addra_all_1	jpeg2000_top.v	/^output [17:0] addra_all_1;$/;"	p
 addra_all_1	jpeg2000_top.v	/^wire [17:0] addra_all_1;$/;"	n
 clk_dwt	jpeg2000_top.v	/^input clk_dwt;$/;"	p
 compression_ratio	jpeg2000_top.v	/^input [2:0]compression_ratio;$/;"	p
 data_from_mq	jpeg2000_top.v	/^wire [15:0]data_from_mq;				$/;"	n
 douta_all_1	jpeg2000_top.v	/^input [31:0]douta_all_1;$/;"	p
-ena_all_1	jpeg2000_top.v	/^output ena_all_1;$/;"	p
-ena_all_1	jpeg2000_top.v	/^wire ena_all_1;$/;"	n
 flush_over	jpeg2000_top.v	/^wire flush_over;$/;"	n
 jpeg2000_top	jpeg2000_top.v	/^module jpeg2000_top(	\/\/Inputs$/;"	m
 one_codeblock_over	jpeg2000_top.v	/^wire one_codeblock_over;$/;"	n
@@ -4876,8 +4826,6 @@ rst_syn	jpeg2000_top.v	/^wire rst_syn;$/;"	n
 start_cpu	jpeg2000_top.v	/^input start_cpu;$/;"	p
 test_tier1	jpeg2000_top.v	/^output test_tier1;$/;"	p
 test_tier1	jpeg2000_top.v	/^wire test_tier1;$/;"	n
-wea_all_1	jpeg2000_top.v	/^output [3:0]wea_all_1;$/;"	p
-wea_all_1	jpeg2000_top.v	/^wire [3:0]wea_all_1;$/;"	n
 word_last_flag_plane_cp	jpeg2000_top.v	/^wire word_last_flag_plane_cp;					$/;"	n
 word_last_flag_plane_mp	jpeg2000_top.v	/^wire word_last_flag_plane_mp;					$/;"	n
 word_last_flag_plane_sp	jpeg2000_top.v	/^wire word_last_flag_plane_sp;				$/;"	n
@@ -5079,10 +5027,24 @@ rst	quant\quant_new.v	/^input rst;$/;"	p
 rst_syn	quant\quant_new.v	/^input rst_syn;$/;"	p
 signed	quant\quant_new.v	/^wire signed [35:0] mul_out_h;$/;"	n
 signed	quant\quant_new.v	/^wire signed [35:0] mul_out_l;$/;"	n
+IDLE	read_sram.v	/^parameter IDLE=0,$/;"	c
+READING	read_sram.v	/^READING=2,$/;"	c
+READ_BEGIN	read_sram.v	/^READ_BEGIN=1,$/;"	c
+READ_OVER	read_sram.v	/^READ_OVER=3;$/;"	c
+address_to_cpu	read_sram.v	/^output address_to_cpu;$/;"	p
+clk	read_sram.v	/^input clk;$/;"	p
+data_from_sram	read_sram.v	/^input data_from_sram;$/;"	p
+data_to_cpu	read_sram.v	/^output data_to_cpu;$/;"	p
+nextstate	read_sram.v	/^reg [2:0]nextstate;$/;"	r
+read_sram	read_sram.v	/^module read_sram(\/*autoport*\/);$/;"	m
+rst	read_sram.v	/^input rst;$/;"	p
+start_jpeg	read_sram.v	/^input start_jpeg;$/;"	p
+state	read_sram.v	/^reg [2:0]state;$/;"	r
 addra_all_1	system_top.v	/^	wire [17:0] addra_all_1;$/;"	n
-address_from_dwt	system_top.v	/^  wire address_from_dwt;$/;"	n
+address_from_dwt	system_top.v	/^  wire [17:0]address_from_dwt;$/;"	n
 address_to_sram	system_top.v	/^    output [17:0]address_to_sram;$/;"	p
 address_to_sram	system_top.v	/^  wire [17:0]address_to_sram;$/;"	n
+address_to_sram_reg	system_top.v	/^reg [17:0]address_to_sram_reg;\/\/for test$/;"	r
 adv	system_top.v	/^    output adv;$/;"	p
 adv	system_top.v	/^  wire adv;$/;"	n
 byte_en	system_top.v	/^    output [3:0]byte_en;$/;"	p
@@ -5111,8 +5073,8 @@ compression_ratio	system_top.v	/^	wire [2:0]  compression_ratio;$/;"	n
 configure_over	system_top.v	/^  wire configure_over;$/;"	n
 data_sram	system_top.v	/^    inout [31:0]data_sram;$/;"	p
 data_sram	system_top.v	/^  wire [31:0]data_sram;$/;"	n
+data_to_jpeg	system_top.v	/^wire [31:0]data_to_jpeg;$/;"	n
 douta_all_1	system_top.v	/^	wire [31:0] douta_all_1;$/;"	n
-ena_all_1	system_top.v	/^	wire        ena_all_1;$/;"	n
 fpga_0_RS232_ctsN_pin	system_top.v	/^	wire fpga_0_RS232_ctsN_pin; $/;"	n
 fpga_0_RS232_rtsN_pin	system_top.v	/^  wire fpga_0_RS232_rtsN_pin;$/;"	n
 fpga_0_RS232_sin_pin	system_top.v	/^	input fpga_0_RS232_sin_pin;$/;"	p
@@ -5159,7 +5121,6 @@ test_signals	system_top.v	/^	output test_signals;$/;"	p
 test_signals	system_top.v	/^	wire test_signals;$/;"	n
 test_tier1	system_top.v	/^	wire test_tier1;$/;"	n
 top	system_top.v	/^module top(\/*autoport*\/$/;"	m
-wea_all_1	system_top.v	/^	wire [3:0]  wea_all_1;$/;"	n
 write_en	system_top.v	/^	wire [3:0]  write_en;$/;"	n
 write_en_n	system_top.v	/^    output write_en_n;$/;"	p
 write_en_n	system_top.v	/^  wire write_en_n;$/;"	n
@@ -5792,9 +5753,6 @@ one_codeblock_over	tier2\fifo_t1_t2.v	/^	input one_codeblock_over;$/;"	p
 one_codeblock_over_reg	tier2\fifo_t1_t2.v	/^	reg one_codeblock_over_reg;$/;"	r
 output_to_ram	tier2\fifo_t1_t2.v	/^	output [WORD_WIDTH-1:0]output_to_ram;$/;"	p
 output_to_ram	tier2\fifo_t1_t2.v	/^	reg [17:0]output_to_ram;$/;"	r
-over_reg1	tier2\fifo_t1_t2.v	/^	reg over_reg1;$/;"	r
-over_reg2	tier2\fifo_t1_t2.v	/^	reg over_reg2;$/;"	r
-over_reg3	tier2\fifo_t1_t2.v	/^	reg over_reg3;$/;"	r
 pass_error	tier2\fifo_t1_t2.v	/^	reg [29:0]pass_error;$/;"	r
 pass_error_expanded	tier2\fifo_t1_t2.v	/^	wire [38:0]pass_error_expanded;$/;"	n
 pass_error_expanded_shifted	tier2\fifo_t1_t2.v	/^	wire [37:0]pass_error_expanded_shifted;$/;"	n
@@ -6379,7 +6337,6 @@ codeblock_counter	tier2\tier2_top.v	/^	wire [7:0]codeblock_counter;$/;"	n
 codeblock_shift_over	tier2\tier2_top.v	/^	wire codeblock_shift_over;$/;"	n
 codestream_generate_over	tier2\tier2_top.v	/^	wire codestream_generate_over;$/;"	n
 codestream_generate_start	tier2\tier2_top.v	/^	wire			codestream_generate_start;$/;"	n
-codestream_output_32	tier2\tier2_top.v	/^	wire [31:0]codestream_output_32;$/;"	n
 compression_ratio	tier2\tier2_top.v	/^	input [2:0]compression_ratio;$/;"	p
 data_from_mq	tier2\tier2_top.v	/^	input [15:0]data_from_mq;$/;"	p
 data_from_ram	tier2\tier2_top.v	/^	wire [WORD_WIDTH-1:0]data_from_ram=ldata_ram;$/;"	n

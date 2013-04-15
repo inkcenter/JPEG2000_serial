@@ -1307,24 +1307,6 @@ always@(posedge clk_rc or negedge rst) begin
 	end
 end
 
-reg[1:0]band_flag;
-reg[1:0]band_delay1;
-always@(posedge clk_rc or negedge rst) begin
-	if(!rst) begin
-		band_delay1 <= 2'b0;
-		band_flag <= 2'b0;
-	end
-	else if(rst_syn)begin
-		band_delay1 <= 2'b0;
-		band_flag <= 2'b0;
-	end
-	else if(pos_clk_bpc==1'b1)begin
-		if(stall_vld == 1'b0)begin
-			band_delay1 <= band;
-			band_flag <= band_delay1;
-		end
-	end
-end
 
 
  

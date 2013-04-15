@@ -357,9 +357,6 @@ parameter WORD_WIDTH=18,
 	assign one_tile_over=state==ONE_TILE_OVER;
 	assign rst_syn=(one_tile_over_reg_1||one_tile_over_reg_2||one_tile_over_reg_3||one_tile_over_reg_4||one_tile_over_reg_5);
 	assign pass_all_scaned=(pass_counter!=0&&codeblock_index!=current_codeblock_index);
-	assign subband_codeblock_number_1=(packet_counter==0||packet_counter==1||packet_counter==2||packet_counter==3||packet_counter==4||packet_counter==5||packet_counter==6||packet_counter==7||packet_counter==8||packet_counter==9||packet_counter==10||packet_counter==11||packet_counter==12||packet_counter==13||packet_counter==14||packet_counter==15||packet_counter==16||packet_counter==17);
-	assign subband_codeblock_number_4=(packet_counter==18||packet_counter==19||packet_counter==20);
-	assign subband_codeblock_number_16=(packet_counter==21||packet_counter==22||packet_counter==23);
 	assign all_subband_over=state_tagtree==ALL_SUBBAND_OVER;
 	assign one_subband_over=state_tagtree==ONE_SUBBAND_OVER;
 	assign bit_stuff_0=(shift_counter==8&&bit_buffer==8'hff);

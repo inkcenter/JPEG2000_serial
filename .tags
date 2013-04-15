@@ -148,8 +148,8 @@ COLL_DELAY	.\ip_core\BLK_MEM_GEN_V7_2.v	/^    wire [0:0]                #COLL_DE
 COLL_DELAY	.\ip_core\BLK_MEM_GEN_V7_2.v	/^    wire [0:0]                #COLL_DELAY web_delay   = web_i;$/;"	n
 COLL_DELAY	.\ip_core\BLK_MEM_GEN_V7_2.v	/^    wire [C_ADDRA_WIDTH-1:0]  #COLL_DELAY addra_delay = ADDRA;$/;"	n
 COLL_DELAY	.\ip_core\BLK_MEM_GEN_V7_2.v	/^    wire [C_ADDRB_WIDTH-1:0]  #COLL_DELAY addrb_delay = ADDRB;$/;"	n
-COM7	.\camera_sram\camera_control.v	/^COM7                      =2,$/;"	c
 COMPARE_SLOPE	.\tier2\codestream_generate.v	/^			COMPARE_SLOPE=4,$/;"	c
+CONFIGURE_REGISTERS	.\camera_sram\camera_control.v	/^CONFIGURE_REGISTERS=7;$/;"	c
 CONFIGURE_REGISTERS_BEGIN	.\camera_sram\camera_control.v	/^CONFIGURE_REGISTERS_BEGIN =1,$/;"	c
 CONFIGURE_REGISTERS_OVER	.\camera_sram\camera_control.v	/^CONFIGURE_REGISTERS_OVER  =3,$/;"	c
 CT	.\bpc_mq\mq2.v	/^reg [3:0]CT;$/;"	r
@@ -524,9 +524,6 @@ GENERATE_FILE_HEADER	.\tier2\codestream_generate.v	/^		GENERATE_FILE_HEADER=1,$/
 GENERATING_CODESTREAM	.\tier2\tier2_control.v	/^		GENERATING_CODESTREAM=3;$/;"	c
 GET_CODEBLOCK_ADDRESS	.\dwt\entropy_calc.v	/^			GET_CODEBLOCK_ADDRESS=4,$/;"	c
 GET_CODEBLOCK_ADDRESS	.\tier2\codestream_generate.v	/^			GET_CODEBLOCK_ADDRESS=1,$/;"	c
-HREF	.\camera_sram\camera_control.v	/^HREF                      =12,$/;"	c
-HSTART	.\camera_sram\camera_control.v	/^HSTART                    =9,$/;"	c
-HSTOP	.\camera_sram\camera_control.v	/^HSTOP                     =10,$/;"	c
 I0	.\ip_core\BLK_MEM_GEN_V7_2.v	/^    input  I0, I1, S;$/;"	p
 I0	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  input I0, I1, I2, I3, I4, I5;$/;"	p
 I1	.\ip_core\BLK_MEM_GEN_V7_2.v	/^    input  I0, I1, S;$/;"	p
@@ -538,6 +535,7 @@ I5	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  input I0, I1, I2, I3, I4, I5;$/;"	p
 IDLE	.\camera_sram\camera_control.v	/^parameter IDLE            =0,$/;"	c
 IDLE	.\camera_sram\sram_control.v	/^	parameter IDLE=0,$/;"	c
 IDLE	.\dwt\entropy_calc.v	/^parameter 	IDLE=0,$/;"	c
+IDLE	.\read_sram.v	/^parameter IDLE=0,$/;"	c
 IDLE	.\tier2\codestream_generate.v	/^	parameter IDLE=0,$/;"	c
 IDLE	.\tier2\fifo_t1_t2.v	/^	parameter IDLE=0,$/;"	c
 IDLE	.\tier2\tier2_control.v	/^	parameter IDLE=0,$/;"	c
@@ -572,8 +570,6 @@ MQ_out	.\bpc_mq\mq2.v	/^output [15:0]MQ_out; \/\/from fifo$/;"	p
 MQ_out	.\bpc_mq\mq2.v	/^reg [15:0] MQ_out; $/;"	r
 MQ_out	.\test_128.v	/^wire  [15:0]MQ_out;$/;"	n
 MQ_out	.\test_128.v	/^wire [15:0]data_from_mq={MQ_out[7:0],MQ_out[15:8]};$/;"	n
-MQ_out_a	.\bpc_mq\mq2.v	/^wire[7:0] MQ_out_a=MQ_out[15:8];$/;"	n
-MQ_out_b	.\bpc_mq\mq2.v	/^wire[7:0] MQ_out_b=MQ_out[7:0];$/;"	n
 MRC	.\bpc_mq\code_cell.v	/^module MRC(mrc_CxD,$/;"	m
 MSB_1	.\bpc_mq\bpc_generate.v	/^reg [3:0]MSB_1;$/;"	r
 MSB_2	.\bpc_mq\bpc_generate.v	/^reg [3:0]MSB_2;$/;"	r
@@ -707,14 +703,17 @@ RD_RST	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   input                               
 RD_RST	.\ip_core\FIFO_GENERATOR_V7_2.v	/^ input                     RD_RST;$/;"	p
 RD_RST	.\ip_core\FIFO_GENERATOR_V7_2.v	/^ wire                      RD_RST;$/;"	n
 READING	.\camera_sram\camera_control.v	/^READING             =6,$/;"	c
+READING	.\read_sram.v	/^READING=2,$/;"	c
+READ_BEGIN	.\read_sram.v	/^READ_BEGIN=1,$/;"	c
 READ_DATA	.\camera_sram\camera_control.v	/^READ_DATA                 =5,$/;"	c
 READ_DATA_BEGIN	.\camera_sram\camera_control.v	/^READ_DATA_BEGIN           =4,$/;"	c
-READ_DATA_OVER	.\camera_sram\camera_control.v	/^READ_DATA_OVER            =6;$/;"	c
+READ_DATA_OVER	.\camera_sram\camera_control.v	/^READ_DATA_OVER            =6,$/;"	c
 READ_EVEN_ROW	.\dwt\entropy_calc.v	/^			READ_EVEN_ROW=2,$/;"	c
 READ_FORMER_PASS_DATA	.\tier2\codestream_generate.v	/^			READ_FORMER_PASS_DATA=38,$/;"	c
-READ_ID	.\camera_sram\camera_control.v	/^READ_ID                   =13,$/;"	c
+READ_ID	.\camera_sram\camera_control.v	/^READ_ID                   =2,$/;"	c
 READ_ODD_ROW	.\dwt\entropy_calc.v	/^			READ_ODD_ROW=1,$/;"	c
 READ_OVER	.\camera_sram\camera_control.v	/^READ_OVER           =7,$/;"	c
+READ_OVER	.\read_sram.v	/^READ_OVER=3;$/;"	c
 READ_PASS_DATA	.\tier2\codestream_generate.v	/^			READ_PASS_DATA=37,$/;"	c
 READ_PASS_FIRST_HEADER	.\tier2\codestream_generate.v	/^			READ_PASS_FIRST_HEADER=2,$/;"	c
 READ_PASS_LENGTH_BEGIN	.\tier2\codestream_generate.v	/^			READ_PASS_LENGTH_BEGIN=22,$/;"	c
@@ -908,9 +907,6 @@ VALID	.\ip_core\FIFO_GENERATOR_V7_2.v	/^    output                              
 VALID	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   output                              VALID,$/;"	p
 VALID_FIFO_OUT	.\ip_core\FIFO_GENERATOR_V7_2.v	/^  wire                               VALID_FIFO_OUT;$/;"	n
 VALID_P0_OUT	.\ip_core\FIFO_GENERATOR_V7_2.v	/^  wire                               VALID_P0_OUT;$/;"	n
-VREF	.\camera_sram\camera_control.v	/^VREF                      =11,$/;"	c
-VSTART	.\camera_sram\camera_control.v	/^VSTART                    =7,$/;"	c
-VSTOP	.\camera_sram\camera_control.v	/^VSTOP                     =8,$/;"	c
 WAITING_WRITE_OVER	.\tier2\fifo_t1_t2.v	/^		WAITING_WRITE_OVER=13,$/;"	c
 WAIT_SHIFT_OVER	.\tier2\codestream_generate.v	/^		WAIT_SHIFT_OVER=29;$/;"	c
 WEA	.\ip_core\BLK_MEM_GEN_V4_3.v	/^   input [C_WEA_WIDTH-1:0]     WEA,$/;"	p
@@ -1037,7 +1033,7 @@ addra_all_1	.\Tier_1_top.v	/^wire [17:0] addra_all_1;$/;"	n
 addra_all_1	.\dwt\processing_640.v	/^output [17:0]addra_all_1;$/;"	p
 addra_all_1	.\dwt\processing_640.v	/^reg [17:0]addra_all_1;$/;"	r
 addra_all_1	.\dwt\shexiangtou_putdata.v	/^reg [17:0]addra_all_1;$/;"	r
-addra_all_1	.\jpeg2000_top.v	/^output [31:0] addra_all_1;$/;"	p
+addra_all_1	.\jpeg2000_top.v	/^output [17:0] addra_all_1;$/;"	p
 addra_all_1	.\jpeg2000_top.v	/^wire [17:0] addra_all_1;$/;"	n
 addra_all_1	.\system_top.v	/^	wire [17:0] addra_all_1;$/;"	n
 addra_all_1	.\test_bench.v	/^wire [31:0] addra_all_1;$/;"	n
@@ -1124,11 +1120,13 @@ address_LL	.\test_128.v	/^wire[13:0]address_LL;$/;"	n
 address_LL_sel	.\Tier_1_top.v	/^wire [13:0]address_LL_sel=addrb_1|address_LL;$/;"	n
 address_LL_sel	.\test_128.v	/^wire [13:0]address_LL_sel=addrb_1|address_LL;					 $/;"	n
 address_from_dwt	.\camera_sram\sram_control.v	/^	input [17:0]address_from_dwt;$/;"	p
-address_from_dwt	.\system_top.v	/^  wire address_from_dwt;$/;"	n
+address_from_dwt	.\system_top.v	/^  wire [17:0]address_from_dwt;$/;"	n
+address_to_cpu	.\read_sram.v	/^output address_to_cpu;$/;"	p
 address_to_sram	.\camera_sram\sram_control.v	/^	output [17:0]address_to_sram;$/;"	p
 address_to_sram	.\camera_sram\sram_control.v	/^	wire address_to_sram;$/;"	n
 address_to_sram	.\system_top.v	/^    output [17:0]address_to_sram;$/;"	p
 address_to_sram	.\system_top.v	/^  wire [17:0]address_to_sram;$/;"	n
+address_to_sram_reg	.\system_top.v	/^reg [17:0]address_to_sram_reg;\/\/for test$/;"	r
 adj_rd_pntr_wr	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   wire [C_WR_PNTR_WIDTH-1:0]  adj_rd_pntr_wr;$/;"	n
 adj_wr_pntr_rd	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   wire [C_RD_PNTR_WIDTH-1:0]  adj_wr_pntr_rd;$/;"	n
 adjusted_rd_pntr	.\ip_core\FIFO_GENERATOR_V7_2.v	/^      reg  [C_PNTR_WIDTH-1:0]  adjusted_rd_pntr = 0;$/;"	r
@@ -1255,16 +1253,11 @@ band	.\bpc_mq\bpc_generate.v	/^input [1:0] band;$/;"	p
 band	.\bpc_mq\bpc_read_control.v	/^output [1:0] band;$/;"	p
 band	.\bpc_mq\bpc_read_control.v	/^reg[1:0] band;$/;"	r
 band	.\test_128.v	/^wire [1:0]band;$/;"	n
-band_delay1	.\bpc_mq\bpc_generate.v	/^reg[1:0]band_delay1;$/;"	r
 band_eq_1	.\bpc_mq\code_cell.v	/^wire band_eq_1=(flag_band==1);$/;"	n
 band_eq_3	.\bpc_mq\code_cell.v	/^wire band_eq_3=(flag_band==3);$/;"	n
-band_flag	.\bpc_mq\bpc_generate.v	/^reg[1:0]band_flag;$/;"	r
 band_n	.\bpc_mq\bpc_read_control.v	/^reg[1:0] band_n;$/;"	r
-band_reg	.\bpc_mq\bpc_read_control.v	/^reg [1:0]band_reg;$/;"	r
-band_reg_reg	.\bpc_mq\bpc_read_control.v	/^reg [1:0]band_reg_reg;$/;"	r
 band_unequ_band	.\bpc_mq\bpc_read_control.v	/^reg band_unequ_band;$/;"	r
 band_unequ_band_n	.\bpc_mq\bpc_read_control.v	/^wire band_unequ_band_n=(band!=band_n)?1'b1:1'b0;$/;"	n
-band_unequ_band_reg	.\bpc_mq\bpc_read_control.v	/^reg band_unequ_band_reg;$/;"	r
 beh_vlog_ff_ce_clr_V7_2	.\ip_core\BLK_MEM_GEN_V7_2.v	/^module beh_vlog_ff_ce_clr_V7_2 (Q, C, CE, CLR, D);$/;"	m
 beh_vlog_ff_clr_V7_2	.\ip_core\BLK_MEM_GEN_V7_2.v	/^module beh_vlog_ff_clr_V7_2 (Q, C, CLR, D);$/;"	m
 beh_vlog_ff_pre_V7_2	.\ip_core\BLK_MEM_GEN_V7_2.v	/^module beh_vlog_ff_pre_V7_2 (Q, C, D, PRE);$/;"	m
@@ -1999,6 +1992,7 @@ clk	.\bpc_mq\mq2.v	/^input clk,rst;$/;"	p
 clk	.\bpc_mq\mq_out_state_generate.v	/^input clk;$/;"	p
 clk	.\dwt\entropy_calc.v	/^input clk;$/;"	p
 clk	.\dwt\putdata.v	/^    input clk;$/;"	p
+clk	.\read_sram.v	/^input clk;$/;"	p
 clk	.\test_128.v	/^wire clk=clk_rc;$/;"	n
 clk	.\tier2\codestream_generate.v	/^	input clk;$/;"	p
 clk	.\tier2\tier2_control.v	/^	input clk;$/;"	p
@@ -2141,7 +2135,6 @@ codestream_generate_start	.\tier2\tier2_control.v	/^	wire codestream_generate_st
 codestream_generate_start	.\tier2\tier2_top.v	/^	wire			codestream_generate_start;$/;"	n
 codestream_output	.\tier2\codestream_generate.v	/^	wire [15:0]codestream_output;$/;"	n
 codestream_output_32	.\tier2\codestream_generate.v	/^	reg [31:0]codestream_output_32;$/;"	r
-codestream_output_32	.\tier2\tier2_top.v	/^	wire [31:0]codestream_output_32;$/;"	n
 codestream_output_en	.\tier2\codestream_generate.v	/^	reg codestream_output_en;$/;"	r
 codestream_segment	.\tier2\codestream_generate.v	/^	reg [15:0]codestream_segment;$/;"	r
 col_counter	.\camera_sram\camera_control.v	/^reg [12:0]col_counter;$/;"	r
@@ -2277,28 +2270,7 @@ current_contents	.\ip_core\BLK_MEM_GEN_V4_3.v	/^    reg [C_WRITE_WIDTH_A-1:0] cu
 current_contents	.\ip_core\BLK_MEM_GEN_V4_3.v	/^    reg [C_WRITE_WIDTH_B-1:0] current_contents;$/;"	r
 current_contents	.\ip_core\BLK_MEM_GEN_V7_2.v	/^    reg [C_WRITE_WIDTH_A-1:0] current_contents;$/;"	r
 current_contents	.\ip_core\BLK_MEM_GEN_V7_2.v	/^    reg [C_WRITE_WIDTH_B-1:0] current_contents;$/;"	r
-cx0	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx0;$/;"	n
-cx0_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx0_r;$/;"	n
-cx1	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx1;$/;"	n
-cx1_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx1_r;$/;"	n
-cx2	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx2;$/;"	n
-cx2_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx2_r;$/;"	n
-cx3	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx3;$/;"	n
-cx3_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx3_r;$/;"	n
-cx4	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx4;$/;"	n
-cx4_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx4_r;$/;"	n
-cx5	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx5;$/;"	n
-cx5_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx5_r;$/;"	n
-cx6	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx6;$/;"	n
-cx6_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx6_r;$/;"	n
-cx7	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx7;$/;"	n
-cx7_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx7_r;$/;"	n
-cx8	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx8;$/;"	n
-cx8_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx8_r;$/;"	n
-cx9	.\bpc_mq\write_fifo.v	/^	wire[4:0] cx9;$/;"	n
-cx9_r	.\bpc_mq\read_fifo.v	/^	wire[4:0]cx9_r;$/;"	n
 cx_delay_for_stop	.\bpc_mq\mq2.v	/^reg[4:0] cx_delay_for_stop;$/;"	r
-cx_r	.\bpc_mq\read_fifo.v	/^	wire[4:0] cx_r;$/;"	n
 cxd_c	.\bpc_mq\arrange_cell.v	/^	input  [7:0] cxd_c;$/;"	p
 cxd_r	.\bpc_mq\arrange_cell.v	/^	input  [7:0] cxd_r;$/;"	p
 cxd_vld_c	.\bpc_mq\arrange_cell.v	/^	input  cxd_vld_c;$/;"	p
@@ -2344,6 +2316,7 @@ data_from_mq	.\tier2\tier2_top.v	/^	input [15:0]data_from_mq;$/;"	p
 data_from_ram	.\dwt\entropy_calc.v	/^	reg[16:0]data_from_ram;$/;"	r
 data_from_ram	.\tier2\codestream_generate.v	/^	input [WORD_WIDTH-1:0]data_from_ram;$/;"	p
 data_from_ram	.\tier2\tier2_top.v	/^	wire [WORD_WIDTH-1:0]data_from_ram=ldata_ram;$/;"	n
+data_from_sram	.\read_sram.v	/^input data_from_sram;$/;"	p
 data_left	.\dwt\entropy_calc.v	/^	reg [16:0]data_left;$/;"	r
 data_left_tran	.\dwt\entropy_calc.v	/^	reg[15:0]data_left_tran;$/;"	r
 data_mem1_out	.\dwt\shexiangtou_putdata.v	/^wire [31:0]data_mem1_out;$/;"	n
@@ -2524,7 +2497,12 @@ data_sram	.\camera_sram\sram_control.v	/^	inout [31:0]data_sram;$/;"	p
 data_sram	.\camera_sram\sram_control.v	/^	wire [31:0]data_sram;$/;"	n
 data_sram	.\system_top.v	/^    inout [31:0]data_sram;$/;"	p
 data_sram	.\system_top.v	/^  wire [31:0]data_sram;$/;"	n
+data_test	.\camera_sram\sram_control.v	/^	reg [31:0]data_test;$/;"	r
+data_to_cpu	.\read_sram.v	/^output data_to_cpu;$/;"	p
 data_to_fifo	.\bpc_mq\mq2.v	/^reg [15:0]data_to_fifo;$/;"	r
+data_to_jpeg	.\camera_sram\sram_control.v	/^	output [31:0]data_to_jpeg;$/;"	p
+data_to_jpeg	.\camera_sram\sram_control.v	/^	wire [31:0]data_to_jpeg;$/;"	n
+data_to_jpeg	.\system_top.v	/^wire [31:0]data_to_jpeg;$/;"	n
 data_to_write	.\camera_sram\sram_control.v	/^	reg [31:0]data_to_write;$/;"	r
 data_upper	.\dwt\entropy_calc.v	/^	reg [16:0]data_upper;$/;"	r
 data_upper_tran	.\dwt\entropy_calc.v	/^	reg[15:0]data_upper_tran;$/;"	r
@@ -2713,6 +2691,7 @@ douta_all_1	.\dwt\processing_640.v	/^input [31:0]douta_all_1;$/;"	p
 douta_all_1	.\jpeg2000_top.v	/^input [31:0]douta_all_1;$/;"	p
 douta_all_1	.\system_top.v	/^	wire [31:0] douta_all_1;$/;"	n
 douta_all_1	.\test_bench.v	/^wire [31:0] douta_all_1;$/;"	n
+douta_all_1_reg	.\Tier_1_top.v	/^reg [31:0]douta_all_1_reg;\/\/data from sram,for test$/;"	r
 douta_o1	.\Tier_1_top.v	/^wire [16:0] douta_o1;$/;"	n
 douta_o1	.\test_128.v	/^wire [16:0] douta_o1;$/;"	n
 douta_o2	.\Tier_1_top.v	/^wire [16:0] douta_o2;$/;"	n
@@ -2833,17 +2812,11 @@ ena_64	.\Tier_1_top.v	/^wire ena_64;$/;"	n
 ena_64	.\dwt\mmu.v	/^output ena_64;$/;"	p
 ena_64	.\dwt\mmu.v	/^reg ena_64;$/;"	r
 ena_64	.\test_128.v	/^wire ena_64;$/;"	n
-ena_all_1	.\Tier_1_top.v	/^output ena_all_1;$/;"	p
-ena_all_1	.\Tier_1_top.v	/^wire ena_all_1;$/;"	n
-ena_all_1	.\jpeg2000_top.v	/^output ena_all_1;$/;"	p
-ena_all_1	.\jpeg2000_top.v	/^wire ena_all_1;$/;"	n
-ena_all_1	.\system_top.v	/^	wire        ena_all_1;$/;"	n
 ena_all_1	.\test_bench.v	/^wire        ena_all_1;$/;"	n
 ena_i	.\ip_core\BLK_MEM_GEN_V4_3.v	/^  wire                   ena_i;$/;"	n
 ena_i	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  wire                   ena_i;$/;"	n
 ena_in	.\ip_core\BLK_MEM_GEN_V4_3.v	/^   reg                       ena_in;$/;"	r
 ena_in	.\ip_core\BLK_MEM_GEN_V7_2.v	/^   reg                       ena_in;$/;"	r
-ena_o1	.\Tier_1_top.v	/^wire ena_o1;$/;"	n
 ena_o1_r	.\Tier_1_top.v	/^wire ena_o1_r;$/;"	n
 ena_o1_r	.\dwt\read_original.v	/^output ena_o1_r;$/;"	p
 ena_o1_r	.\dwt\read_original.v	/^reg ena_o1_r;$/;"	r
@@ -2855,7 +2828,6 @@ ena_o1_w	.\dwt\putdata.v	/^    output ena_o1_w;$/;"	p
 ena_o1_w	.\dwt\shexiangtou_putdata.v	/^output ena_o1_w;$/;"	p
 ena_o1_w	.\dwt\shexiangtou_putdata.v	/^reg ena_o1_w;$/;"	r
 ena_o1_w	.\test_128.v	/^wire ena_o1_w;$/;"	n
-ena_o2	.\Tier_1_top.v	/^wire ena_o2;$/;"	n
 ena_o2_r	.\Tier_1_top.v	/^wire ena_o2_r;$/;"	n
 ena_o2_r	.\dwt\read_original.v	/^output ena_o2_r;$/;"	p
 ena_o2_r	.\dwt\read_original.v	/^reg ena_o2_r;$/;"	r
@@ -3105,8 +3077,6 @@ flush	.\bpc_mq\bpc.v	/^wire flush=((stop10==1'b1)&&(stop11==1'b0));$/;"	n
 flush	.\bpc_mq\mq2.v	/^input flush;           	$/;"	p
 flush	.\bpc_mq\write_fifo.v	/^	input  flush;$/;"	p
 flush	.\test_128.v	/^wire flush;$/;"	n
-flush1	.\bpc_mq\write_fifo.v	/^	reg flush1,flush2;$/;"	r
-flush2	.\bpc_mq\write_fifo.v	/^	reg flush1,flush2;$/;"	r
 flush_delay1	.\bpc_mq\mq2.v	/^reg flush_delay1;$/;"	r
 flush_delay2	.\bpc_mq\mq2.v	/^reg flush_delay2;$/;"	r
 flush_delay3	.\bpc_mq\mq2.v	/^reg flush_delay3;$/;"	r
@@ -3171,13 +3141,11 @@ flush_en_delay3_9	.\bpc_mq\mq2.v	/^reg flush_en_delay3_9,flush_en_delay3_10,flus
 flush_en_delay3_cp	.\bpc_mq\mq2.v	/^reg flush_en_delay3_sp,flush_en_delay3_mrp,flush_en_delay3_cp;$/;"	r
 flush_en_delay3_mrp	.\bpc_mq\mq2.v	/^reg flush_en_delay3_sp,flush_en_delay3_mrp,flush_en_delay3_cp;$/;"	r
 flush_en_delay3_sp	.\bpc_mq\mq2.v	/^reg flush_en_delay3_sp,flush_en_delay3_mrp,flush_en_delay3_cp;$/;"	r
-flush_en_delay4_0	.\bpc_mq\mq2.v	/^reg flush_en_delay4_0;$/;"	r
 flush_en_delay4_1	.\bpc_mq\mq2.v	/^reg flush_en_delay4_1;$/;"	r
 flush_en_delay4_10	.\bpc_mq\mq2.v	/^reg flush_en_delay4_10;$/;"	r
 flush_en_delay4_11	.\bpc_mq\mq2.v	/^reg flush_en_delay4_11;$/;"	r
 flush_en_delay4_2	.\bpc_mq\mq2.v	/^reg flush_en_delay4_2;$/;"	r
 flush_en_delay4_3	.\bpc_mq\mq2.v	/^reg flush_en_delay4_3;$/;"	r
-flush_en_delay4_4	.\bpc_mq\mq2.v	/^reg flush_en_delay4_4;$/;"	r
 flush_en_delay4_5	.\bpc_mq\mq2.v	/^reg flush_en_delay4_5;$/;"	r
 flush_en_delay4_6	.\bpc_mq\mq2.v	/^reg flush_en_delay4_6;$/;"	r
 flush_en_delay4_7	.\bpc_mq\mq2.v	/^reg flush_en_delay4_7;$/;"	r
@@ -3366,7 +3334,6 @@ halt_reg4	.\bpc_mq\bpc.v	/^reg halt_reg4;$/;"	r
 halt_reg5	.\bpc_mq\bpc.v	/^reg halt_reg5;		  $/;"	r
 halt_reg6	.\bpc_mq\bpc.v	/^reg halt_reg6;$/;"	r
 halt_reg7	.\bpc_mq\bpc.v	/^reg halt_reg7;$/;"	r
-halt_reg8	.\bpc_mq\bpc.v	/^reg halt_reg8;$/;"	r
 halt_reg_2	.\bpc_mq\bpc_read_control.v	/^reg halt_reg_2;$/;"	r
 halt_reg_3	.\bpc_mq\bpc_read_control.v	/^reg halt_reg_3;$/;"	r
 halt_to_fifo	.\Tier_1_top.v	/^wire halt_to_fifo;$/;"	n
@@ -3711,7 +3678,7 @@ jpeg2000_top	.\jpeg2000_top.v	/^module jpeg2000_top(	\/\/Inputs$/;"	m
 jpeg_start	.\camera_sram\sram_control.v	/^	output jpeg_start;$/;"	p
 jpeg_start	.\camera_sram\sram_control.v	/^	wire jpeg_start;$/;"	n
 jpeg_start	.\system_top.v	/^  wire jpeg_start;$/;"	n
-jpeg_working	.\camera_sram\sram_control.v	/^	wire jpeg_working;$/;"	n
+jpeg_working	.\camera_sram\sram_control.v	/^	reg jpeg_working;$/;"	r
 judge_stop_delay4	.\bpc_mq\bpc_read_control.v	/^wire judge_stop_delay4;$/;"	n
 jump_to_ram2	.\bpc_mq\bpc_read_control.v	/^reg jump_to_ram2;$/;"	r
 jump_to_ram2_reg	.\bpc_mq\bpc_read_control.v	/^reg jump_to_ram2_reg;$/;"	r
@@ -3940,9 +3907,10 @@ next_codeblock_address	.\tier2\codestream_generate.v	/^	reg [ADDR_WIDTH-1:0]next
 next_codeblock_already_found	.\tier2\codestream_generate.v	/^	reg next_codeblock_already_found;$/;"	r
 next_num_rd_bits	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   reg [31:0]  next_num_rd_bits;$/;"	r
 next_num_wr_bits	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   reg [31:0]  next_num_wr_bits;$/;"	r
-nextstate	.\camera_sram\camera_control.v	/^reg [4:0]nextstate;$/;"	r
+nextstate	.\camera_sram\camera_control.v	/^reg [7:0]nextstate;$/;"	r
 nextstate	.\camera_sram\sram_control.v	/^	reg [3:0]nextstate;$/;"	r
 nextstate	.\dwt\entropy_calc.v	/^	reg[3:0]nextstate;$/;"	r
+nextstate	.\read_sram.v	/^reg [2:0]nextstate;$/;"	r
 nextstate	.\tier2\codestream_generate.v	/^	reg [6:0]nextstate;$/;"	r
 nextstate	.\tier2\fifo_t1_t2.v	/^	reg [4:0]nextstate;                     $/;"	r
 nextstate	.\tier2\tier2_control.v	/^	reg [2:0]nextstate;$/;"	r
@@ -3984,7 +3952,6 @@ odd_data_raw	.\test_128.v	/^wire [15:0] odd_data_raw;$/;"	n
 odd_data_reg	.\dwt\col_filter_new.v	/^	reg [15:0] odd_data_reg;$/;"	r
 odd_even_judge	.\dwt\processing_640.v	/^reg odd_even_judge;$/;"	r
 odd_even_judge	.\dwt\shexiangtou_putdata.v	/^reg odd_even_judge;$/;"	r
-odd_even_judge_delay	.\dwt\processing_640.v	/^reg odd_even_judge_delay;$/;"	r
 odd_even_judge_delay	.\dwt\shexiangtou_putdata.v	/^reg odd_even_judge_delay;$/;"	r
 odd_even_judge_r	.\dwt\processing_640.v	/^reg odd_even_judge_r;$/;"	r
 odd_even_judge_r	.\dwt\shexiangtou_putdata.v	/^reg odd_even_judge_r;$/;"	r
@@ -4152,9 +4119,6 @@ output_valid_reg_1	.\tier2\codestream_generate.v	/^	reg output_valid_reg_1;$/;"	
 output_valid_reg_2	.\tier2\codestream_generate.v	/^	reg output_valid_reg_2;$/;"	r
 over	.\dwt\processing_640.v	/^wire over;$/;"	n
 over	.\dwt\shexiangtou_putdata.v	/^wire over;$/;"	n
-over_reg1	.\tier2\fifo_t1_t2.v	/^	reg over_reg1;$/;"	r
-over_reg2	.\tier2\fifo_t1_t2.v	/^	reg over_reg2;$/;"	r
-over_reg3	.\tier2\fifo_t1_t2.v	/^	reg over_reg3;$/;"	r
 over_start	.\dwt\processing_640.v	/^wire over_start;$/;"	n
 over_start	.\dwt\shexiangtou_putdata.v	/^wire over_start;$/;"	n
 over_start_delay	.\dwt\processing_640.v	/^reg over_start_delay;$/;"	r
@@ -4660,7 +4624,7 @@ present_state_FSM_FFd4_In	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  wire present_state_FS
 present_state_FSM_FFd4_In	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  wire present_state_FSM_FFd4_In;$/;"	n
 present_state_FSM_FFd4_In1_21	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  wire present_state_FSM_FFd4_In1_21;$/;"	n
 present_state_FSM_FFd4_In1_25	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  wire present_state_FSM_FFd4_In1_25; $/;"	n
-processing	.\dwt\processing_640.v	/^module processing(	\/\/output$/;"	m
+processing	.\dwt\processing_640.v	/^module processing(\/*autoport*\/$/;"	m
 prog_empty_actual_thresh_assert	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   integer                           prog_empty_actual_thresh_assert;$/;"	r
 prog_empty_actual_thresh_negate	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   integer                           prog_empty_actual_thresh_negate;$/;"	r
 prog_empty_d	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   reg                            prog_empty_d       = 1;$/;"	r
@@ -4833,10 +4797,6 @@ rdempty	.\bpc_mq\fifoa.v	/^	output [9:0] rdempty;$/;"	p
 rdempty	.\bpc_mq\fifoa.v	/^	wire [9:0] rdempty;$/;"	n
 rdempty	.\bpc_mq\read_fifo.v	/^	input [9:0] rdempty;$/;"	p
 rdempty	.\test_128.v	/^wire [9:0] rdempty;$/;"	n
-rdempty_reg1	.\bpc_mq\read_fifo.v	/^reg rdempty_reg1;$/;"	r
-rdempty_reg2	.\bpc_mq\read_fifo.v	/^reg rdempty_reg2;$/;"	r
-rdempty_reg3	.\bpc_mq\read_fifo.v	/^reg rdempty_reg3;$/;"	r
-rdempty_reg4	.\bpc_mq\read_fifo.v	/^reg rdempty_reg4;$/;"	r
 rea_i	.\ip_core\BLK_MEM_GEN_V4_3.v	/^  wire                   rea_i;$/;"	n
 rea_i	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  wire                   rea_i;$/;"	n
 read	.\dwt\read_original.v	/^parameter read = 3'b01;$/;"	c
@@ -4877,6 +4837,7 @@ read_netlist_V7_2	.\ip_core\BLK_MEM_GEN_V7_2.v	/^module read_netlist_V7_2 #($/;"
 read_over	.\camera_sram\camera_control.v	/^reg read_over;$/;"	r
 read_phase2	.\camera_sram\camera_control.v	/^reg read_phase2;$/;"	r
 read_raw_control	.\dwt\read_original.v	/^module read_raw_control ( \/\/output$/;"	m
+read_sram	.\read_sram.v	/^module read_sram(\/*autoport*\/);$/;"	m
 read_start	.\dwt\entropy_calc.v	/^	wire read_start=(Y_U_V_over==1||Y_U_V_over==2||Y_U_V_over==3);$/;"	n
 read_start_delay1	.\dwt\entropy_calc.v	/^	reg read_start_delay1;$/;"	r
 rears_pass_error	.\tier2\fifo_t1_t2.v	/^	wire [7:0]rears_pass_error;$/;"	n
@@ -4912,6 +4873,7 @@ regcea_in	.\ip_core\BLK_MEM_GEN_V4_3.v	/^   reg                       regcea_in;
 regcea_in	.\ip_core\BLK_MEM_GEN_V7_2.v	/^   reg                       regcea_in;$/;"	r
 regceb_c	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  wire regceb_c;$/;"	n
 register	.\camera_sram\camera_control.v	/^reg [7:0]register;$/;"	r
+register_counter	.\camera_sram\camera_control.v	/^reg [7:0]register_counter;$/;"	r
 relate_block_fsm	.\bpc_mq\bpc_read_control.v	/^reg relate_block_fsm;$/;"	r
 relate_block_fsm_n	.\bpc_mq\bpc_read_control.v	/^reg relate_block_fsm_n;$/;"	r
 renorm	.\bpc_mq\mq2.v	/^wire renorm;$/;"	n
@@ -5021,6 +4983,7 @@ rst	.\pass_error\gf_pass_error_cal.v	/^input rst;$/;"	p
 rst	.\pass_error\gf_pass_error_pre.v	/^input rst;$/;"	p
 rst	.\pass_error\gf_pass_error_unit.v	/^input rst;$/;"	p
 rst	.\quant\quant_new.v	/^input rst;$/;"	p
+rst	.\read_sram.v	/^input rst;$/;"	p
 rst	.\system_top.v	/^	input rst;$/;"	p
 rst	.\test_128.v	/^reg rst;$/;"	r
 rst	.\test_bench.v	/^reg rst;$/;"	r
@@ -5831,6 +5794,7 @@ start_cpu_reg4	.\dwt\processing_640.v	/^reg	start_cpu_reg4;$/;"	r
 start_cpu_reg4	.\dwt\shexiangtou_putdata.v	/^reg	start_cpu_reg4;$/;"	r
 start_cpu_syn	.\dwt\processing_640.v	/^reg start_cpu_syn;$/;"	r
 start_cpu_syn	.\dwt\shexiangtou_putdata.v	/^reg start_cpu_syn;$/;"	r
+start_jpeg	.\read_sram.v	/^input start_jpeg;$/;"	p
 start_point	.\bpc_mq\write_fifo.v	/^	reg [3:0] start_point;$/;"	r
 start_point_n	.\bpc_mq\write_fifo.v	/^	wire [3:0] start_point_n;$/;"	n
 start_pre	.\dwt\processing_640.v	/^wire start_pre;$/;"	n
@@ -5854,12 +5818,12 @@ start_reg	.\dwt\processing_640.v	/^reg start_reg;$/;"	r
 start_reg	.\dwt\shexiangtou_putdata.v	/^reg start_reg;$/;"	r
 start_reg1	.\dwt\processing_640.v	/^reg start_reg1;$/;"	r
 start_reg1	.\dwt\shexiangtou_putdata.v	/^reg start_reg1;$/;"	r
-start_reg2	.\dwt\processing_640.v	/^reg	start_reg2;$/;"	r
 start_reg2	.\dwt\shexiangtou_putdata.v	/^reg start_reg2;$/;"	r
 state	.\bpc_mq\mq2.v	/^reg[1:0] state,nxstate;$/;"	r
-state	.\camera_sram\camera_control.v	/^reg [4:0]state;$/;"	r
+state	.\camera_sram\camera_control.v	/^reg [7:0]state;$/;"	r
 state	.\camera_sram\sram_control.v	/^	reg [3:0]state;$/;"	r
 state	.\dwt\entropy_calc.v	/^	reg[3:0]state;$/;"	r
+state	.\read_sram.v	/^reg [2:0]state;$/;"	r
 state	.\tier2\codestream_generate.v	/^	reg [6:0]state;$/;"	r
 state	.\tier2\fifo_t1_t2.v	/^	reg [4:0]state;                         $/;"	r
 state	.\tier2\tier2_control.v	/^	reg [2:0]state;$/;"	r
@@ -6133,17 +6097,11 @@ wea_64	.\Tier_1_top.v	/^wire wea_64;$/;"	n
 wea_64	.\dwt\mmu.v	/^output wea_64;$/;"	p
 wea_64	.\dwt\mmu.v	/^reg  wea_64;$/;"	r
 wea_64	.\test_128.v	/^wire wea_64;$/;"	n
-wea_all_1	.\Tier_1_top.v	/^output [3:0]wea_all_1;$/;"	p
-wea_all_1	.\Tier_1_top.v	/^wire [3:0]wea_all_1;$/;"	n
-wea_all_1	.\jpeg2000_top.v	/^output [3:0]wea_all_1;$/;"	p
-wea_all_1	.\jpeg2000_top.v	/^wire [3:0]wea_all_1;$/;"	n
-wea_all_1	.\system_top.v	/^	wire [3:0]  wea_all_1;$/;"	n
 wea_all_1	.\test_bench.v	/^wire [3:0]  wea_all_1;$/;"	n
 wea_i	.\ip_core\BLK_MEM_GEN_V4_3.v	/^  wire [C_WEA_WIDTH-1:0] wea_i;$/;"	n
 wea_i	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  wire [C_WEA_WIDTH-1:0] wea_i;$/;"	n
 wea_in	.\ip_core\BLK_MEM_GEN_V4_3.v	/^   reg [C_WEA_WIDTH-1:0]     wea_in;$/;"	r
 wea_in	.\ip_core\BLK_MEM_GEN_V7_2.v	/^   reg [C_WEA_WIDTH-1:0]     wea_in;$/;"	r
-wea_o1	.\Tier_1_top.v	/^wire wea_o1;$/;"	n
 wea_o1_r	.\Tier_1_top.v	/^wire wea_o1_r;$/;"	n
 wea_o1_r	.\dwt\read_original.v	/^output wea_o1_r;$/;"	p
 wea_o1_r	.\dwt\read_original.v	/^wire wea_o1_r;$/;"	n
@@ -6155,7 +6113,6 @@ wea_o1_w	.\dwt\putdata.v	/^	output wea_o1_w;$/;"	p
 wea_o1_w	.\dwt\shexiangtou_putdata.v	/^output wea_o1_w;$/;"	p
 wea_o1_w	.\dwt\shexiangtou_putdata.v	/^wire wea_o1_w;$/;"	n
 wea_o1_w	.\test_128.v	/^wire wea_o1_w;$/;"	n
-wea_o2	.\Tier_1_top.v	/^wire wea_o2; $/;"	n
 wea_o2_r	.\Tier_1_top.v	/^wire wea_o2_r;$/;"	n
 wea_o2_r	.\dwt\read_original.v	/^output wea_o2_r;$/;"	p
 wea_o2_r	.\dwt\read_original.v	/^wire wea_o2_r;$/;"	n

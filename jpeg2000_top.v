@@ -10,8 +10,6 @@ module jpeg2000_top(	//Inputs
 				//Outputs
 					write_en,
 					output_address,
-					ena_all_1,
-					wea_all_1,
 					addra_all_1,
 					output_to_fpga_32,
 					test_tier1);
@@ -28,8 +26,6 @@ input [2:0]compression_ratio;
 
 output [3:0]write_en;
 output [31:0]output_address;
-output ena_all_1;
-output [3:0]wea_all_1;
 output [17:0] addra_all_1;
 output [31:0]output_to_fpga_32;
 output test_tier1;
@@ -45,8 +41,6 @@ wire flush_over;
 wire [30:0]pass_error_sp;
 wire [30:0]pass_error_mp;
 wire [30:0]pass_error_cp;
-wire [3:0]wea_all_1;
-wire ena_all_1;
 wire [17:0] addra_all_1;
 wire [31:0]output_address;
 wire [3:0]write_en;
@@ -67,8 +61,6 @@ Tier_1_top		u_Tier_1_top(//Outputs
 						.pass_error_sp(pass_error_sp),						
 						.pass_error_mp(pass_error_mp),						
 						.pass_error_cp(pass_error_cp),												
-						.ena_all_1(ena_all_1),
-                  .wea_all_1(wea_all_1),
 						.addra_all_1(addra_all_1),
 						//Inputs
 						.compression_ratio(compression_ratio),

@@ -2831,36 +2831,17 @@ end
 
 //*******************************************//
 wire band_unequ_band_n=(band!=band_n)?1'b1:1'b0;
-reg [1:0]band_reg;
-reg [1:0]band_reg_reg;
 reg band_unequ_band;
-reg band_unequ_band_reg;
-always@(posedge clk_rc or negedge rst) begin
-	  if(!rst) begin
-	    band_reg <= 2'b0;
-		band_reg_reg<= 2'b0;
-	  end
-	  else if(rst_syn)begin
-		band_reg <= 2'b0;
-		band_reg_reg<= 2'b0;
-	  end	
-	  else begin
-	    band_reg <= band;
-		band_reg_reg<=band_reg;
-	  end
-end
+
 always@(posedge clk_rc or negedge rst) begin
 	  if(!rst) begin
 	    band_unequ_band <= 0;
-		band_unequ_band_reg<= 0;
 	  end
 	  else if(rst_syn)begin
 		band_unequ_band <= 0;
-		band_unequ_band_reg<= 0;
 	  end
 	  else begin
 	    band_unequ_band <= band_unequ_band_n;
-		band_unequ_band_reg<=band_unequ_band;
 	  end
 end
 reg count_bp_below_4;
