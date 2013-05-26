@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : sram_control.v
 //  Created On    : 2013-04-04 19:32:32
-//  Last Modified : 2013-04-15 17:00:00
+//  Last Modified : 2013-04-16 18:39:44
 //  Revision      : 
 //  Author        : Tian Changsong
 //
@@ -23,6 +23,7 @@ module sram_control(/*autoport*/
 			output_test_sram,
 			jpeg_start,
 			data_to_jpeg,
+			jpeg_working,
 //input
 			clk_100,
 			rst,
@@ -51,6 +52,7 @@ module sram_control(/*autoport*/
 	output output_test_sram;
 	output jpeg_start;
 	output [31:0]data_to_jpeg;
+	output jpeg_working;
 
 
 	parameter IDLE=0,
@@ -94,7 +96,7 @@ module sram_control(/*autoport*/
 	wire [31:0]data_sram;
 	wire [3:0]byte_en;
 	wire row_full;
-	wire address_to_sram;
+	wire [17:0]address_to_sram;
 	wire [31:0]data_to_jpeg;
 	/* wire assign */
 	assign jpeg_start = state==JPEG_START;
@@ -270,7 +272,7 @@ module sram_control(/*autoport*/
 	begin
 		if(!rst)
 			address<=0;
-		else if(cam_vsyn||row_full)
+		else if(row_full)
 			address<=0;
 		else 
 		begin

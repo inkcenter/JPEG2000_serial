@@ -1,8 +1,8 @@
 //==================================================================================================
 //  Filename      : camera_control.v
 //  Created On    : 2013-04-04 19:32:51
-//  Last Modified : 2013-04-11 19:24:05
-//  Revision      : 
+//  Last Modified : 2013-04-24 15:43:30
+//  Revision      : re
 //  Author        : Tian Changsong
 //
 //  Description   : 

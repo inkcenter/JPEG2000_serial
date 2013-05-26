@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : processing_640.v
 //  Created On    : 2013-04-04 22:24:32
-//  Last Modified : 2013-04-15 18:08:45
+//  Last Modified : 2013-04-15 22:13:42
 //  Revision      : 
 //
 //  Description   : 
@@ -87,6 +87,7 @@ reg pre_vld_delay_3;
 reg start_reg1;
 reg [1:0]start_count;
 reg start_cpu_syn;
+reg start_cpu_syn_reg1;
 reg	start_cpu_reg1;
 reg start_cpu_reg2;
 reg	start_cpu_reg3;
@@ -189,6 +190,7 @@ begin
 	if(!rst)
 	begin
 		start_cpu_syn<=0;
+		start_cpu_syn_reg1<=0;
 		start_cpu_reg1<=0;
 		start_cpu_reg2<=0;
 		start_cpu_reg3<=0;
@@ -199,7 +201,7 @@ begin
 	end 
 	else if(rst_syn)
 	begin
-		start_cpu_reg1<=0;
+		start_cpu_reg1<=0;//do not reset start_cpu_syn and start_cpu_syn_reg1 here!!
 		start_cpu_reg2<=0;
 		start_cpu_reg3<=0;
 		start_cpu_reg4<=0;
@@ -210,7 +212,8 @@ begin
 	else
 	begin
 		start_cpu_syn<=start_cpu;
-		start_cpu_reg1<=!start_cpu_syn&&start_cpu;
+		start_cpu_syn_reg1<=start_cpu_syn;
+		start_cpu_reg1<=!start_cpu_syn_reg1&&start_cpu_syn;
 		start_cpu_reg2<=start_cpu_reg1;
 		start_cpu_reg3<=start_cpu_reg2;
 		start_cpu_reg4<=start_cpu_reg3;
