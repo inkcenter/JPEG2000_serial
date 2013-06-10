@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : sram_control.v
 //  Created On    : 2013-04-04 19:32:32
-//  Last Modified : 2013-04-16 18:39:44
+//  Last Modified : 2013-05-28 20:06:18
 //  Revision      : 
 //  Author        : Tian Changsong
 //
@@ -21,7 +21,7 @@ module sram_control(/*autoport*/
 			output_en,
 			byte_en,
 			output_test_sram,
-			jpeg_start,
+			jpeg_start_from_sram,
 			data_to_jpeg,
 			jpeg_working,
 //input
@@ -32,7 +32,8 @@ module sram_control(/*autoport*/
 			cam_href,
 			cam_vsyn,
 			configure_over,
-			address_from_dwt);
+			address_from_dwt
+			);
 	input clk_100;
 	input rst;
 	input [7:0]cam_data;
@@ -50,7 +51,7 @@ module sram_control(/*autoport*/
 	output output_en;
 	output [3:0]byte_en;
 	output output_test_sram;
-	output jpeg_start;
+	output jpeg_start_from_sram;
 	output [31:0]data_to_jpeg;
 	output jpeg_working;
 
@@ -87,7 +88,7 @@ module sram_control(/*autoport*/
 	reg [31:0]data_test;
 
 	/* wire */
-	wire jpeg_start;
+	wire jpeg_start_from_sram;
 	wire output_test_sram;
 	wire encoding_free;
 	wire adv=0;
@@ -99,7 +100,7 @@ module sram_control(/*autoport*/
 	wire [17:0]address_to_sram;
 	wire [31:0]data_to_jpeg;
 	/* wire assign */
-	assign jpeg_start = state==JPEG_START;
+	assign jpeg_start_from_sram = state==JPEG_START;
 	assign address_to_sram = jpeg_working?address_from_dwt:address;
 	assign encoding_free=(state==IDLE||state==WRITTING_1||state==WRITTING_2||state==WRITE_WAITING);
 	assign row_full=row_counter==640;
@@ -321,8 +322,10 @@ module sram_control(/*autoport*/
 			begin
 				nextstate=JPEG_WORKING;
 			end
-			JPEG_WORKING:nextstate=JPEG_WORKING;
-
+			JPEG_WORKING:
+			begin
+				nextstate=JPEG_WORKING;
+			end
 			default:nextstate=IDLE;
 	    endcase
 	end

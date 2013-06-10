@@ -1,14 +1,34 @@
+//==================================================================================================
+//  Filename      : codestream_generate.v
+//  Created On    : 2013-05-26 20:17:50
+//  Last Modified : 2013-05-26 20:17:51
+//  Revision      : 
+//  Author        : Tian Changsong
+//
+//  Description   : 
+//
+//
+//==================================================================================================
 `timescale 1ns/1ns
-module codestream_generate(/*autoarg*/
-    //input
-    clk, rst, codeblock_shift_over, codestream_generate_start, 
-    data_from_ram, target_slope, target_byte_number, 
-
-    //output
-    codestream_generate_over, codeblock_counter, 
-    lram_read_en, lram_address_rd, output_to_fpga_32, 
-    output_address, write_en, rst_syn
-);
+module codestream_generate(/*autoport*/
+//output
+			codestream_generate_over,
+			codeblock_counter,
+			lram_read_en,
+			lram_address_rd,
+			output_to_fpga_32,
+			output_address,
+			write_en,
+			rst_syn,
+			one_image_over,
+//input
+			clk,
+			rst,
+			codeblock_shift_over,
+			codestream_generate_start,
+			data_from_ram,
+			target_slope,
+			target_byte_number);
 
 parameter WORD_WIDTH=18,
 			ADDR_WIDTH=14;
@@ -30,6 +50,7 @@ parameter WORD_WIDTH=18,
 	output [31:0]output_address;
 	output [3:0]write_en;
 	output rst_syn;
+	output one_image_over;
 
 	parameter IDLE=0,
 		GENERATE_FILE_HEADER=1,
@@ -196,6 +217,7 @@ parameter WORD_WIDTH=18,
 	reg [6:0]nextstate;
 	reg lram_read_en;
 	reg [7:0]codeblock_counter;
+	reg one_image_over;
 //	/***** integer *****/
 //	integer a_1;	
 ////integer disc;
@@ -245,6 +267,18 @@ parameter WORD_WIDTH=18,
 	assign codestream_output=codestream_output_en?codestream_buffer[23:8]:0;
 
 	/***** reg output *****/
+	always @(posedge clk or negedge rst)
+	begin
+		if (!rst) 
+		begin
+			one_image_over<=0;
+		end
+		else  if(state==CODESTREAM_GENERATE_OVER)
+		begin
+			one_image_over<=1;
+		end
+		else one_image_over<=0;
+	end
 	always@(*)
 	begin
 		if(state==OUTPUT_TOTAL_BYTE_NUMBER)
@@ -2047,7 +2081,7 @@ parameter WORD_WIDTH=18,
 					nextstate=OUTPUT_TOTAL_BYTE_NUMBER;
 				else nextstate=WAIT_SHIFT_OVER;
 			end
-			CODESTREAM_GENERATE_OVER:nextstate=CODESTREAM_GENERATE_OVER;
+			CODESTREAM_GENERATE_OVER:nextstate=IDLE;
 			
 
 			default:nextstate=IDLE;

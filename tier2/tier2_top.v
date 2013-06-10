@@ -1,15 +1,27 @@
 `timescale 1ns/10ps
-module tier2_top(/*autoarg*/
-    //input
-    rd_clk, wr_clk, rst, data_from_mq, pass_plane, 
-    compression_ratio, word_last_flag_plane_sp, word_last_flag_plane_mp, 
-    word_last_flag_plane_cp, zero_plane_number, 
-    one_codeblock_over, flush_over, pass_error_sp, 
-    pass_error_mp, pass_error_cp, 
-
-    //output
-    output_address, write_en, rst_syn, output_to_fpga_32
-);
+module tier2_top(/*autoport*/
+//output
+           output_address,
+           write_en,
+           rst_syn,
+           output_to_fpga_32,
+           one_image_over,
+//input
+           rd_clk,
+           wr_clk,
+           rst,
+           data_from_mq,
+           pass_plane,
+           compression_ratio,
+           word_last_flag_plane_sp,
+           word_last_flag_plane_mp,
+           word_last_flag_plane_cp,
+           zero_plane_number,
+           one_codeblock_over,
+           flush_over,
+           pass_error_sp,
+           pass_error_mp,
+           pass_error_cp);
 
 parameter WORD_WIDTH=18,
 			ADDR_WIDTH=14;
@@ -35,6 +47,7 @@ parameter WORD_WIDTH=18,
 	output [3:0]write_en;
 	output rst_syn;
 	output [31:0]output_to_fpga_32;
+    output one_image_over;
 
 	/***** codestream_generate *****/
 	wire codestream_generate_over;
@@ -105,7 +118,8 @@ parameter WORD_WIDTH=18,
     .output_to_fpga_32          (output_to_fpga_32[31:0]         ),
     .output_address             (output_address[31:0]            ),
     .write_en                   (write_en[3:0]                   ),
-    .rst_syn                    (rst_syn                         )
+    .rst_syn                    (rst_syn                         ),
+    .one_image_over(one_image_over)
 );
 	
 

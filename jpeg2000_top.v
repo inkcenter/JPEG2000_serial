@@ -1,18 +1,18 @@
 `timescale 1ns/10ps
-module jpeg2000_top(	//Inputs
-					clk_dwt,
-					//clk_rc,
-
-					rst,
-					start_cpu,
-					douta_all_1,
-					compression_ratio,
-				//Outputs
-					write_en,
-					output_address,
-					addra_all_1,
-					output_to_fpga_32,
-					test_tier1);
+module jpeg2000_top(/*autoport*/
+//output
+			write_en,
+			output_address,
+			addra_all_1,
+			output_to_fpga_32,
+			test_tier1,
+			one_image_over,
+//input
+			clk_dwt,
+			rst,
+			start_cpu,
+			douta_all_1,
+			compression_ratio);
 
 
 
@@ -29,6 +29,7 @@ output [31:0]output_address;
 output [17:0] addra_all_1;
 output [31:0]output_to_fpga_32;
 output test_tier1;
+output one_image_over;
 
 wire [15:0]data_from_mq;				
 wire [1:0]pass_plane;									
@@ -93,7 +94,8 @@ tier2_top		U_tier2_top(	//Inputs
 						.output_address             (output_address[31:0]           ),
 						.write_en                   (write_en[3:0]                  ),
 						.rst_syn                    (rst_syn                        ),
-						.output_to_fpga_32          (output_to_fpga_32[31:0]        ));
+						.output_to_fpga_32          (output_to_fpga_32[31:0]        ),
+						.one_image_over(one_image_over));
 endmodule 						
 
 
