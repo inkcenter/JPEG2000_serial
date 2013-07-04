@@ -1035,7 +1035,7 @@ addra_all_1	.\dwt\processing_640.v	/^reg [17:0]addra_all_1;$/;"	r
 addra_all_1	.\dwt\shexiangtou_putdata.v	/^reg [17:0]addra_all_1;$/;"	r
 addra_all_1	.\jpeg2000_top.v	/^output [17:0] addra_all_1;$/;"	p
 addra_all_1	.\jpeg2000_top.v	/^wire [17:0] addra_all_1;$/;"	n
-addra_all_1	.\system_top.v	/^	wire [17:0] addra_all_1;$/;"	n
+addra_all_1	.\system_top.v	/^wire [17:0] addra_all_1;$/;"	n
 addra_all_1	.\test_bench.v	/^wire [31:0] addra_all_1;$/;"	n
 addra_in	.\ip_core\BLK_MEM_GEN_V4_3.v	/^   reg [C_ADDRA_WIDTH-1:0]   addra_in;$/;"	r
 addra_in	.\ip_core\BLK_MEM_GEN_V7_2.v	/^   reg [C_ADDRA_WIDTH-1:0]   addra_in;$/;"	r
@@ -1120,13 +1120,13 @@ address_LL	.\test_128.v	/^wire[13:0]address_LL;$/;"	n
 address_LL_sel	.\Tier_1_top.v	/^wire [13:0]address_LL_sel=addrb_1|address_LL;$/;"	n
 address_LL_sel	.\test_128.v	/^wire [13:0]address_LL_sel=addrb_1|address_LL;					 $/;"	n
 address_from_dwt	.\camera_sram\sram_control.v	/^	input [17:0]address_from_dwt;$/;"	p
-address_from_dwt	.\system_top.v	/^  wire [17:0]address_from_dwt;$/;"	n
+address_from_dwt	.\system_top.v	/^wire [17:0]address_from_dwt;$/;"	n
 address_to_cpu	.\read_sram.v	/^output address_to_cpu;$/;"	p
 address_to_sram	.\camera_sram\sram_control.v	/^	output [17:0]address_to_sram;$/;"	p
 address_to_sram	.\camera_sram\sram_control.v	/^	wire [17:0]address_to_sram;$/;"	n
-address_to_sram	.\system_top.v	/^    output [17:0]address_to_sram;$/;"	p
-address_to_sram	.\system_top.v	/^  wire [17:0]address_to_sram;$/;"	n
-address_to_sram_reg	.\system_top.v	/^  reg [17:0]address_to_sram_reg;\/\/for test$/;"	r
+address_to_sram	.\system_top.v	/^output [17:0]address_to_sram;$/;"	p
+address_to_sram	.\system_top.v	/^wire [17:0]address_to_sram;$/;"	n
+address_to_sram_reg	.\system_top.v	/^reg [17:0]address_to_sram_reg;\/\/for test$/;"	r
 adj_rd_pntr_wr	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   wire [C_WR_PNTR_WIDTH-1:0]  adj_rd_pntr_wr;$/;"	n
 adj_wr_pntr_rd	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   wire [C_RD_PNTR_WIDTH-1:0]  adj_wr_pntr_rd;$/;"	n
 adjusted_rd_pntr	.\ip_core\FIFO_GENERATOR_V7_2.v	/^      reg  [C_PNTR_WIDTH-1:0]  adjusted_rd_pntr = 0;$/;"	r
@@ -1134,8 +1134,8 @@ adjusted_wr_pntr	.\ip_core\FIFO_GENERATOR_V7_2.v	/^      reg  [C_PNTR_WIDTH-1:0]
 adjusted_wr_pntr_rd	.\ip_core\FIFO_GENERATOR_V7_2.v	/^      reg  [C_RD_PNTR_WIDTH-1:0]  adjusted_wr_pntr_rd = 0;$/;"	r
 adv	.\camera_sram\sram_control.v	/^	output adv;$/;"	p
 adv	.\camera_sram\sram_control.v	/^	wire adv=0;$/;"	n
-adv	.\system_top.v	/^    output adv;$/;"	p
-adv	.\system_top.v	/^  wire adv;$/;"	n
+adv	.\system_top.v	/^output adv;$/;"	p
+adv	.\system_top.v	/^wire adv;$/;"	n
 all_codeblock_over	.\dwt\entropy_calc.v	/^	wire all_codeblock_over;$/;"	n
 all_subband_over	.\tier2\codestream_generate.v	/^	wire all_subband_over;$/;"	n
 almost_empty_i	.\ip_core\FIFO_GENERATOR_V7_2.v	/^ reg                       almost_empty_i = 1'b1;$/;"	r
@@ -1730,8 +1730,8 @@ byte_allocate	.\dwt\entropy_calc.v	/^	reg[13:0]byte_allocate;$/;"	r
 byte_counter	.\tier2\fifo_t1_t2.v	/^	reg [19:0]byte_counter;$/;"	r
 byte_en	.\camera_sram\sram_control.v	/^	output [3:0]byte_en;$/;"	p
 byte_en	.\camera_sram\sram_control.v	/^	wire [3:0]byte_en;$/;"	n
-byte_en	.\system_top.v	/^    output [3:0]byte_en;$/;"	p
-byte_en	.\system_top.v	/^  wire [3:0]byte_en;$/;"	n
+byte_en	.\system_top.v	/^output [3:0]byte_en;$/;"	p
+byte_en	.\system_top.v	/^wire [3:0]byte_en;$/;"	n
 byte_full	.\tier2\fifo_t1_t2.v	/^	wire byte_full;$/;"	n
 byte_number_codeblock	.\Tier_1_top.v	/^wire [13:0]byte_number_codeblock;$/;"	n
 byte_number_codeblock	.\dwt\entropy_calc.v	/^	reg[13:0]byte_number_codeblock;$/;"	r
@@ -1797,25 +1797,25 @@ calc_sl_uvld	.\dwt\row_filter_new.v	/^	wire calc_sl_uvld = (fsm_rf == calc_sl);$
 calc_sr	.\dwt\col_filter_new.v	/^	parameter calc_sr = 2'b10;$/;"	c
 calc_sr_over	.\dwt\col_filter_new.v	/^	wire calc_sr_over = ((arow_cnt == 2)&&(prow_cnt == 3)); $/;"	n
 cam_data	.\camera_sram\sram_control.v	/^	input [7:0]cam_data;$/;"	p
-cam_data	.\system_top.v	/^    input [7:0]cam_data;$/;"	p
-cam_data	.\system_top.v	/^  wire [7:0]cam_data;$/;"	n
+cam_data	.\system_top.v	/^input [7:0]cam_data;$/;"	p
+cam_data	.\system_top.v	/^wire [7:0]cam_data;$/;"	n
 cam_data_buffer	.\camera_sram\sram_control.v	/^	reg [31:0]cam_data_buffer;$/;"	r
 cam_data_counter	.\camera_sram\sram_control.v	/^	reg [1:0]cam_data_counter;$/;"	r
 cam_data_reg	.\camera_sram\sram_control.v	/^	reg [7:0]cam_data_reg;\/\/for test$/;"	r
 cam_href	.\camera_sram\camera_control.v	/^input cam_href;$/;"	p
 cam_href	.\camera_sram\sram_control.v	/^	input cam_href;$/;"	p
-cam_href	.\system_top.v	/^    input cam_href;$/;"	p
-cam_href	.\system_top.v	/^  wire cam_href;$/;"	n
+cam_href	.\system_top.v	/^input cam_href;$/;"	p
+cam_href	.\system_top.v	/^wire cam_href;$/;"	n
 cam_href_reg1	.\camera_sram\sram_control.v	/^	reg cam_href_reg1;$/;"	r
 cam_href_reg2	.\camera_sram\sram_control.v	/^	reg cam_href_reg2;$/;"	r
 cam_pclk	.\camera_sram\camera_control.v	/^input cam_pclk;$/;"	p
 cam_pclk	.\camera_sram\sram_control.v	/^	input cam_pclk;$/;"	p
-cam_pclk	.\system_top.v	/^    input cam_pclk;$/;"	p
-cam_pclk	.\system_top.v	/^  wire cam_pclk;$/;"	n
+cam_pclk	.\system_top.v	/^input cam_pclk;$/;"	p
+cam_pclk	.\system_top.v	/^wire cam_pclk;$/;"	n
 cam_vsyn	.\camera_sram\camera_control.v	/^input cam_vsyn;$/;"	p
 cam_vsyn	.\camera_sram\sram_control.v	/^	input cam_vsyn;$/;"	p
-cam_vsyn	.\system_top.v	/^    input cam_vsyn;$/;"	p
-cam_vsyn	.\system_top.v	/^  wire cam_vsyn;$/;"	n
+cam_vsyn	.\system_top.v	/^input cam_vsyn;$/;"	p
+cam_vsyn	.\system_top.v	/^wire cam_vsyn;$/;"	n
 cam_vsyn_reg1	.\camera_sram\sram_control.v	/^	reg cam_vsyn_reg1;$/;"	r
 cam_vsyn_reg2	.\camera_sram\sram_control.v	/^	reg cam_vsyn_reg2;$/;"	r
 camera_control	.\camera_sram\camera_control.v	/^module camera_control(\/*autoport*\/$/;"	m
@@ -1979,8 +1979,8 @@ cf_wren3	.\dwt\col_filter_new.v	/^	wire cf_wren3 = cf_wren1_reg;$/;"	n
 cf_wren4	.\dwt\col_filter_new.v	/^	wire cf_wren4 = cf_wren1_reg;$/;"	n
 chip_en	.\camera_sram\sram_control.v	/^	output chip_en;$/;"	p
 chip_en	.\camera_sram\sram_control.v	/^	wire chip_en;$/;"	n
-chip_en	.\system_top.v	/^    output chip_en;$/;"	p
-chip_en	.\system_top.v	/^  wire chip_en;$/;"	n
+chip_en	.\system_top.v	/^output chip_en;$/;"	p
+chip_en	.\system_top.v	/^wire chip_en;$/;"	n
 clear0	.\Tier_1_top.v	/^wire clear0;$/;"	n
 clear0	.\bpc_mq\bpc.v	/^output clear0;$/;"	p
 clear0	.\bpc_mq\bpc.v	/^reg clear0;$/;"	r
@@ -1998,15 +1998,15 @@ clk	.\tier2\codestream_generate.v	/^	input clk;$/;"	p
 clk	.\tier2\tier2_control.v	/^	input clk;$/;"	p
 clk	.\tier2\tier2_top.v	/^	wire clk=rd_clk;$/;"	n
 clk_100	.\camera_sram\sram_control.v	/^	input clk_100;$/;"	p
-clk_100	.\system_top.v	/^	wire clk_100;$/;"	n
-clk_200	.\system_top.v	/^  wire clk_200;$/;"	n
+clk_100	.\system_top.v	/^wire clk_100;$/;"	n
+clk_200	.\system_top.v	/^wire clk_200;$/;"	n
 clk_25	.\camera_sram\camera_control.v	/^input clk_25;$/;"	p
-clk_25	.\system_top.v	/^  wire clk_25;$/;"	n
+clk_25	.\system_top.v	/^wire clk_25;$/;"	n
 clk_2_sync	.\ip_core\FIFO_GENERATOR_V7_2.v	/^  wire clk_2_sync = (C_COMMON_CLOCK == 1) ? CLK : WR_CLK;$/;"	n
 clk_bpc	.\bpc_mq\bpc.v	/^input clk_bpc;$/;"	p
 clk_bpc_reg	.\bpc_mq\bpc.v	/^reg clk_bpc_reg;$/;"	r
-clk_camera	.\system_top.v	/^    output clk_camera;$/;"	p
-clk_camera	.\system_top.v	/^  wire clk_camera;$/;"	n
+clk_camera	.\system_top.v	/^output clk_camera;$/;"	p
+clk_camera	.\system_top.v	/^wire clk_camera;$/;"	n
 clk_cf	.\dwt\col_filter_new.v	/^	input  clk_cf;$/;"	p
 clk_dwt	.\Tier_1_top.v	/^input clk_dwt;										$/;"	p
 clk_dwt	.\bpc_mq\arrange_cell.v	/^	input  clk_dwt;$/;"	p
@@ -2015,11 +2015,11 @@ clk_dwt	.\bpc_mq\write_fifo.v	/^	input  clk_dwt;$/;"	p
 clk_dwt	.\dwt\processing_640.v	/^input clk_dwt;$/;"	p
 clk_dwt	.\dwt\shexiangtou_putdata.v	/^input clk_dwt;$/;"	p
 clk_dwt	.\jpeg2000_top.v	/^input clk_dwt;$/;"	p
-clk_dwt	.\system_top.v	/^	wire clk_dwt;$/;"	n
+clk_dwt	.\system_top.v	/^wire clk_dwt;$/;"	n
 clk_dwt	.\test_128.v	/^reg clk_dwt;$/;"	r
 clk_dwt	.\test_bench.v	/^reg clk_dwt;$/;"	r
 clk_flu	.\dwt\flu.v	/^	input clk_flu;$/;"	p
-clk_fpga	.\system_top.v	/^	input clk_fpga;$/;"	p
+clk_fpga	.\system_top.v	/^input clk_fpga;$/;"	p
 clk_mmu	.\addr_bit_plane\bit_plane_count.v	/^input clk_mmu;$/;"	p
 clk_mmu	.\dwt\mmu.v	/^input clk_mmu;$/;"	p
 clk_mmu	.\dwt\read_original.v	/^input clk_mmu;$/;"	p
@@ -2049,8 +2049,8 @@ clk_sg	.\test_128.v	/^wire clk_sg;$/;"	n
 clk_sg	.\test_bench.v	/^reg clk_sg;$/;"	r
 clk_sg_reg	.\bpc_mq\bpc_generate.v	/^reg clk_sg_reg;$/;"	r
 clk_sg_reg	.\bpc_mq\write_fifo.v	/^reg clk_sg_reg;$/;"	r
-clk_sram	.\system_top.v	/^    output clk_sram;$/;"	p
-clk_sram	.\system_top.v	/^  wire clk_sram;$/;"	n
+clk_sram	.\system_top.v	/^output clk_sram;$/;"	p
+clk_sram	.\system_top.v	/^wire clk_sram;$/;"	n
 clk_tr	.\dwt\transpose_new.v	/^	input  clk_tr;$/;"	p
 clk_wr	.\bpc_mq\fifoa.v	/^	input       clk_wr;$/;"	p
 clk_wr	.\bpc_mq\write_fifo.v	/^	input  clk_wr;$/;"	p
@@ -2165,8 +2165,8 @@ com4	.\addr_bit_plane\bit_plane_count.v	/^reg [16:0]com4;$/;"	r
 compression_ratio	.\Tier_1_top.v	/^input [2:0]compression_ratio;$/;"	p
 compression_ratio	.\dwt\entropy_calc.v	/^input [2:0]compression_ratio;$/;"	p
 compression_ratio	.\jpeg2000_top.v	/^input [2:0]compression_ratio;$/;"	p
-compression_ratio	.\system_top.v	/^	input [2:0]compression_ratio;$/;"	p
-compression_ratio	.\system_top.v	/^	wire [2:0]  compression_ratio;$/;"	n
+compression_ratio	.\system_top.v	/^input [2:0]compression_ratio;$/;"	p
+compression_ratio	.\system_top.v	/^wire [2:0]  compression_ratio;$/;"	n
 compression_ratio	.\test_128.v	/^wire [2:0]compression_ratio=0;$/;"	n
 compression_ratio	.\test_bench.v	/^reg  [2:0]  compression_ratio;$/;"	r
 compression_ratio	.\tier2\fifo_t1_t2.v	/^	input [2:0]compression_ratio;$/;"	p
@@ -2174,7 +2174,7 @@ compression_ratio	.\tier2\tier2_top.v	/^	input [2:0]compression_ratio;$/;"	p
 configure_over	.\camera_sram\camera_control.v	/^output configure_over;$/;"	p
 configure_over	.\camera_sram\camera_control.v	/^reg configure_over;$/;"	r
 configure_over	.\camera_sram\sram_control.v	/^	input configure_over;$/;"	p
-configure_over	.\system_top.v	/^  wire configure_over;$/;"	n
+configure_over	.\system_top.v	/^wire configure_over;$/;"	n
 corrupted_data	.\ip_core\FIFO_GENERATOR_V7_2.v	/^    reg [1:0] corrupted_data;$/;"	r
 count	.\dwt\processing_640.v	/^reg [8:0]count;$/;"	r
 count	.\dwt\putdata.v	/^	reg [5:0] count;$/;"	r
@@ -2264,7 +2264,9 @@ cp_ac0	.\bpc_mq\code_cell.v	/^  input cp_ac0,cp_ac1,cp_ac2,cp_ac3;$/;"	p
 cp_ac1	.\bpc_mq\code_cell.v	/^  input cp_ac0,cp_ac1,cp_ac2,cp_ac3;$/;"	p
 cp_ac2	.\bpc_mq\code_cell.v	/^  input cp_ac0,cp_ac1,cp_ac2,cp_ac3;$/;"	p
 cp_ac3	.\bpc_mq\code_cell.v	/^  input cp_ac0,cp_ac1,cp_ac2,cp_ac3;$/;"	p
-cpu_process_over	.\system_top.v	/^  reg cpu_process_over;$/;"	r
+cpu_process_over	.\system_top.v	/^reg cpu_process_over;$/;"	r
+cpu_process_over_status	.\system_top.v	/^reg cpu_process_over_status;$/;"	r
+cpu_time_counter	.\system_top.v	/^reg [24:0]cpu_time_counter;$/;"	r
 current_codeblock_inclusion	.\tier2\codestream_generate.v	/^	reg current_codeblock_inclusion;$/;"	r
 current_codeblock_index	.\tier2\codestream_generate.v	/^	reg [7:0]current_codeblock_index;$/;"	r
 current_contents	.\ip_core\BLK_MEM_GEN_V4_3.v	/^    reg [C_WRITE_WIDTH_A-1:0] current_contents;$/;"	r
@@ -2496,8 +2498,8 @@ data_sel	.\dwt\entropy_calc.v	/^	reg data_sel;$/;"	r
 data_sel_delay	.\dwt\entropy_calc.v	/^	reg data_sel_delay;$/;"	r
 data_sram	.\camera_sram\sram_control.v	/^	inout [31:0]data_sram;$/;"	p
 data_sram	.\camera_sram\sram_control.v	/^	wire [31:0]data_sram;$/;"	n
-data_sram	.\system_top.v	/^    inout [31:0]data_sram;$/;"	p
-data_sram	.\system_top.v	/^  wire [31:0]data_sram;$/;"	n
+data_sram	.\system_top.v	/^inout [31:0]data_sram;$/;"	p
+data_sram	.\system_top.v	/^wire [31:0]data_sram;$/;"	n
 data_test	.\camera_sram\sram_control.v	/^	reg [31:0]data_test;$/;"	r
 data_to_cpu	.\read_sram.v	/^output data_to_cpu;$/;"	p
 data_to_fifo	.\bpc_mq\mq2.v	/^reg [15:0]data_to_fifo;$/;"	r
@@ -2690,7 +2692,7 @@ douta_64	.\test_128.v	/^wire[16:0] douta_64;$/;"	n
 douta_all_1	.\Tier_1_top.v	/^input [31:0]douta_all_1;											$/;"	p
 douta_all_1	.\dwt\processing_640.v	/^input [31:0]douta_all_1;$/;"	p
 douta_all_1	.\jpeg2000_top.v	/^input [31:0]douta_all_1;$/;"	p
-douta_all_1	.\system_top.v	/^	wire [31:0] douta_all_1;$/;"	n
+douta_all_1	.\system_top.v	/^wire [31:0] douta_all_1;$/;"	n
 douta_all_1	.\test_bench.v	/^wire [31:0] douta_all_1;$/;"	n
 douta_all_1_reg	.\Tier_1_top.v	/^reg [31:0]douta_all_1_reg;\/\/data from sram,for test$/;"	r
 douta_o1	.\Tier_1_top.v	/^wire [16:0] douta_o1;$/;"	n
@@ -3220,30 +3222,58 @@ fp_r_6	.\dwt\putdata.v	/^		fp_r_6 ,$/;"	r
 fp_r_7	.\dwt\putdata.v	/^		fp_r_7 ,$/;"	r
 fp_r_8	.\dwt\putdata.v	/^		fp_r_8 ,$/;"	r
 fp_r_9	.\dwt\putdata.v	/^		fp_r_9 ,$/;"	r
-fpga_0_Generic_Ethernet_10_100_PHY_MDC_pin	.\system_top.v	/^  output fpga_0_Generic_Ethernet_10_100_PHY_MDC_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_Addr_pin	.\system_top.v	/^output [12:0]fpga_0_DDR2_SDRAM_DDR2_Addr_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_Addr_pin	.\system_top.v	/^wire [12:0]fpga_0_DDR2_SDRAM_DDR2_Addr_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin	.\system_top.v	/^output [1:0]fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin	.\system_top.v	/^wire [1:0]fpga_0_DDR2_SDRAM_DDR2_BankAddr_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin	.\system_top.v	/^output fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin	.\system_top.v	/^wire fpga_0_DDR2_SDRAM_DDR2_CAS_n_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_CE_pin	.\system_top.v	/^output [1:0]fpga_0_DDR2_SDRAM_DDR2_CE_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_CE_pin	.\system_top.v	/^wire [1:0]fpga_0_DDR2_SDRAM_DDR2_CE_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_CS_n_pin	.\system_top.v	/^output [1:0]fpga_0_DDR2_SDRAM_DDR2_CS_n_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_CS_n_pin	.\system_top.v	/^wire [1:0]fpga_0_DDR2_SDRAM_DDR2_CS_n_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin	.\system_top.v	/^output [1:0]fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin	.\system_top.v	/^wire [1:0]fpga_0_DDR2_SDRAM_DDR2_Clk_n_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_Clk_pin	.\system_top.v	/^output [1:0]fpga_0_DDR2_SDRAM_DDR2_Clk_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_Clk_pin	.\system_top.v	/^wire [1:0]fpga_0_DDR2_SDRAM_DDR2_Clk_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_DM_pin	.\system_top.v	/^output [7:0]fpga_0_DDR2_SDRAM_DDR2_DM_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_DM_pin	.\system_top.v	/^wire [7:0]fpga_0_DDR2_SDRAM_DDR2_DM_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin	.\system_top.v	/^inout [7:0]fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin	.\system_top.v	/^wire [7:0]fpga_0_DDR2_SDRAM_DDR2_DQS_n_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin	.\system_top.v	/^inout [7:0]fpga_0_DDR2_SDRAM_DDR2_DQS_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_DQS_pin	.\system_top.v	/^wire [7:0]fpga_0_DDR2_SDRAM_DDR2_DQS_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_DQ_pin	.\system_top.v	/^inout [63:0]fpga_0_DDR2_SDRAM_DDR2_DQ_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_DQ_pin	.\system_top.v	/^wire [63:0]fpga_0_DDR2_SDRAM_DDR2_DQ_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_ODT_pin	.\system_top.v	/^output [1:0]fpga_0_DDR2_SDRAM_DDR2_ODT_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_ODT_pin	.\system_top.v	/^wire [1:0]fpga_0_DDR2_SDRAM_DDR2_ODT_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin	.\system_top.v	/^output fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin	.\system_top.v	/^wire fpga_0_DDR2_SDRAM_DDR2_RAS_n_pin;$/;"	n
+fpga_0_DDR2_SDRAM_DDR2_WE_n_pin	.\system_top.v	/^output fpga_0_DDR2_SDRAM_DDR2_WE_n_pin;$/;"	p
+fpga_0_DDR2_SDRAM_DDR2_WE_n_pin	.\system_top.v	/^wire fpga_0_DDR2_SDRAM_DDR2_WE_n_pin;$/;"	n
+fpga_0_Generic_Ethernet_10_100_PHY_MDC_pin	.\system_top.v	/^output fpga_0_Generic_Ethernet_10_100_PHY_MDC_pin;$/;"	p
 fpga_0_Generic_Ethernet_10_100_PHY_MDC_pin	.\system_top.v	/^wire fpga_0_Generic_Ethernet_10_100_PHY_MDC_pin;$/;"	n
-fpga_0_Generic_Ethernet_10_100_PHY_MDIO_pin	.\system_top.v	/^  inout  fpga_0_Generic_Ethernet_10_100_PHY_MDIO_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_MDIO_pin	.\system_top.v	/^inout  fpga_0_Generic_Ethernet_10_100_PHY_MDIO_pin;$/;"	p
 fpga_0_Generic_Ethernet_10_100_PHY_MDIO_pin	.\system_top.v	/^wire fpga_0_Generic_Ethernet_10_100_PHY_MDIO_pin;$/;"	n
-fpga_0_Generic_Ethernet_10_100_PHY_col_pin	.\system_top.v	/^  input  fpga_0_Generic_Ethernet_10_100_PHY_col_pin;$/;"	p
-fpga_0_Generic_Ethernet_10_100_PHY_crs_pin	.\system_top.v	/^  input  fpga_0_Generic_Ethernet_10_100_PHY_crs_pin;$/;"	p
-fpga_0_Generic_Ethernet_10_100_PHY_dv_pin	.\system_top.v	/^  input  fpga_0_Generic_Ethernet_10_100_PHY_dv_pin;$/;"	p
-fpga_0_Generic_Ethernet_10_100_PHY_rst_n_pin	.\system_top.v	/^  output fpga_0_Generic_Ethernet_10_100_PHY_rst_n_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_col_pin	.\system_top.v	/^input  fpga_0_Generic_Ethernet_10_100_PHY_col_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_crs_pin	.\system_top.v	/^input  fpga_0_Generic_Ethernet_10_100_PHY_crs_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_dv_pin	.\system_top.v	/^input  fpga_0_Generic_Ethernet_10_100_PHY_dv_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_rst_n_pin	.\system_top.v	/^output fpga_0_Generic_Ethernet_10_100_PHY_rst_n_pin;$/;"	p
 fpga_0_Generic_Ethernet_10_100_PHY_rst_n_pin	.\system_top.v	/^wire fpga_0_Generic_Ethernet_10_100_PHY_rst_n_pin;$/;"	n
-fpga_0_Generic_Ethernet_10_100_PHY_rx_clk_pin	.\system_top.v	/^  input  fpga_0_Generic_Ethernet_10_100_PHY_rx_clk_pin;$/;"	p
-fpga_0_Generic_Ethernet_10_100_PHY_rx_data_pin	.\system_top.v	/^  input [3:0] fpga_0_Generic_Ethernet_10_100_PHY_rx_data_pin;$/;"	p
-fpga_0_Generic_Ethernet_10_100_PHY_rx_er_pin	.\system_top.v	/^  input  fpga_0_Generic_Ethernet_10_100_PHY_rx_er_pin;$/;"	p
-fpga_0_Generic_Ethernet_10_100_PHY_tx_clk_pin	.\system_top.v	/^  input  fpga_0_Generic_Ethernet_10_100_PHY_tx_clk_pin;$/;"	p
-fpga_0_Generic_Ethernet_10_100_PHY_tx_data_pin	.\system_top.v	/^  output [3:0] fpga_0_Generic_Ethernet_10_100_PHY_tx_data_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_rx_clk_pin	.\system_top.v	/^input  fpga_0_Generic_Ethernet_10_100_PHY_rx_clk_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_rx_data_pin	.\system_top.v	/^input [3:0] fpga_0_Generic_Ethernet_10_100_PHY_rx_data_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_rx_er_pin	.\system_top.v	/^input  fpga_0_Generic_Ethernet_10_100_PHY_rx_er_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_tx_clk_pin	.\system_top.v	/^input  fpga_0_Generic_Ethernet_10_100_PHY_tx_clk_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_tx_data_pin	.\system_top.v	/^output [3:0] fpga_0_Generic_Ethernet_10_100_PHY_tx_data_pin;$/;"	p
 fpga_0_Generic_Ethernet_10_100_PHY_tx_data_pin	.\system_top.v	/^wire [3:0]fpga_0_Generic_Ethernet_10_100_PHY_tx_data_pin;$/;"	n
-fpga_0_Generic_Ethernet_10_100_PHY_tx_en_pin	.\system_top.v	/^  output fpga_0_Generic_Ethernet_10_100_PHY_tx_en_pin;$/;"	p
+fpga_0_Generic_Ethernet_10_100_PHY_tx_en_pin	.\system_top.v	/^output fpga_0_Generic_Ethernet_10_100_PHY_tx_en_pin;$/;"	p
 fpga_0_Generic_Ethernet_10_100_PHY_tx_en_pin	.\system_top.v	/^wire fpga_0_Generic_Ethernet_10_100_PHY_tx_en_pin;$/;"	n
-fpga_0_RS232_RX_pin	.\system_top.v	/^  input fpga_0_RS232_RX_pin;$/;"	p
-fpga_0_RS232_TX_pin	.\system_top.v	/^  output fpga_0_RS232_TX_pin;$/;"	p
+fpga_0_RS232_RX_pin	.\system_top.v	/^input fpga_0_RS232_RX_pin;$/;"	p
+fpga_0_RS232_TX_pin	.\system_top.v	/^output fpga_0_RS232_TX_pin;$/;"	p
 fpga_0_RS232_TX_pin	.\system_top.v	/^wire fpga_0_RS232_TX_pin;$/;"	n
 fpga_0_clk_1_sys_clk_pin	.\system_top.v	/^wire fpga_0_clk_1_sys_clk_pin;$/;"	n
 fpga_0_rst_1_sys_rst_pin	.\system_top.v	/^wire fpga_0_rst_1_sys_rst_pin;$/;"	n
-fpga_push_button	.\system_top.v	/^	inout fpga_push_button;$/;"	p
-fpga_push_button	.\system_top.v	/^  wire fpga_push_button;$/;"	n
+fpga_push_button	.\system_top.v	/^input fpga_push_button;$/;"	p
+fpga_push_button	.\system_top.v	/^wire fpga_push_button;$/;"	n
 frame_valid	.\camera_sram\sram_control.v	/^	reg frame_valid;$/;"	r
 fsm	.\dwt\processing_640.v	/^reg fsm;$/;"	r
 fsm	.\dwt\shexiangtou_putdata.v	/^reg fsm;$/;"	r
@@ -3681,10 +3711,11 @@ jpeg2000_output_bram_BRAM_Din_B_pin	.\system_top.v	/^wire [31:0]jpeg2000_output_
 jpeg2000_top	.\jpeg2000_top.v	/^module jpeg2000_top(\/*autoport*\/$/;"	m
 jpeg_start_from_sram	.\camera_sram\sram_control.v	/^	output jpeg_start_from_sram;$/;"	p
 jpeg_start_from_sram	.\camera_sram\sram_control.v	/^	wire jpeg_start_from_sram;$/;"	n
-jpeg_start_from_sram	.\system_top.v	/^  wire jpeg_start_from_sram;$/;"	n
+jpeg_start_from_sram	.\system_top.v	/^wire jpeg_start_from_sram;$/;"	n
+jpeg_time_cpunter	.\system_top.v	/^reg [24:0]jpeg_time_cpunter;$/;"	r
 jpeg_working	.\camera_sram\sram_control.v	/^	output jpeg_working;$/;"	p
 jpeg_working	.\camera_sram\sram_control.v	/^	reg jpeg_working;$/;"	r
-jpeg_working	.\system_top.v	/^  wire jpeg_working;$/;"	n
+jpeg_working	.\system_top.v	/^wire jpeg_working;$/;"	n
 judge_stop_delay4	.\bpc_mq\bpc_read_control.v	/^wire judge_stop_delay4;$/;"	n
 jump_to_ram2	.\bpc_mq\bpc_read_control.v	/^reg jump_to_ram2;$/;"	r
 jump_to_ram2_reg	.\bpc_mq\bpc_read_control.v	/^reg jump_to_ram2_reg;$/;"	r
@@ -3970,12 +4001,12 @@ one_codeblock_over	.\tier2\fifo_t1_t2.v	/^	input one_codeblock_over;$/;"	p
 one_codeblock_over	.\tier2\tier2_top.v	/^	input one_codeblock_over;$/;"	p
 one_codeblock_over_reg	.\tier2\fifo_t1_t2.v	/^	reg one_codeblock_over_reg;$/;"	r
 one_image_over	.\jpeg2000_top.v	/^output one_image_over;$/;"	p
-one_image_over	.\system_top.v	/^  wire one_image_over;$/;"	n
+one_image_over	.\system_top.v	/^wire one_image_over;$/;"	n
 one_image_over	.\tier2\codestream_generate.v	/^	output one_image_over;$/;"	p
 one_image_over	.\tier2\codestream_generate.v	/^	reg one_image_over;$/;"	r
 one_image_over	.\tier2\tier2_top.v	/^    output one_image_over;$/;"	p
-one_image_over_reg	.\system_top.v	/^  reg one_image_over_reg;$/;"	r
-one_image_over_status	.\system_top.v	/^  reg one_image_over_status;$/;"	r
+one_image_over_reg	.\system_top.v	/^reg one_image_over_reg;$/;"	r
+one_image_over_status	.\system_top.v	/^reg one_image_over_status;$/;"	r
 one_pass_over	.\tier2\codestream_generate.v	/^	wire one_pass_over;$/;"	n
 one_subband_over	.\tier2\codestream_generate.v	/^	wire one_subband_over;$/;"	n
 one_tile_over	.\tier2\codestream_generate.v	/^	wire one_tile_over;$/;"	n
@@ -4095,7 +4126,7 @@ output	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   output [C_RD_DATA_COUNT_WIDTH-1:0]  
 output	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   output reg                                    EMPTY = 1'b1,$/;"	p
 output_address	.\jpeg2000_top.v	/^output [31:0]output_address;$/;"	p
 output_address	.\jpeg2000_top.v	/^wire [31:0]output_address;$/;"	n
-output_address	.\system_top.v	/^	wire [31:0] output_address;$/;"	n
+output_address	.\system_top.v	/^wire [31:0] output_address;$/;"	n
 output_address	.\test_bench.v	/^wire [31:0] output_address;$/;"	n
 output_address	.\tier2\codestream_generate.v	/^	output [31:0]output_address;$/;"	p
 output_address	.\tier2\codestream_generate.v	/^	reg [31:0]output_address;$/;"	r
@@ -4104,19 +4135,19 @@ output_address	.\tier2\tier2_top.v	/^	wire [31:0]output_address;$/;"	n
 output_count	.\tier2\codestream_generate.v	/^	reg [1:0]output_count;$/;"	r
 output_en	.\camera_sram\sram_control.v	/^	output output_en;$/;"	p
 output_en	.\camera_sram\sram_control.v	/^	wire output_en;$/;"	n
-output_en	.\system_top.v	/^    output output_en;$/;"	p
-output_en	.\system_top.v	/^  wire output_en;$/;"	n
+output_en	.\system_top.v	/^output output_en;$/;"	p
+output_en	.\system_top.v	/^wire output_en;$/;"	n
 output_test_camera	.\camera_sram\camera_control.v	/^output output_test_camera;$/;"	p
 output_test_camera	.\camera_sram\camera_control.v	/^wire output_test_camera;$/;"	n
-output_test_camera	.\system_top.v	/^    output output_test_camera;$/;"	p
-output_test_camera	.\system_top.v	/^  wire output_test_camera;$/;"	n
+output_test_camera	.\system_top.v	/^output output_test_camera;$/;"	p
+output_test_camera	.\system_top.v	/^wire output_test_camera;$/;"	n
 output_test_sram	.\camera_sram\sram_control.v	/^	output output_test_sram;$/;"	p
 output_test_sram	.\camera_sram\sram_control.v	/^	wire output_test_sram;$/;"	n
-output_test_sram	.\system_top.v	/^    output output_test_sram;$/;"	p
-output_test_sram	.\system_top.v	/^  wire output_test_sram;$/;"	n
+output_test_sram	.\system_top.v	/^output output_test_sram;$/;"	p
+output_test_sram	.\system_top.v	/^wire output_test_sram;$/;"	n
 output_to_fpga_32	.\jpeg2000_top.v	/^output [31:0]output_to_fpga_32;$/;"	p
 output_to_fpga_32	.\jpeg2000_top.v	/^wire [31:0]output_to_fpga_32;$/;"	n
-output_to_fpga_32	.\system_top.v	/^	wire [31:0] output_to_fpga_32;$/;"	n
+output_to_fpga_32	.\system_top.v	/^wire [31:0] output_to_fpga_32;$/;"	n
 output_to_fpga_32	.\test_bench.v	/^wire [31:0] output_to_fpga_32;$/;"	n
 output_to_fpga_32	.\tier2\codestream_generate.v	/^	output [31:0]output_to_fpga_32;$/;"	p
 output_to_fpga_32	.\tier2\codestream_generate.v	/^	reg [31:0]output_to_fpga_32;$/;"	r
@@ -4987,7 +5018,7 @@ rst	.\pass_error\gf_pass_error_pre.v	/^input rst;$/;"	p
 rst	.\pass_error\gf_pass_error_unit.v	/^input rst;$/;"	p
 rst	.\quant\quant_new.v	/^input rst;$/;"	p
 rst	.\read_sram.v	/^input rst;$/;"	p
-rst	.\system_top.v	/^	input rst;$/;"	p
+rst	.\system_top.v	/^input rst;$/;"	p
 rst	.\test_128.v	/^reg rst;$/;"	r
 rst	.\test_bench.v	/^reg rst;$/;"	r
 rst	.\tier2\codestream_generate.v	/^	input rst;$/;"	p
@@ -5010,8 +5041,8 @@ rst_i	.\ip_core\BLK_MEM_GEN_V4_3.v	/^  wire                              rst_i;$
 rst_i	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  wire                              rst_i;$/;"	n
 rst_i	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   wire                           rst_i;$/;"	n
 rst_i	.\ip_core\FIFO_GENERATOR_V7_2.v	/^  wire                               rst_i;$/;"	n
-rst_n	.\system_top.v	/^  output rst_n;$/;"	p
-rst_n	.\system_top.v	/^  wire rst_n;$/;"	n
+rst_n	.\system_top.v	/^output rst_n;$/;"	p
+rst_n	.\system_top.v	/^wire rst_n;$/;"	n
 rst_q	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   reg                            rst_q;$/;"	r
 rst_qq	.\ip_core\FIFO_GENERATOR_V7_2.v	/^   reg                            rst_qq;$/;"	r
 rst_reg	.\ip_core\FIFO_GENERATOR_V7_2.v	/^  reg                                rst_reg      = 0;$/;"	r
@@ -5049,7 +5080,7 @@ rst_syn	.\tier2\tier2_control.v	/^	input rst_syn;$/;"	p
 rst_syn	.\tier2\tier2_ram.v	/^	input rst_syn;$/;"	p
 rst_syn	.\tier2\tier2_top.v	/^	output rst_syn;$/;"	p
 rst_syn	.\tier2\tier2_top.v	/^	wire rst_syn;$/;"	n
-rst_to_jpeg	.\system_top.v	/^  wire rst_to_jpeg;$/;"	n
+rst_to_jpeg	.\system_top.v	/^wire rst_to_jpeg;$/;"	n
 rsta	.\tier2\ram_12k.v	/^input rsta;$/;"	p
 rsta_in	.\ip_core\BLK_MEM_GEN_V4_3.v	/^   reg                       rsta_in;$/;"	r
 rsta_in	.\ip_core\BLK_MEM_GEN_V7_2.v	/^   reg                       rsta_in;$/;"	r
@@ -5133,12 +5164,12 @@ sccb_end_reg1	.\camera_sram\camera_control.v	/^reg sccb_end_reg1;$/;"	r
 sccb_valid	.\camera_sram\camera_control.v	/^reg sccb_valid;$/;"	r
 scl	.\camera_sram\camera_control.v	/^output scl;$/;"	p
 scl	.\camera_sram\camera_control.v	/^reg scl;$/;"	r
-scl	.\system_top.v	/^    output scl;$/;"	p
-scl	.\system_top.v	/^  wire scl;$/;"	n
+scl	.\system_top.v	/^output scl;$/;"	p
+scl	.\system_top.v	/^wire scl;$/;"	n
 sda	.\camera_sram\camera_control.v	/^inout sda;$/;"	p
 sda	.\camera_sram\camera_control.v	/^wire sda;$/;"	n
-sda	.\system_top.v	/^    inout sda;$/;"	p
-sda	.\system_top.v	/^  wire sda;$/;"	n
+sda	.\system_top.v	/^inout sda;$/;"	p
+sda	.\system_top.v	/^wire sda;$/;"	n
 sda_input_en	.\camera_sram\camera_control.v	/^wire sda_input_en;$/;"	n
 sda_reg	.\camera_sram\camera_control.v	/^reg sda_reg;$/;"	r
 sda_response	.\camera_sram\camera_control.v	/^reg sda_response;$/;"	r
@@ -5675,7 +5706,8 @@ sp3_vld	.\bpc_mq\bpc.v	/^reg sp3_vld;$/;"	r
 space_judge	.\bpc_mq\mq2.v	/^wire space_judge;$/;"	n
 space_judge_delay	.\bpc_mq\mq2.v	/^reg space_judge_delay;$/;"	r
 sram_control	.\camera_sram\sram_control.v	/^module sram_control(\/*autoport*\/$/;"	m
-sram_store_over	.\system_top.v	/^  reg sram_store_over;$/;"	r
+sram_store_over	.\system_top.v	/^reg sram_store_over;$/;"	r
+sram_time_counter	.\system_top.v	/^reg [24:0]sram_time_counter;$/;"	r
 srset	.\bpc_mq\bpc_read_control.v	/^wire srset;$/;"	n
 srst	.\bpc_mq\bpc_read_control.v	/^wire srst;		$/;"	n
 srst	.\dwt\col_filter_new.v	/^	wire srst = (fsm_cf == idle);$/;"	n
@@ -5772,7 +5804,7 @@ start_aga_reg_reg2	.\bpc_mq\bpc_read_control.v	/^reg start_aga_reg_reg2;$/;"	r
 start_aga_song	.\bpc_mq\bpc_read_control.v	/^input start_aga_song;					$/;"	p
 start_aga_song_reg	.\bpc_mq\bpc_read_control.v	/^reg start_aga_song_reg;$/;"	r
 start_button	.\camera_sram\camera_control.v	/^input start_button;$/;"	p
-start_button	.\system_top.v	/^  wire start_button;$/;"	n
+start_button	.\system_top.v	/^wire start_button;$/;"	n
 start_cf	.\Tier_1_top.v	/^wire start_cf;$/;"	n
 start_cf	.\dwt\col_filter_new.v	/^	input  start_cf;$/;"	p
 start_cf	.\dwt\flu.v	/^	input start_cf;$/;"	p
@@ -5786,16 +5818,16 @@ start_cpu	.\Tier_1_top.v	/^input start_cpu;									$/;"	p
 start_cpu	.\dwt\processing_640.v	/^input start_cpu;$/;"	p
 start_cpu	.\dwt\shexiangtou_putdata.v	/^input start_cpu;$/;"	p
 start_cpu	.\jpeg2000_top.v	/^input start_cpu;$/;"	p
-start_cpu	.\system_top.v	/^	output start_cpu;$/;"	p
-start_cpu	.\system_top.v	/^	wire start_cpu;$/;"	n
+start_cpu	.\system_top.v	/^output start_cpu;$/;"	p
+start_cpu	.\system_top.v	/^wire start_cpu;$/;"	n
 start_cpu	.\test_bench.v	/^reg start_cpu;$/;"	r
-start_cpu_posedge	.\system_top.v	/^  reg start_cpu_posedge;$/;"	r
+start_cpu_posedge	.\system_top.v	/^reg start_cpu_posedge;$/;"	r
 start_cpu_reg1	.\dwt\processing_640.v	/^reg	start_cpu_reg1;$/;"	r
 start_cpu_reg1	.\dwt\shexiangtou_putdata.v	/^reg	start_cpu_reg1;$/;"	r
-start_cpu_reg1	.\system_top.v	/^  reg start_cpu_reg1;$/;"	r
+start_cpu_reg1	.\system_top.v	/^reg start_cpu_reg1;$/;"	r
 start_cpu_reg2	.\dwt\processing_640.v	/^reg start_cpu_reg2;$/;"	r
 start_cpu_reg2	.\dwt\shexiangtou_putdata.v	/^reg start_cpu_reg2;$/;"	r
-start_cpu_reg2	.\system_top.v	/^  reg start_cpu_reg2;$/;"	r
+start_cpu_reg2	.\system_top.v	/^reg start_cpu_reg2;$/;"	r
 start_cpu_reg3	.\dwt\processing_640.v	/^reg	start_cpu_reg3;$/;"	r
 start_cpu_reg3	.\dwt\shexiangtou_putdata.v	/^reg	start_cpu_reg3;$/;"	r
 start_cpu_reg4	.\dwt\processing_640.v	/^reg	start_cpu_reg4;$/;"	r
@@ -5822,7 +5854,7 @@ start_ram1	.\bpc_mq\bpc_read_control.v	/^wire start_ram1;$/;"	n
 start_ram2	.\bpc_mq\bpc_read_control.v	/^wire start_ram2;$/;"	n
 start_ram3	.\bpc_mq\bpc_read_control.v	/^wire start_ram3;$/;"	n
 start_ram4	.\bpc_mq\bpc_read_control.v	/^wire start_ram4;$/;"	n
-start_reason	.\system_top.v	/^  reg [1:0]start_reason;$/;"	r
+start_reason	.\system_top.v	/^reg [1:0]start_reason;$/;"	r
 start_reg	.\camera_sram\camera_control.v	/^reg start_reg;$/;"	r
 start_reg	.\dwt\processing_640.v	/^reg start_reg;$/;"	r
 start_reg	.\dwt\shexiangtou_putdata.v	/^reg start_reg;$/;"	r
@@ -5954,13 +5986,13 @@ target_slope	.\tier2\tier2_top.v	/^	wire [8:0]target_slope;$/;"	n
 temp	.\tier2\fifo_t1_t2.v	/^	reg [8:0]temp;$/;"	r
 test	.\test_128.v	/^module test();$/;"	m
 test	.\test_bench.v	/^module test();$/;"	m
-test_signals	.\system_top.v	/^	output test_signals;$/;"	p
-test_signals	.\system_top.v	/^	wire test_signals;$/;"	n
+test_signals	.\system_top.v	/^output test_signals;$/;"	p
+test_signals	.\system_top.v	/^wire test_signals;$/;"	n
 test_tier1	.\Tier_1_top.v	/^output test_tier1;$/;"	p
 test_tier1	.\Tier_1_top.v	/^wire test_tier1;$/;"	n
 test_tier1	.\jpeg2000_top.v	/^output test_tier1;$/;"	p
 test_tier1	.\jpeg2000_top.v	/^wire test_tier1;$/;"	n
-test_tier1	.\system_top.v	/^	wire test_tier1;$/;"	n
+test_tier1	.\system_top.v	/^wire test_tier1;$/;"	n
 test_tier1	.\test_bench.v	/^wire        test_tier1;$/;"	n
 tier1_over	.\Tier_1_top.v	/^wire tier1_over=code_over_flag;$/;"	n
 tier1_over	.\dwt\entropy_calc.v	/^input tier1_over;$/;"	p
@@ -6317,7 +6349,7 @@ write_b	.\ip_core\BLK_MEM_GEN_V4_3.v	/^  task write_b$/;"	t
 write_b	.\ip_core\BLK_MEM_GEN_V7_2.v	/^  task write_b$/;"	t
 write_en	.\jpeg2000_top.v	/^output [3:0]write_en;$/;"	p
 write_en	.\jpeg2000_top.v	/^wire [3:0]write_en;$/;"	n
-write_en	.\system_top.v	/^	wire [3:0]  write_en;$/;"	n
+write_en	.\system_top.v	/^wire [3:0]  write_en;$/;"	n
 write_en	.\test_bench.v	/^wire [3:0]  write_en;$/;"	n
 write_en	.\tier2\codestream_generate.v	/^	output [3:0]write_en;$/;"	p
 write_en	.\tier2\codestream_generate.v	/^	reg [3:0]write_en;$/;"	r
@@ -6325,8 +6357,8 @@ write_en	.\tier2\tier2_top.v	/^	output [3:0]write_en;$/;"	p
 write_en	.\tier2\tier2_top.v	/^	wire [3:0]write_en;$/;"	n
 write_en_n	.\camera_sram\sram_control.v	/^	output write_en_n;$/;"	p
 write_en_n	.\camera_sram\sram_control.v	/^	reg write_en_n;$/;"	r
-write_en_n	.\system_top.v	/^    output write_en_n;$/;"	p
-write_en_n	.\system_top.v	/^  wire write_en_n;$/;"	n
+write_en_n	.\system_top.v	/^output write_en_n;$/;"	p
+write_en_n	.\system_top.v	/^wire write_en_n;$/;"	n
 write_fifo	.\bpc_mq\write_fifo.v	/^module write_fifo(\/\/output$/;"	m
 write_fifo	.\ip_core\FIFO_GENERATOR_V7_2.v	/^  task write_fifo;$/;"	t
 write_netlist_V7_2	.\ip_core\BLK_MEM_GEN_V7_2.v	/^module write_netlist_V7_2$/;"	m

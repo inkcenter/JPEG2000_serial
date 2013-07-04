@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : camera_control.v
 //  Created On    : 2013-04-04 19:32:51
-//  Last Modified : 2013-04-24 15:43:30
+//  Last Modified : 2013-06-22 17:03:43
 //  Revision      : re
 //  Author        : Tian Changsong
 //
@@ -390,8 +390,8 @@ begin
 	else
 	begin
 		case(register_counter)
-			0  :register<=8'h80;//COM7
-			1  :register<=8'h80;//ori:81
+			0  :register<=8'h40;//COM7
+			1  :register<=8'h81;//ori:81
 			2  :register<=8'h3e;
 			3  :register<=8'h09;
 			4  :register<=8'he0;
@@ -400,27 +400,23 @@ begin
 			7  :register<=8'h00;
 			8  :register<=8'h00;
 			9  :register<=8'he5;
-			10 :register<=8'h50;//ori:43
-			11 :register<=8'h93;//ori:12
-			12 :register<=8'h81;//ori:91
+			10 :register<=8'h43;//ori:43
+			11 :register<=8'h12;//ori:12
+			12 :register<=8'h91;//ori:91
 			13 :register<=8'h91;
 			14 :register<=8'h20;//COM5
 			15 :register<=8'h04;
 			16 :register<=8'h80;
 			17 :register<=8'h40;
 			18 :register<=8'h00;
-			19 :register<=8'h00;//ori:04
-			20 :register<=8'h00;//ori:80
-			21 :register<=8'h76;//HSTOP,59
-			// 21 :register<=8'h59;//HSTOP,59
+			19 :register<=8'h04;//ori:04
+			20 :register<=8'h80;//ori:80
+			21 :register<=8'hc6;//HSTOP,59
 			22 :register<=8'h26;//HSTART,09
-			// 22 :register<=8'h09;//HSTART,09
 			23 :register<=8'h00;//HREF,00
 			24 :register<=8'h00;
-			// 25 :register<=8'h59;//VSTOP,59
-			// 26 :register<=8'h09;//VSTRT,09
-			25 :register<=8'h76;//VSTOP,59
-			26 :register<=8'h26;//VSTRT,09
+			25 :register<=8'h3d;//VSTOP,59
+			26 :register<=8'h01;//VSTRT,09
 			27 :register<=8'ha6;
 			28 :register<=8'h2e;
 			29 :register<=8'h10;
@@ -432,7 +428,6 @@ begin
 			35 :register<=8'hbf;
 			36 :register<=8'h04;
 			37 :register<=8'h00;//uyvy
-			// 37 :register<=8'h00;
 			38 :register<=8'h00;
 			39 :register<=8'h77;
 			40 :register<=8'h06;
@@ -519,13 +514,6 @@ begin
 			121:register<=8'hbb;
 			122:register<=8'hd2;
 			123:register<=8'he6;
-			// COM7:register   <=8'h00;//yuv
-			// VSTART:register <=8'h09;//row start
-			// VSTOP:register  <=8'h59;//row stop
-			// VREF:register   <=8'h00;//[5:3]:row stop low bits,[2:0]:row start low bits 
-			// HSTART:register <=8'h09;//col start
-			// HSTOP:register  <=8'h59;//col stop
-			// HREF:register   <=8'h00;//[5:3]col stop low bits,[2:0]col start low bits
 		endcase
 	end 
 end

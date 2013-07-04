@@ -103,7 +103,8 @@ module sram_control(/*autoport*/
 	assign jpeg_start_from_sram = state==JPEG_START;
 	assign address_to_sram = jpeg_working?address_from_dwt:address;
 	assign encoding_free=(state==IDLE||state==WRITTING_1||state==WRITTING_2||state==WRITE_WAITING);
-	assign row_full=row_counter==640;
+	assign row_full=row_counter==384;
+	//assign row_full=row_counter==640;
 	assign output_test_sram=&data_reg&&(&cam_data_reg);
 	assign data_sram=write_en_n?32'bz:data_to_write;
 	assign data_to_jpeg = jpeg_working?data_sram:0;
@@ -296,7 +297,7 @@ module sram_control(/*autoport*/
 
 	always@(*)
 	begin
-	    case(state)
+	    case(state) 
 			IDLE:
 			begin 
 				if(frame_valid)

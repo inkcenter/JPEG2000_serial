@@ -1,7 +1,7 @@
 //==================================================================================================
 //  Filename      : codestream_generate.v
 //  Created On    : 2013-05-26 20:17:50
-//  Last Modified : 2013-05-26 20:17:51
+//  Last Modified : 2013-06-22 17:08:22
 //  Revision      : 
 //  Author        : Tian Changsong
 //
@@ -1457,7 +1457,8 @@ parameter WORD_WIDTH=18,
 						//5 :codestream_segment<=16'h0400;  //XSIZ_2 for 1024
 						6 :codestream_segment<=16'h0000;  //YSIZ_1
 						//7 :codestream_segment<=16'h0200;  //YSIZ_2 for 512
-						7 :codestream_segment<=16'h0280;  //YSIZ_2 for 640
+						// 7 :codestream_segment<=16'h0280;  //YSIZ_2 for 640
+						7 :codestream_segment<=16'h0180;  //YSIZ_2 for 640
 						//7 :codestream_segment<=16'h0080;  //YSIZ_2 for 128
 						//7 :codestream_segment<=16'h0300;  //YSIZ_2 for 768
 						8 :codestream_segment<=16'h0000;  //XOSIZ_1
@@ -2052,7 +2053,8 @@ parameter WORD_WIDTH=18,
 			EMPTY_PACKET:nextstate=EPH;
 			ALL_PACKET_OVER:
 			begin
-				if(tile_counter==24)
+				if(tile_counter==14)
+				// if(tile_counter==24)
 					nextstate=EOC;
 				else nextstate=OUTPUT_TOTAL_BYTE_NUMBER;
 			end
@@ -2062,7 +2064,7 @@ parameter WORD_WIDTH=18,
 			end
 			ONE_TILE_OVER:
 			begin
-				if(tile_counter==24)
+				if(tile_counter==14)
 					nextstate=CODESTREAM_GENERATE_OVER;
 				else nextstate=IDLE;
 			end
